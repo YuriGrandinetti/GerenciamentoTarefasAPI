@@ -11,5 +11,6 @@ namespace GerenciamentoTarefasAPI.Repository
         }
 
         public DbSet<Tarefa> Tarefas { get; set; }
+        public DbSet<Usuario> Usuarios { get; set; }
     }
 }

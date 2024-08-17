@@ -10,7 +10,6 @@ C:\B3Projeto\GerenciamentoTarefasAPI\GerenciamentoTarefas\bin\Debug\net6.0\Micro
 C:\B3Projeto\GerenciamentoTarefasAPI\GerenciamentoTarefas\bin\Debug\net6.0\Swashbuckle.AspNetCore.Swagger.dll
 C:\B3Projeto\GerenciamentoTarefasAPI\GerenciamentoTarefas\bin\Debug\net6.0\Swashbuckle.AspNetCore.SwaggerGen.dll
 C:\B3Projeto\GerenciamentoTarefasAPI\GerenciamentoTarefas\bin\Debug\net6.0\Swashbuckle.AspNetCore.SwaggerUI.dll
-C:\B3Projeto\GerenciamentoTarefasAPI\GerenciamentoTarefas\obj\Debug\net6.0\GerenciamentoTarefas.csproj.AssemblyReference.cache
 C:\B3Projeto\GerenciamentoTarefasAPI\GerenciamentoTarefas\obj\Debug\net6.0\GerenciamentoTarefas.GeneratedMSBuildEditorConfig.editorconfig
 C:\B3Projeto\GerenciamentoTarefasAPI\GerenciamentoTarefas\obj\Debug\net6.0\GerenciamentoTarefas.AssemblyInfoInputs.cache
 C:\B3Projeto\GerenciamentoTarefasAPI\GerenciamentoTarefas\obj\Debug\net6.0\GerenciamentoTarefas.AssemblyInfo.cs
@@ -32,3 +31,17 @@ C:\B3Projeto\GerenciamentoTarefasAPI\GerenciamentoTarefas\bin\Debug\net6.0\Micro
 C:\B3Projeto\GerenciamentoTarefasAPI\GerenciamentoTarefas\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Relational.dll
 C:\B3Projeto\GerenciamentoTarefasAPI\GerenciamentoTarefas\bin\Debug\net6.0\RabbitMQ.Client.dll
 C:\B3Projeto\GerenciamentoTarefasAPI\GerenciamentoTarefas\bin\Debug\net6.0\System.Threading.Channels.dll
+C:\B3Projeto\GerenciamentoTarefasAPI\GerenciamentoTarefas\bin\Debug\net6.0\libman.json
+C:\B3Projeto\GerenciamentoTarefasAPI\GerenciamentoTarefas\bin\Debug\net6.0\Newtonsoft.Json.dll
+C:\B3Projeto\GerenciamentoTarefasAPI\GerenciamentoTarefas\bin\Debug\net6.0\Npgsql.dll
+C:\B3Projeto\GerenciamentoTarefasAPI\GerenciamentoTarefas\bin\Debug\net6.0\Npgsql.EntityFrameworkCore.PostgreSQL.dll
+C:\B3Projeto\GerenciamentoTarefasAPI\GerenciamentoTarefas\bin\Debug\net6.0\Npgsql.Json.NET.dll
+C:\B3Projeto\GerenciamentoTarefasAPI\GerenciamentoTarefas\bin\Debug\net6.0\Swashbuckle.AspNetCore.Annotations.dll
+C:\B3Projeto\GerenciamentoTarefasAPI\GerenciamentoTarefas\bin\Debug\net6.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+C:\B3Projeto\GerenciamentoTarefasAPI\GerenciamentoTarefas\bin\Debug\net6.0\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\B3Projeto\GerenciamentoTarefasAPI\GerenciamentoTarefas\bin\Debug\net6.0\Microsoft.IdentityModel.Logging.dll
+C:\B3Projeto\GerenciamentoTarefasAPI\GerenciamentoTarefas\bin\Debug\net6.0\Microsoft.IdentityModel.Protocols.dll
+C:\B3Projeto\GerenciamentoTarefasAPI\GerenciamentoTarefas\bin\Debug\net6.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+C:\B3Projeto\GerenciamentoTarefasAPI\GerenciamentoTarefas\bin\Debug\net6.0\Microsoft.IdentityModel.Tokens.dll
+C:\B3Projeto\GerenciamentoTarefasAPI\GerenciamentoTarefas\bin\Debug\net6.0\System.IdentityModel.Tokens.Jwt.dll
+C:\B3Projeto\GerenciamentoTarefasAPI\GerenciamentoTarefas\obj\Debug\net6.0\GerenciamentoTarefas.csproj.AssemblyReference.cache

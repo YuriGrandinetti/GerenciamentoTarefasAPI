@@ -1,8 +1,8 @@
 ﻿using GerenciamentoTarefasAPI.Models;
-using GerenciamentoTarefasAPI.Repository;
+
 using Microsoft.EntityFrameworkCore;
 
-namespace GerenciamentoTarefas.Repository
+namespace GerenciamentoTarefasAPI.Repository
 {
     public class TarefasRepository
     {
