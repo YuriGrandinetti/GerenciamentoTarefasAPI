@@ -7,7 +7,10 @@ using static GerenciamentoTarefas.Domain.Enumeradores;
 using Microsoft.EntityFrameworkCore;
 using Swashbuckle.AspNetCore.Annotations;
 using System.Collections.Generic;
+<<<<<<< HEAD
 using System.Globalization;
+=======
+>>>>>>> dc185a08486fd19f43707bdaa4f524e38bd8532b
 
 namespace GerenciamentoTarefasAPI.Controllers
 {
@@ -171,6 +174,7 @@ namespace GerenciamentoTarefasAPI.Controllers
 
             return CreatedAtAction(nameof(ObterTarefaPorId), new { id = novaTarefa.Id }, novaTarefa);
         }
+<<<<<<< HEAD
         [HttpPut("{id}")]
         [SwaggerOperation(Summary = "Altera uma tarefa existente.", Description = "Atualiza as informações de uma tarefa existente no banco de dados.")]
         [ProducesResponseType(204)]
@@ -208,6 +212,12 @@ namespace GerenciamentoTarefasAPI.Controllers
 
 
 
+=======
+
+
+
+       
+>>>>>>> dc185a08486fd19f43707bdaa4f524e38bd8532b
 
     }
 }

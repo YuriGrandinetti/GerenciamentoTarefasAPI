@@ -8,9 +8,17 @@ build_property.PlatformNeutralAssembly =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = GerenciamentoTarefas
 build_property.RootNamespace = GerenciamentoTarefas
+<<<<<<< HEAD
 build_property.ProjectDir = C:\B3Projeto\GerenciamentoTarefasAPI\GerenciamentoTarefas\
 build_property.RazorLangVersion = 6.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
 build_property.MSBuildProjectDirectory = C:\B3Projeto\GerenciamentoTarefasAPI\GerenciamentoTarefas
+=======
+build_property.ProjectDir = C:\ProjetoB3\GerenciamentoTarefasAPI\
+build_property.RazorLangVersion = 6.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = C:\ProjetoB3\GerenciamentoTarefasAPI
+>>>>>>> dc185a08486fd19f43707bdaa4f524e38bd8532b
 build_property._RazorSourceGeneratorDebug = 

@@ -1,8 +1,14 @@
 {
   "version": 2,
+<<<<<<< HEAD
   "dgSpecHash": "ijx9F0aifxq8QsrdIrHa7uRHrXdPpUwamvKnqGm0JidWq/VLQljiuqLcRIkmVPHDgOLfn3s+j2P9f2etdy9qCQ==",
   "success": true,
   "projectFilePath": "C:\\B3Projeto\\GerenciamentoTarefasAPI\\GerenciamentoTarefas\\GerenciamentoTarefas.csproj",
+=======
+  "dgSpecHash": "7ibnPSCFIqD5bNYL49Fg+c+ITLGrunbVy8AlczHu0gsa5K5pr86Z1IWXdI/5Ro2VSuPyDhvp+sa6H+wcDEiLag==",
+  "success": true,
+  "projectFilePath": "C:\\ProjetoB3\\GerenciamentoTarefasAPI\\GerenciamentoTarefas.csproj",
+>>>>>>> dc185a08486fd19f43707bdaa4f524e38bd8532b
   "expectedPackageFiles": [
     "C:\\Users\\Teste\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\Teste\\.nuget\\packages\\microsoft.aspnetcore.authentication.jwtbearer\\6.0.0\\microsoft.aspnetcore.authentication.jwtbearer.6.0.0.nupkg.sha512",

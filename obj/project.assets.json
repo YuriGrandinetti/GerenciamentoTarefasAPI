@@ -1507,11 +1507,19 @@
   "project": {
     "version": "1.0.0",
     "restore": {
+<<<<<<< HEAD
       "projectUniqueName": "C:\\B3Projeto\\GerenciamentoTarefasAPI\\GerenciamentoTarefas\\GerenciamentoTarefas.csproj",
       "projectName": "GerenciamentoTarefas",
       "projectPath": "C:\\B3Projeto\\GerenciamentoTarefasAPI\\GerenciamentoTarefas\\GerenciamentoTarefas.csproj",
       "packagesPath": "C:\\Users\\Teste\\.nuget\\packages\\",
       "outputPath": "C:\\B3Projeto\\GerenciamentoTarefasAPI\\GerenciamentoTarefas\\obj\\",
+=======
+      "projectUniqueName": "C:\\ProjetoB3\\GerenciamentoTarefasAPI\\GerenciamentoTarefas.csproj",
+      "projectName": "GerenciamentoTarefas",
+      "projectPath": "C:\\ProjetoB3\\GerenciamentoTarefasAPI\\GerenciamentoTarefas.csproj",
+      "packagesPath": "C:\\Users\\Teste\\.nuget\\packages\\",
+      "outputPath": "C:\\ProjetoB3\\GerenciamentoTarefasAPI\\obj\\",
+>>>>>>> dc185a08486fd19f43707bdaa4f524e38bd8532b
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Teste\\AppData\\Roaming\\NuGet\\NuGet.Config",

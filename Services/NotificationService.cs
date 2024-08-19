@@ -26,6 +26,7 @@ public class NotificationService
         EnviarNotificacao(message);
     }
 
+<<<<<<< HEAD
     public void EnviarNotificacaoDeTarefaAlterada(string tarefaDescricao)
     {
         string message = $"Notificação: A tarefa '{tarefaDescricao}' foi alterada.";
@@ -33,5 +34,7 @@ public class NotificationService
     }
 
 
+=======
+>>>>>>> dc185a08486fd19f43707bdaa4f524e38bd8532b
 
 }
