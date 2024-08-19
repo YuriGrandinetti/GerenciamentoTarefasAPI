@@ -7,6 +7,7 @@ using static GerenciamentoTarefas.Domain.Enumeradores;
 using Microsoft.EntityFrameworkCore;
 using Swashbuckle.AspNetCore.Annotations;
 using System.Collections.Generic;
+using System.Globalization;
 
 namespace GerenciamentoTarefasAPI.Controllers
 {
@@ -170,10 +171,43 @@ namespace GerenciamentoTarefasAPI.Controllers
 
             return CreatedAtAction(nameof(ObterTarefaPorId), new { id = novaTarefa.Id }, novaTarefa);
         }
+        [HttpPut("{id}")]
+        [SwaggerOperation(Summary = "Altera uma tarefa existente.", Description = "Atualiza as informações de uma tarefa existente no banco de dados.")]
+        [ProducesResponseType(204)]
+        [ProducesResponseType(404)]
+        [ProducesResponseType(400)]
+        public async Task<IActionResult> AlterarTarefa(int id, [FromBody] Tarefa tarefaAlterada)
+        {
+            var tarefaExistente = await _context.Tarefas.FindAsync(id);
+            if (tarefaExistente == null)
+            {
+                _rabbitMQLogger.LogError($"Tentativa de alterar tarefa não encontrada: {id}");
+                return NotFound();
+            }
+
+            tarefaExistente.Descricao = tarefaAlterada.Descricao;
+            tarefaExistente.Status = tarefaAlterada.Status;
+
+            // Garantir que a DataVencimento está em UTC
+            tarefaExistente.DataVencimento = DateTime.SpecifyKind(tarefaAlterada.DataVencimento, DateTimeKind.Utc);
+
+            await _context.SaveChangesAsync();
+            _rabbitMQLogger.LogInformation($"Tarefa alterada: {tarefaExistente.Descricao}");
+            _notificationService.EnviarNotificacaoDeTarefaAlterada(tarefaExistente.Descricao);
+
+            return NoContent();
+        }
 
 
 
-       
+
+
+
+
+
+
+
+
 
     }
 }

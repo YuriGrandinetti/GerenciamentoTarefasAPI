@@ -26,5 +26,12 @@ public class NotificationService
         EnviarNotificacao(message);
     }
 
+    public void EnviarNotificacaoDeTarefaAlterada(string tarefaDescricao)
+    {
+        string message = $"Notificação: A tarefa '{tarefaDescricao}' foi alterada.";
+        EnviarNotificacao(message);
+    }
+
+
 
 }

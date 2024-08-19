@@ -14,6 +14,17 @@ builder.Configuration
     .AddJsonFile("appsettings.json", optional: false, reloadOnChange: true)
     .AddEnvironmentVariables(); // Isso garante que as variáveis de ambiente sejam carregadas
 
+// Configuração do CORS
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy("AllowSpecificOrigin", builder =>
+    {
+        builder.WithOrigins("http://localhost:4200") // URL da sua aplicação Angular
+               .AllowAnyHeader()
+               .AllowAnyMethod();
+    });
+});
+
 // Adiciona os serviços ao contêiner.
 builder.Services.AddControllers();
 
@@ -97,9 +108,12 @@ if (app.Environment.IsDevelopment())
     app.UseSwagger();
     app.UseSwaggerUI(c =>
     {
-        c.SwaggerEndpoint("/swagger/v1/swagger.json", "GerenciamentoTarefasAPI v1");      
+        c.SwaggerEndpoint("/swagger/v1/swagger.json", "GerenciamentoTarefasAPI v1");
     });
 }
+
+// Habilitar CORS antes de autenticação e autorização
+app.UseCors("AllowSpecificOrigin");
 
 app.UseAuthentication(); // Adiciona autenticação JWT
 app.UseAuthorization();
