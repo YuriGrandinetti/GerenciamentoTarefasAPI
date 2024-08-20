@@ -16,5 +16,8 @@ namespace GerenciamentoTarefasAPI.Models
         public string Email { get; set; }
         [Column("senha")]  // Especifica que o campo "senha" no banco de dados corresponde à propriedade "Senha"
         public string Senha { get; set; }
+
+        // Propriedade de navegação para tarefas
+        public ICollection<Tarefa> Tarefas { get; set; }
     }
 }

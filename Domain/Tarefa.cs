@@ -25,6 +25,13 @@ namespace GerenciamentoTarefasAPI.Models
         [Column("usuarioid")]
         public Int32 usuarioid { get; set; }
 
-        
+
+        // Propriedade de navegação para a relação com o usuário
+        [ForeignKey("UsuarioId")]
+        public Usuario Usuario { get; set; }
+
+
     }
+
+
 }

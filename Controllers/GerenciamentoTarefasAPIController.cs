@@ -287,12 +287,56 @@ namespace GerenciamentoTarefasAPI.Controllers
             }
         }
 
+        [HttpGet("pesquisar")]
+        [SwaggerOperation(Summary = "Pesquisa tarefas por descrição, data ou status.", Description = "Pesquisa tarefas com base nos critérios de descrição, data ou status, e retorna as tarefas juntamente com o nome do usuário a que estão vinculadas.")]
+        [ProducesResponseType(typeof(IEnumerable<object>), 200)]
+        [ProducesResponseType(404)]
+        public async Task<IActionResult> PesquisarTarefas([FromQuery] string? descricao = null, [FromQuery] DateTime? data = null, [FromQuery] string? status = null)
+        {
+            try
+            {
+                var query = _context.Tarefas.AsQueryable();
 
+                if (!string.IsNullOrEmpty(descricao))
+                {
+                    query = query.Where(t => t.Descricao.Contains(descricao));
+                }
 
+                if (data.HasValue)
+                {
+                    query = query.Where(t => t.DataVencimento.Date == data.Value.Date);
+                }
 
+                if (!string.IsNullOrEmpty(status))
+                {
+                    query = query.Where(t => t.Status.Equals(status, StringComparison.OrdinalIgnoreCase));
+                }
 
+                var tarefasComUsuarios = await query
+                    .Include(t => t.Usuario)
+                    .Select(t => new
+                    {
+                        t.Id,
+                        t.Descricao,
+                        t.Status,
+                        t.DataVencimento,
+                        UsuarioNome = t.Usuario.Nome
+                    })
+                    .ToListAsync();
 
+                if (tarefasComUsuarios.Count == 0)
+                {
+                    return NotFound("Nenhuma tarefa encontrada com os critérios fornecidos.");
+                }
 
+                return Ok(tarefasComUsuarios);
+            }
+            catch (Exception e)
+            {
+                _rabbitMQLogger.LogError($"Erro ao pesquisar tarefas: {e.Message}");
+                return StatusCode(500, "Ocorreu um erro ao pesquisar as tarefas.");
+            }
+        }
 
 
 

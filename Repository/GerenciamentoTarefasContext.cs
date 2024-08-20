@@ -12,5 +12,16 @@ namespace GerenciamentoTarefasAPI.Repository
 
         public DbSet<Tarefa> Tarefas { get; set; }
         public DbSet<Usuario> Usuarios { get; set; }
+
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            base.OnModelCreating(modelBuilder);
+
+            // Configura a relação entre Tarefa e Usuario
+            modelBuilder.Entity<Tarefa>()
+                .HasOne(t => t.Usuario)             // Cada Tarefa tem um Usuario
+                .WithMany(u => u.Tarefas)           // Um Usuario pode ter muitas Tarefas
+                .HasForeignKey(t => t.usuarioid);   // Chave estrangeira em Tarefa é UsuarioId
+        }
     }
 }
