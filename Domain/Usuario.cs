@@ -1,5 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
+using System.Text.Json.Serialization;
 
 namespace GerenciamentoTarefasAPI.Models
 {
@@ -18,6 +19,7 @@ namespace GerenciamentoTarefasAPI.Models
         public string Senha { get; set; }
 
         // Propriedade de navegação para tarefas
+     
         public ICollection<Tarefa> Tarefas { get; set; }
     }
 }

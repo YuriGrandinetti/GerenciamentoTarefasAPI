@@ -52,10 +52,10 @@ namespace GerenciamentoTarefasAPI.Repository
             _rabbitMQService.EnviarMensagem("task_queue", $"Tarefa excluída: {tarefa.Descricao}");
         }
 
-        public async Task<IEnumerable<Tarefa>> ObterTarefasPorUsuario(int usuarioId)
+        public async Task<IEnumerable<Tarefa>> ObterTarefasPorUsuario(int usuarioid)
         {
             return await _context.Tarefas
-                                 .Where(t => t.usuarioid == usuarioId)
+                                 .Where(t => t.usuarioid == usuarioid)
                                  .ToListAsync();
         }
 

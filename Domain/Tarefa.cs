@@ -1,5 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
+using System.Text.Json.Serialization;
 using static GerenciamentoTarefas.Domain.Enumeradores;
 
 namespace GerenciamentoTarefasAPI.Models
@@ -25,7 +26,7 @@ namespace GerenciamentoTarefasAPI.Models
         [Column("usuarioid")]
         public Int32 usuarioid { get; set; }
 
-
+        [JsonIgnore]  // Ignora a desserialização
         // Propriedade de navegação para a relação com o usuário
         [ForeignKey("usuarioid")]
         public Usuario Usuario { get; set; }

@@ -9,6 +9,7 @@ using Swashbuckle.AspNetCore.Annotations;
 using System.Collections.Generic;
 using System.Globalization;
 using System.IdentityModel.Tokens.Jwt;
+using GerenciamentoTarefas.Domain;
 
 namespace GerenciamentoTarefasAPI.Controllers
 {
@@ -153,25 +154,41 @@ namespace GerenciamentoTarefasAPI.Controllers
         [SwaggerOperation(Summary = "Cria uma nova tarefa para usuário.", Description = "Adiciona uma nova tarefa ao banco de dados associada ao usuário e envia uma notificação de criação para o RabbitMQ.")]
         [ProducesResponseType(typeof(Tarefa), 201)]
         [ProducesResponseType(400)]
-        public async Task<IActionResult> CriarTarefa([FromBody] Tarefa novaTarefa)
+        public async Task<IActionResult> CriarTarefa([FromBody] TarefaCreateDto novaTarefaDto)
         {
-
-            // Verifica se o usuário existe
-            var usuario = await _context.Usuarios.FindAsync(novaTarefa.usuarioid);
-            if (usuario == null)
+            try
             {
-                return NotFound("Usuário não encontrado");
+                // Verifica se o usuário existe
+                var usuario = await _context.Usuarios.FindAsync(novaTarefaDto.usuarioid);
+                if (usuario == null)
+                {
+                    return NotFound("Usuário não encontrado");
+                }
+
+                // Cria uma nova instância de Tarefa a partir do DTO
+                var novaTarefa = new Tarefa
+                {
+                    Descricao = novaTarefaDto.descricao,
+                    DataVencimento = novaTarefaDto.datavencimento,
+                    Status = novaTarefaDto.status,
+                    usuarioid = novaTarefaDto.usuarioid
+                };
+
+                // Adiciona a nova tarefa ao contexto
+                _context.Tarefas.Add(novaTarefa);
+                await _context.SaveChangesAsync();
+
+                // Envia a notificação para o RabbitMQ
+                _rabbitMQLogger.LogInformation($"Tarefa criada: {novaTarefa.Descricao} para o usuário {usuario.Nome}");
+                _notificationService.EnviarNotificacaoDeTarefaCriada(novaTarefa.Descricao);
+
+                return CreatedAtAction(nameof(ObterTarefaPorId), new { id = novaTarefa.Id }, novaTarefa);
             }
-
-            // Adiciona a nova tarefa ao contexto
-            _context.Tarefas.Add(novaTarefa);
-            await _context.SaveChangesAsync();
-
-            // Envia a notificação para o RabbitMQ
-            _rabbitMQLogger.LogInformation($"Tarefa criada: {novaTarefa.Descricao} para o usuário {usuario.Nome}");
-            _notificationService.EnviarNotificacaoDeTarefaCriada(novaTarefa.Descricao);
-
-            return CreatedAtAction(nameof(ObterTarefaPorId), new { id = novaTarefa.Id }, novaTarefa);
+            catch (Exception e)
+            {
+                _rabbitMQLogger.LogError($"Erro ao criar tarefa: {e.Message}");
+                return StatusCode(500, "Ocorreu um erro ao criar a tarefa.");
+            }
         }
 
         [HttpPut("{id}")]
@@ -179,7 +196,7 @@ namespace GerenciamentoTarefasAPI.Controllers
         [ProducesResponseType(204)]
         [ProducesResponseType(404)]
         [ProducesResponseType(400)]
-        public async Task<IActionResult> AlterarTarefa(int id, [FromBody] Tarefa tarefaAlterada)
+        public async Task<IActionResult> AlterarTarefa(int id, [FromBody] TarefaUpdateDto tarefaAlteradaDto)
         {
             try
             {
@@ -191,17 +208,15 @@ namespace GerenciamentoTarefasAPI.Controllers
                     return NotFound();
                 }
 
-                // Atualiza os campos da tarefa existente com os valores da tarefa alterada
-                tarefaExistente.Descricao = tarefaAlterada.Descricao;
-                tarefaExistente.Status = tarefaAlterada.Status;
-
-                // Garante que a DataVencimento seja salva corretamente como uma data
-                tarefaExistente.DataVencimento = tarefaAlterada.DataVencimento.Date;
+                // Atualiza os campos da tarefa existente com os valores do DTO
+                tarefaExistente.Descricao = tarefaAlteradaDto.descricao;
+                tarefaExistente.Status = tarefaAlteradaDto.status;
+                tarefaExistente.DataVencimento = tarefaAlteradaDto.datavencimento.Date;
+                tarefaExistente.usuarioid = tarefaAlteradaDto.usuarioid;  // Atualiza o usuário se necessário
 
                 // Salva as alterações no banco de dados
                 await _context.SaveChangesAsync();
 
-                // Loga a alteração e envia notificação
                 _rabbitMQLogger.LogInformation($"Tarefa alterada: {tarefaExistente.Descricao}");
                 _notificationService.EnviarNotificacaoDeTarefaAlterada(tarefaExistente.Descricao);
 
@@ -213,6 +228,9 @@ namespace GerenciamentoTarefasAPI.Controllers
                 return StatusCode(500, "Ocorreu um erro ao alterar a tarefa.");
             }
         }
+
+
+
 
 
         [HttpGet("minhas-tarefas")]
@@ -233,12 +251,7 @@ namespace GerenciamentoTarefasAPI.Controllers
             }
             var usuarioId = valorusuario; // User.FindFirst(JwtRegisteredClaimNames.Sub)?.Value;
 
-            // Obter o ID do usuário logado
-            // var usuarioId = User.FindFirst(JwtRegisteredClaimNames.Sub)?.Value; // 'sub' é o claim padrão para o ID do usuário no JWT
-
-            //     var usuarioId = User.FindFirst("sub")?.Value; // 'sub' é o claim padrão para o ID do usuário no JWT
-           // var emailUsuario = User.Claims. .ToList(). .ToList[0] . FindFirst("id")?.Value; // 'email' é o claim padrão para o e-mail do usuário no JWT
-
+           
             if (string.IsNullOrEmpty(usuarioId))
             {
                 _rabbitMQLogger.LogError("Usuário não identificado.");
@@ -309,7 +322,7 @@ namespace GerenciamentoTarefasAPI.Controllers
 
                 if (!string.IsNullOrEmpty(status))
                 {
-                    query = query.Where(t => t.Status.Equals(status, StringComparison.OrdinalIgnoreCase));
+                    query = query.Where(t => t.Status.ToLower() == status.ToLower());
                 }
 
                 var tarefasComUsuarios = await query
