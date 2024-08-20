@@ -1,33 +1,109 @@
-# GerenciamentosTarefasAPI
+# GerenciamentoTarefasAPI
 
-Este projeto é uma API para gerenciamento de tarefas, desenvolvida com .NET 6.0. Ele permite que os usuários cadastrem, consultem, atualizem e excluam tarefas, além de enviar notificações sobre as mudanças de status das tarefas. A aplicação também faz uso do RabbitMQ para gerenciar filas de mensagens de forma assíncrona.
+## Visão Geral
 
-## Funcionalidades
-
-- **Cadastro de Tarefas**: Crie novas tarefas com descrições, datas e status.
-- **Consulta de Tarefas**: Obtenha uma lista de tarefas ou detalhes de uma tarefa específica.
-- **Atualização de Tarefas**: Atualize os detalhes de uma tarefa existente.
-- **Exclusão de Tarefas**: Exclua tarefas existentes.
-- **Notificações**: Envio de notificações sobre mudanças no status das tarefas.
-- **Integração com RabbitMQ**: Processamento assíncrono de tarefas usando filas de mensagens.
+O projeto `GerenciamentoTarefasAPI` é uma aplicação backend desenvolvida em .NET 6 que fornece uma API para gerenciar tarefas dos usuários. A API oferece funcionalidades como criação, alteração, consulta e exclusão de tarefas, além de autenticação de usuários, notificações via RabbitMQ e organização das tarefas por status (pendente, concluída, cancelada).
 
 ## Tecnologias Utilizadas
 
-- **.NET 6.0**: Framework utilizado para o desenvolvimento da API.
-- **Entity Framework**: Utilizado para o mapeamento objeto-relacional (ORM) e interação com o banco de dados.
-- **RabbitMQ**: Utilizado para o gerenciamento de filas de mensagens.
-- **SQL Server ou PostgreSQL**: O banco de dados utilizado para armazenar as informações das tarefas.
-- **Docker**: (Opcional) Para containerização da aplicação.
+- **ASP.NET Core 6**: Framework principal para a construção da API.
+- **Entity Framework Core**: ORM utilizado para a interação com o banco de dados.
+- **PostgreSQL**: Banco de dados relacional utilizado para armazenar as informações.
+- **RabbitMQ**: Sistema de mensageria utilizado para notificações de eventos importantes.
+- **Swagger**: Ferramenta para documentação e testes da API.
+- **JWT (JSON Web Token)**: Sistema de autenticação e autorização dos usuários.
 
 ## Estrutura do Projeto
 
-- `Controllers`: Contém os controladores da API, responsáveis por lidar com as requisições HTTP.
-- `Models`: Define as entidades utilizadas no sistema.
-- `Repository`: Contém os repositórios para interação com o banco de dados.
-- `Services`: Contém os serviços que implementam a lógica de negócios, incluindo o serviço de notificação e integração com RabbitMQ.
-- `Program.cs`: Arquivo principal que configura e executa a aplicação.
+- **Controllers**: Contém os controladores responsáveis pelas rotas da API.
+  - `UsuariosController.cs`: Gerencia as operações relacionadas aos usuários, como registro e login.
+  - `TarefasController.cs`: Gerencia as operações relacionadas às tarefas, como criação, edição, exclusão e consulta.
+  
+- **Domain**: Contém as entidades do sistema que representam os modelos de dados.
+  - `Usuario.cs`: Representa os usuários do sistema.
+  - `Tarefa.cs`: Representa as tarefas associadas aos usuários.
+  - `Enumeradores.cs`: Contém os enumeradores utilizados no projeto.
 
-## Configuração e Instalação
+- **Repository**: Contém as classes que interagem diretamente com o banco de dados.
+  - `TarefasRepository.cs`: Contém as operações CRUD relacionadas às tarefas.
+  - `GerenciamentoTarefasContext.cs`: Contexto do Entity Framework, mapeia as entidades para o banco de dados.
+
+- **Services**: Contém serviços auxiliares utilizados pela aplicação.
+  - `RabbitMQService.cs`: Serviço para enviar mensagens para o RabbitMQ.
+  - `NotificationService.cs`: Serviço para gerenciar notificações.
+  - `UsuarioService.cs`: Serviço para gerenciar operações relacionadas aos usuários.
+
+## Configuração do Ambiente
+
+1. **Clonar o Repositório**
+
+   ```bash
+   git clone https://github.com/seu-usuario/GerenciamentoTarefasAPI.git
+   cd GerenciamentoTarefasAPIConfigurar o Banco de Dados
+   ```
+Certifique-se de ter o PostgreSQL instalado e em execução.
+Crie um banco de dados para a aplicação.
+Atualize a string de conexão em appsettings.json com as credenciais corretas.
+
+## Configuração do Ambiente
+
+### 1. Configurar o Banco de Dados
+
+Certifique-se de que o PostgreSQL está instalado e em execução em seu ambiente. Siga os passos abaixo para configurar o banco de dados:
+
+1. Crie um banco de dados para a aplicação. Você pode fazer isso executando o seguinte comando no PostgreSQL:
+
+   ```sql
+   CREATE DATABASE GerenciamentoTarefasDB;
+   ```
+   
+   Atualize a string de conexão no arquivo appsettings.json com as credenciais do banco de dados que você acabou de criar:
+   
+   "ConnectionStrings": {
+  "DefaultConnection": "Host=localhost;Database=GerenciamentoTarefasDB;Username=seu_usuario;Password=sua_senha"
+}
+
+
+2. Instalar Dependências
+Depois de configurar o banco de dados, você deve instalar as dependências do projeto. Para isso, utilize o comando abaixo:
+dotnet restore
+Executar o Projeto
+Agora você pode iniciar o projeto utilizando o comando:
+```bash
+   dotnet run
+
+   ```
+   
+   A API estará disponível em http://localhost:5000.
+
+5. Acessar a Documentação
+A documentação da API pode ser acessada via Swagger em http://localhost:5000/swagger.
+
+Endpoints Principais
+Aqui estão alguns dos principais endpoints da API:
+
+/api/usuarios/registrar [POST]: Registrar um novo usuário.
+/api/usuarios/login [POST]: Autenticar um usuário e obter um token JWT.
+/api/tarefas [GET]: Obter todas as tarefas.
+/api/tarefas/{id} [GET]: Obter uma tarefa por ID.
+/api/tarefas [POST]: Criar uma nova tarefa.
+/api/tarefas/{id} [PUT]: Atualizar uma tarefa existente.
+/api/tarefas/{id}/iniciar [PUT]: Iniciar uma tarefa.
+/api/tarefas/{id}/concluir [PUT]: Concluir uma tarefa.
+/api/tarefas/{id}/cancelar [PUT]: Cancelar uma tarefa.
+/api/tarefas/{id} [DELETE]: Excluir uma tarefa.
+Testes
+A API foi testada utilizando o Swagger para simular chamadas de API.
+Testes unitários podem ser criados para validar a lógica de negócios.
+Contribuição
+Faça um fork do projeto.
+Crie uma branch para sua feature (git checkout -b feature/nova-feature).
+Commit suas mudanças (git commit -m 'Adiciona nova feature').
+Envie para o repositório remoto (git push origin feature/nova-feature).
+Abra um Pull Request.
+Licença
+Este projeto é licenciado sob a Licença MIT - veja o arquivo LICENSE.md para mais detalhes.
+
 
 ### Pré-requisitos
 
