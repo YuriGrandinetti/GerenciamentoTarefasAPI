@@ -63,6 +63,8 @@ Certifique-se de que o PostgreSQL está instalado e em execução em seu ambient
   "DefaultConnection": "Host=localhost;Database=GerenciamentoTarefasDB;Username=seu_usuario;Password=sua_senha"
 }
 
+## Script do Banco de dados : 
+Esta na raiz do projeto o arquivo Dump do Banco de Dados para que o projeto Funcione : script_gerenciamento_tarefas.sql
 
 2. Instalar Dependências
 Depois de configurar o banco de dados, você deve instalar as dependências do projeto. Para isso, utilize o comando abaixo:
