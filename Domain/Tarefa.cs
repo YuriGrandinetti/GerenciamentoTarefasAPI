@@ -27,7 +27,7 @@ namespace GerenciamentoTarefasAPI.Models
 
 
         // Propriedade de navegação para a relação com o usuário
-        [ForeignKey("UsuarioId")]
+        [ForeignKey("usuarioid")]
         public Usuario Usuario { get; set; }
 
 

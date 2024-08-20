@@ -3,6 +3,7 @@ using GerenciamentoTarefasAPI.Models;
 using GerenciamentoTarefasAPI.Services;
 using System.Threading.Tasks;
 using Swashbuckle.AspNetCore.Annotations;
+using GerenciamentoTarefas.Domain;
 
 namespace GerenciamentoTarefasAPI.Controllers
 {
@@ -31,7 +32,7 @@ namespace GerenciamentoTarefasAPI.Controllers
         [SwaggerOperation(Summary = "Faz login de um usuário.", Description = "Valida as credenciais do usuário (email e senha) e retorna um token JWT.")]
         [ProducesResponseType(typeof(string), 200)]
         [ProducesResponseType(400)]
-        public async Task<IActionResult> LoginUsuario([FromBody] Usuario loginUsuario)
+        public async Task<IActionResult> LoginUsuario([FromBody] LoginRequest loginUsuario)
         {
             var usuario = await _usuarioService.LoginUsuario(loginUsuario.Email, loginUsuario.Senha);
 
@@ -40,10 +41,7 @@ namespace GerenciamentoTarefasAPI.Controllers
                 return BadRequest("Credenciais inválidas.");
             }
 
-            // Gerar o token JWT usando o serviço de usuário
             var token = _usuarioService.GerarToken(usuario);
-
-            // Retornar o token no formato JSON
             return Ok(new { Token = token });
         }
 
