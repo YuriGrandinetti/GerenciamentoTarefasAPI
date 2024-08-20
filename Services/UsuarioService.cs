@@ -52,7 +52,7 @@ namespace GerenciamentoTarefasAPI.Services
 
             var claims = new[]
             {
-                new Claim(JwtRegisteredClaimNames.Sub, usuario.Email),
+                new Claim(JwtRegisteredClaimNames.Sub, usuario.Id.ToString()),
                 new Claim(JwtRegisteredClaimNames.Jti, Guid.NewGuid().ToString()),
                 new Claim(ClaimTypes.NameIdentifier, usuario.Id.ToString()),
                 new Claim(ClaimTypes.Name, usuario.Nome)

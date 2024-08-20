@@ -51,5 +51,16 @@ namespace GerenciamentoTarefasAPI.Repository
             // Enviar mensagem para o RabbitMQ sobre a exclusão da tarefa
             _rabbitMQService.EnviarMensagem("task_queue", $"Tarefa excluída: {tarefa.Descricao}");
         }
+
+        public async Task<IEnumerable<Tarefa>> ObterTarefasPorUsuario(int usuarioId)
+        {
+            return await _context.Tarefas
+                                 .Where(t => t.usuarioid == usuarioId)
+                                 .ToListAsync();
+        }
+
+
+
+
     }
 }

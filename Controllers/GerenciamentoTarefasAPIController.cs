@@ -7,10 +7,8 @@ using static GerenciamentoTarefas.Domain.Enumeradores;
 using Microsoft.EntityFrameworkCore;
 using Swashbuckle.AspNetCore.Annotations;
 using System.Collections.Generic;
-<<<<<<< HEAD
 using System.Globalization;
-=======
->>>>>>> dc185a08486fd19f43707bdaa4f524e38bd8532b
+using System.IdentityModel.Tokens.Jwt;
 
 namespace GerenciamentoTarefasAPI.Controllers
 {
@@ -21,12 +19,13 @@ namespace GerenciamentoTarefasAPI.Controllers
         private readonly GerenciamentoTarefasContext _context;
         private readonly NotificationService _notificationService;
         private readonly RabbitMQLogger _rabbitMQLogger;
-
-        public TarefasController(GerenciamentoTarefasContext context, RabbitMQService rabbitMQService)
+        private readonly TarefasRepository _tarefasRepository;
+        public TarefasController(GerenciamentoTarefasContext context, RabbitMQService rabbitMQService, TarefasRepository tarefasRepository)
         {
             _context = context;
             _notificationService = new NotificationService(rabbitMQService);
             _rabbitMQLogger = new RabbitMQLogger(rabbitMQService);
+            _tarefasRepository = tarefasRepository;
         }
               
 
@@ -174,7 +173,7 @@ namespace GerenciamentoTarefasAPI.Controllers
 
             return CreatedAtAction(nameof(ObterTarefaPorId), new { id = novaTarefa.Id }, novaTarefa);
         }
-<<<<<<< HEAD
+
         [HttpPut("{id}")]
         [SwaggerOperation(Summary = "Altera uma tarefa existente.", Description = "Atualiza as informações de uma tarefa existente no banco de dados.")]
         [ProducesResponseType(204)]
@@ -182,24 +181,78 @@ namespace GerenciamentoTarefasAPI.Controllers
         [ProducesResponseType(400)]
         public async Task<IActionResult> AlterarTarefa(int id, [FromBody] Tarefa tarefaAlterada)
         {
-            var tarefaExistente = await _context.Tarefas.FindAsync(id);
-            if (tarefaExistente == null)
+            try
             {
-                _rabbitMQLogger.LogError($"Tentativa de alterar tarefa não encontrada: {id}");
-                return NotFound();
+                // Busca a tarefa existente no banco de dados
+                var tarefaExistente = await _context.Tarefas.FindAsync(id);
+                if (tarefaExistente == null)
+                {
+                    _rabbitMQLogger.LogError($"Tentativa de alterar tarefa não encontrada: {id}");
+                    return NotFound();
+                }
+
+                // Atualiza os campos da tarefa existente com os valores da tarefa alterada
+                tarefaExistente.Descricao = tarefaAlterada.Descricao;
+                tarefaExistente.Status = tarefaAlterada.Status;
+
+                // Garante que a DataVencimento seja salva corretamente como uma data
+                tarefaExistente.DataVencimento = tarefaAlterada.DataVencimento.Date;
+
+                // Salva as alterações no banco de dados
+                await _context.SaveChangesAsync();
+
+                // Loga a alteração e envia notificação
+                _rabbitMQLogger.LogInformation($"Tarefa alterada: {tarefaExistente.Descricao}");
+                _notificationService.EnviarNotificacaoDeTarefaAlterada(tarefaExistente.Descricao);
+
+                return NoContent();
+            }
+            catch (Exception e)
+            {
+                _rabbitMQLogger.LogError($"Erro ao alterar tarefa: {e.Message}");
+                return StatusCode(500, "Ocorreu um erro ao alterar a tarefa.");
+            }
+        }
+
+
+        [HttpGet("minhas-tarefas")]
+        [SwaggerOperation(Summary = "Obtém as tarefas do usuário logado.", Description = "Recupera a lista de tarefas associadas ao usuário atualmente logado.")]
+        [ProducesResponseType(typeof(IEnumerable<Tarefa>), 200)]
+        public async Task<IActionResult> ObterMinhasTarefas()
+        {
+            
+            var allClaims = User.Claims.ToList();
+            string valorusuario=null;
+
+            // Loga todos os claims para depuração
+            foreach (var claim in allClaims)
+            {
+                // _rabbitMQLogger.LogInformation($"Claim Type: {claim.Type}, Claim Value: {claim.Value}");
+                valorusuario = claim.Value;
+                break;
+            }
+            var usuarioId = valorusuario; // User.FindFirst(JwtRegisteredClaimNames.Sub)?.Value;
+
+            // Obter o ID do usuário logado
+            // var usuarioId = User.FindFirst(JwtRegisteredClaimNames.Sub)?.Value; // 'sub' é o claim padrão para o ID do usuário no JWT
+
+            //     var usuarioId = User.FindFirst("sub")?.Value; // 'sub' é o claim padrão para o ID do usuário no JWT
+           // var emailUsuario = User.Claims. .ToList(). .ToList[0] . FindFirst("id")?.Value; // 'email' é o claim padrão para o e-mail do usuário no JWT
+
+            if (string.IsNullOrEmpty(usuarioId))
+            {
+                _rabbitMQLogger.LogError("Usuário não identificado.");
+                return Unauthorized("Usuário não autenticado.");
             }
 
-            tarefaExistente.Descricao = tarefaAlterada.Descricao;
-            tarefaExistente.Status = tarefaAlterada.Status;
+            // Converte o usuarioId para int (se necessário)
+            int usuarioIdInt = int.Parse(usuarioId);
 
-            // Garantir que a DataVencimento está em UTC
-            tarefaExistente.DataVencimento = DateTime.SpecifyKind(tarefaAlterada.DataVencimento, DateTimeKind.Utc);
+            // Obter as tarefas do usuário logado
+            var minhasTarefas = await _tarefasRepository.ObterTarefasPorUsuario(usuarioIdInt);
 
-            await _context.SaveChangesAsync();
-            _rabbitMQLogger.LogInformation($"Tarefa alterada: {tarefaExistente.Descricao}");
-            _notificationService.EnviarNotificacaoDeTarefaAlterada(tarefaExistente.Descricao);
-
-            return NoContent();
+            _rabbitMQLogger.LogInformation($"Obtendo tarefas do usuário {usuarioIdInt}. Total de tarefas: {minhasTarefas.Count()}");
+            return Ok(minhasTarefas);
         }
 
 
@@ -212,12 +265,7 @@ namespace GerenciamentoTarefasAPI.Controllers
 
 
 
-=======
 
-
-
-       
->>>>>>> dc185a08486fd19f43707bdaa4f524e38bd8532b
 
     }
 }

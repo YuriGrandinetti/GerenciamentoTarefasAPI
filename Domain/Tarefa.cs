@@ -15,7 +15,7 @@ namespace GerenciamentoTarefasAPI.Models
         [Column("descricao")]  // Especifica que o campo "descricao" no banco de dados corresponde à propriedade "Descricao"
         public string Descricao { get; set; }
 
-        [Column("datavencimento")]  // Especifica que o campo "datavencimento" no banco de dados corresponde à propriedade "DataVencimento"
+        [Column("datavencimento", TypeName = "date")] // Especifica que o campo "datavencimento" no banco de dados corresponde à propriedade "DataVencimento"
         public DateTime DataVencimento { get; set; }
 
         [Column("status")]  // Especifica que o campo "status" no banco de dados corresponde à propriedade "Status"

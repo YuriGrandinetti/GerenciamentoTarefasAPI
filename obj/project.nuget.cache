@@ -1,14 +1,8 @@
 {
   "version": 2,
-<<<<<<< HEAD
   "dgSpecHash": "ijx9F0aifxq8QsrdIrHa7uRHrXdPpUwamvKnqGm0JidWq/VLQljiuqLcRIkmVPHDgOLfn3s+j2P9f2etdy9qCQ==",
   "success": true,
   "projectFilePath": "C:\\B3Projeto\\GerenciamentoTarefasAPI\\GerenciamentoTarefas\\GerenciamentoTarefas.csproj",
-=======
-  "dgSpecHash": "7ibnPSCFIqD5bNYL49Fg+c+ITLGrunbVy8AlczHu0gsa5K5pr86Z1IWXdI/5Ro2VSuPyDhvp+sa6H+wcDEiLag==",
-  "success": true,
-  "projectFilePath": "C:\\ProjetoB3\\GerenciamentoTarefasAPI\\GerenciamentoTarefas.csproj",
->>>>>>> dc185a08486fd19f43707bdaa4f524e38bd8532b
   "expectedPackageFiles": [
     "C:\\Users\\Teste\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\Teste\\.nuget\\packages\\microsoft.aspnetcore.authentication.jwtbearer\\6.0.0\\microsoft.aspnetcore.authentication.jwtbearer.6.0.0.nupkg.sha512",
@@ -52,5 +46,12 @@
     "C:\\Users\\Teste\\.nuget\\packages\\system.security.cryptography.cng\\4.5.0\\system.security.cryptography.cng.4.5.0.nupkg.sha512",
     "C:\\Users\\Teste\\.nuget\\packages\\system.threading.channels\\7.0.0\\system.threading.channels.7.0.0.nupkg.sha512"
   ],
-  "logs": []
+  "logs": [
+    {
+      "code": "Undefined",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Problem reading the cache file C:\\B3Projeto\\GerenciamentoTarefasAPI\\GerenciamentoTarefas\\obj\\project.nuget.cache : Invalid property identifier character: <. Path 'version', line 3, position 0."
+    }
+  ]
 }
