@@ -255,6 +255,38 @@ namespace GerenciamentoTarefasAPI.Controllers
             return Ok(minhasTarefas);
         }
 
+        [HttpDelete("{id}")]
+        [SwaggerOperation(Summary = "Exclui uma tarefa existente.", Description = "Remove uma tarefa do banco de dados com base no ID fornecido.")]
+        [ProducesResponseType(204)]
+        [ProducesResponseType(404)]
+        public async Task<IActionResult> ExcluirTarefa(int id)
+        {
+            try
+            {
+                // Busca a tarefa pelo ID
+                var tarefa = await _context.Tarefas.FindAsync(id);
+                if (tarefa == null)
+                {
+                    _rabbitMQLogger.LogError($"Tentativa de excluir tarefa não encontrada: {id}");
+                    return NotFound("Tarefa não encontrada.");
+                }
+
+                // Remove a tarefa do contexto
+                _context.Tarefas.Remove(tarefa);
+                await _context.SaveChangesAsync();
+
+                // Loga a exclusão
+                _rabbitMQLogger.LogInformation($"Tarefa excluída: {tarefa.Descricao}");
+
+                return NoContent();
+            }
+            catch (Exception e)
+            {
+                _rabbitMQLogger.LogError($"Erro ao excluir tarefa: {e.Message}");
+                return StatusCode(500, "Ocorreu um erro ao excluir a tarefa.");
+            }
+        }
+
 
 
 
