@@ -3,7 +3,7 @@
 ## Visão Geral
 
 O projeto `GerenciamentoTarefasAPI` é uma aplicação backend desenvolvida em .NET 6 que fornece uma API para gerenciar tarefas dos usuários. A API oferece funcionalidades como criação, alteração, consulta e exclusão de tarefas, além de autenticação de usuários, notificações via RabbitMQ e organização das tarefas por status (pendente, concluída, cancelada).
-
+Utilizar o Swagger para registrar o Usuario do endpoint http://localhost:5076/api/Usuarios/registrar 
 ## Tecnologias Utilizadas
 
 - **ASP.NET Core 6**: Framework principal para a construção da API.
@@ -12,6 +12,7 @@ O projeto `GerenciamentoTarefasAPI` é uma aplicação backend desenvolvida em .
 - **RabbitMQ**: Sistema de mensageria utilizado para notificações de eventos importantes.
 - **Swagger**: Ferramenta para documentação e testes da API.
 - **JWT (JSON Web Token)**: Sistema de autenticação e autorização dos usuários.
+- **Serilog : Sistema de bibliotecas de logging para suporte para gravação em arquivos.
 
 ## Estrutura do Projeto
 
@@ -143,6 +144,12 @@ Baixe o instalador do RabbitMQ aqui.
 Siga as instruções de instalação.
 Após a instalação, inicie o serviço RabbitMQ através do RabbitMQ Service no Windows Services.
 Acesse a interface de gerenciamento em http://localhost:15672/ (o login padrão é guest e a senha é guest).
+
+5. **Configuração do Serilog:**  
+dotnet add package Serilog.AspNetCore
+dotnet add package Serilog.Sinks.File
+
+Atualize a string de conexão no appsettings.json com as informações do seu banco de dados.
 
 Para mais informações ou dúvidas, entre em contato com:
 - **Yuri Grandinetti Lemes** - [yurigrandi@gmail.com](mailto:yurigrandi@gmail.com)
