@@ -22,7 +22,7 @@ namespace GerenciamentoTarefasAPI.Controllers
         [SwaggerOperation(Summary = "Registra um novo usuário.", Description = "Registra um novo usuário com nome, email e senha.")]
         [ProducesResponseType(typeof(Usuario), 201)]
         [ProducesResponseType(400)]
-        public async Task<IActionResult> RegistrarUsuario(Usuario novoUsuario)
+        public async Task<IActionResult> RegistrarUsuario(UsuariosCreatedDto novoUsuario)
         {
             var usuario = await _usuarioService.RegistrarUsuario(novoUsuario);
             return CreatedAtAction(nameof(ObterUsuarioPorId), new { id = usuario.Id }, usuario);

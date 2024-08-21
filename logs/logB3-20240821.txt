@@ -1,0 +1,664 @@
+2024-08-21 02:08:51.258 -03:00 [INF] User profile is available. Using 'C:\Users\Teste\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-08-21 02:08:51.671 -03:00 [INF] Now listening on: http://localhost:5076
+2024-08-21 02:08:51.676 -03:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-08-21 02:08:51.677 -03:00 [INF] Hosting environment: Development
+2024-08-21 02:08:51.678 -03:00 [INF] Content root path: C:\B3Projeto\GerenciamentoTarefasAPI\GerenciamentoTarefas\
+2024-08-21 02:08:52.906 -03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5076/swagger - -
+2024-08-21 02:08:53.089 -03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5076/swagger - - - 301 0 - 190.0490ms
+2024-08-21 02:08:53.103 -03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5076/swagger/index.html - -
+2024-08-21 02:08:53.361 -03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5076/swagger/swagger-ui-bundle.js - -
+2024-08-21 02:08:53.361 -03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5076/_framework/aspnetcore-browser-refresh.js - -
+2024-08-21 02:08:53.361 -03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5076/swagger/swagger-ui.css - -
+2024-08-21 02:08:53.361 -03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5076/swagger/swagger-ui-standalone-preset.js - -
+2024-08-21 02:08:53.369 -03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5076/swagger/index.html - - - 200 - text/html;charset=utf-8 266.1771ms
+2024-08-21 02:08:53.379 -03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5076/_framework/aspnetcore-browser-refresh.js - - - 200 11954 application/javascript;+charset=utf-8 16.8151ms
+2024-08-21 02:08:53.425 -03:00 [INF] Sending file. Request path: '/swagger-ui.css'. Physical path: 'N/A'
+2024-08-21 02:08:53.429 -03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5076/swagger/swagger-ui.css - - - 200 143632 text/css 69.4189ms
+2024-08-21 02:08:53.430 -03:00 [INF] Sending file. Request path: '/swagger-ui-standalone-preset.js'. Physical path: 'N/A'
+2024-08-21 02:08:53.430 -03:00 [INF] Sending file. Request path: '/swagger-ui-bundle.js'. Physical path: 'N/A'
+2024-08-21 02:08:53.432 -03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5076/swagger/swagger-ui-standalone-preset.js - - - 200 337162 application/javascript 71.4977ms
+2024-08-21 02:08:53.434 -03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5076/swagger/swagger-ui-bundle.js - - - 200 1092889 application/javascript 73.8464ms
+2024-08-21 02:08:53.974 -03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5076/swagger/v1/swagger.json - -
+2024-08-21 02:08:54.218 -03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5076/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 243.8781ms
+2024-08-21 02:13:34 [Information] User profile is available. Using '"C:\Users\Teste\AppData\Local\ASP.NET\DataProtection-Keys"' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-08-21 02:13:35 [Information] Now listening on: "http://localhost:5076"
+2024-08-21 02:13:35 [Information] Application started. Press Ctrl+C to shut down.
+2024-08-21 02:13:35 [Information] Hosting environment: "Development"
+2024-08-21 02:13:35 [Information] Content root path: "C:\B3Projeto\GerenciamentoTarefasAPI\GerenciamentoTarefas\"
+2024-08-21 02:13:36 [Information] Request starting HTTP/1.1 GET http://localhost:5076/swagger - -
+2024-08-21 02:13:36 [Information] Request finished HTTP/1.1 GET http://localhost:5076/swagger - - - 301 0 - 210.7764ms
+2024-08-21 02:13:36 [Information] Request starting HTTP/1.1 GET http://localhost:5076/swagger/index.html - -
+2024-08-21 02:13:37 [Information] Request starting HTTP/1.1 GET http://localhost:5076/swagger/swagger-ui.css - -
+2024-08-21 02:13:37 [Information] Request starting HTTP/1.1 GET http://localhost:5076/swagger/swagger-ui-standalone-preset.js - -
+2024-08-21 02:13:37 [Information] Request finished HTTP/1.1 GET http://localhost:5076/swagger/index.html - - - 200 - text/html;charset=utf-8 276.0902ms
+2024-08-21 02:13:37 [Information] Request starting HTTP/1.1 GET http://localhost:5076/swagger/swagger-ui-bundle.js - -
+2024-08-21 02:13:37 [Information] Request starting HTTP/1.1 GET http://localhost:5076/_framework/aspnetcore-browser-refresh.js - -
+2024-08-21 02:13:37 [Information] Request finished HTTP/1.1 GET http://localhost:5076/_framework/aspnetcore-browser-refresh.js - - - 200 11954 application/javascript;+charset=utf-8 4.9696ms
+2024-08-21 02:13:37 [Information] Sending file. Request path: '"/swagger-ui.css"'. Physical path: '"N/A"'
+2024-08-21 02:13:37 [Information] Sending file. Request path: '"/swagger-ui-bundle.js"'. Physical path: '"N/A"'
+2024-08-21 02:13:37 [Information] Sending file. Request path: '"/swagger-ui-standalone-preset.js"'. Physical path: '"N/A"'
+2024-08-21 02:13:37 [Information] Request finished HTTP/1.1 GET http://localhost:5076/swagger/swagger-ui.css - - - 200 143632 text/css 94.2953ms
+2024-08-21 02:13:37 [Information] Request finished HTTP/1.1 GET http://localhost:5076/swagger/swagger-ui-standalone-preset.js - - - 200 337162 application/javascript 90.8838ms
+2024-08-21 02:13:37 [Information] Request finished HTTP/1.1 GET http://localhost:5076/swagger/swagger-ui-bundle.js - - - 200 1092889 application/javascript 91.7534ms
+2024-08-21 02:13:37 [Information] Request starting HTTP/1.1 GET http://localhost:5076/swagger/v1/swagger.json - -
+2024-08-21 02:13:38 [Information] Request finished HTTP/1.1 GET http://localhost:5076/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 208.3755ms
+2024-08-21 02:14:07 [Information] Request starting HTTP/1.1 OPTIONS http://localhost:5076/api/Usuarios/login - -
+2024-08-21 02:14:07 [Information] CORS policy execution successful.
+2024-08-21 02:14:07 [Information] Request finished HTTP/1.1 OPTIONS http://localhost:5076/api/Usuarios/login - - - 204 - - 18.7354ms
+2024-08-21 02:14:07 [Information] Request starting HTTP/1.1 POST http://localhost:5076/api/Usuarios/login application/json 66
+2024-08-21 02:14:07 [Information] CORS policy execution successful.
+2024-08-21 02:14:07 [Information] Executing endpoint '"GerenciamentoTarefasAPI.Controllers.UsuariosController.LoginUsuario (GerenciamentoTarefas)"'
+2024-08-21 02:14:07 [Information] Route matched with "{action = \"LoginUsuario\", controller = \"Usuarios\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] LoginUsuario(GerenciamentoTarefas.Domain.LoginRequest)" on controller "GerenciamentoTarefasAPI.Controllers.UsuariosController" ("GerenciamentoTarefas").
+2024-08-21 02:14:09 [Information] Request starting HTTP/1.1 POST http://localhost:5076/api/Usuarios/login application/json 66
+2024-08-21 02:14:09 [Information] CORS policy execution successful.
+2024-08-21 02:14:09 [Information] Executing endpoint '"GerenciamentoTarefasAPI.Controllers.UsuariosController.LoginUsuario (GerenciamentoTarefas)"'
+2024-08-21 02:14:09 [Information] Route matched with "{action = \"LoginUsuario\", controller = \"Usuarios\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] LoginUsuario(GerenciamentoTarefas.Domain.LoginRequest)" on controller "GerenciamentoTarefasAPI.Controllers.UsuariosController" ("GerenciamentoTarefas").
+2024-08-21 02:14:09 [Information] Entity Framework Core "6.0.0" initialized '"GerenciamentoTarefasContext"' using provider '"Npgsql.EntityFrameworkCore.PostgreSQL":"6.0.0+025fc55189ae41e3f2b98bcbe4eb44c505653700"' with options: "None"
+2024-08-21 02:14:09 [Information] Entity Framework Core "6.0.0" initialized '"GerenciamentoTarefasContext"' using provider '"Npgsql.EntityFrameworkCore.PostgreSQL":"6.0.0+025fc55189ae41e3f2b98bcbe4eb44c505653700"' with options: "None"
+2024-08-21 02:14:10 [Information] Executed DbCommand ("71"ms) [Parameters=["@__email_0='?'"], CommandType='Text', CommandTimeout='30']"
+""SELECT u.id, u.email, u.nome, u.senha
+FROM usuarios AS u
+WHERE u.email = @__email_0
+LIMIT 1"
+2024-08-21 02:14:10 [Information] Executed DbCommand ("71"ms) [Parameters=["@__email_0='?'"], CommandType='Text', CommandTimeout='30']"
+""SELECT u.id, u.email, u.nome, u.senha
+FROM usuarios AS u
+WHERE u.email = @__email_0
+LIMIT 1"
+2024-08-21 02:14:10 [Information] Executing "OkObjectResult", writing value of type '"<>f__AnonymousType2`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]"'.
+2024-08-21 02:14:10 [Information] Executing "OkObjectResult", writing value of type '"<>f__AnonymousType2`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]"'.
+2024-08-21 02:14:10 [Information] Executed action "GerenciamentoTarefasAPI.Controllers.UsuariosController.LoginUsuario (GerenciamentoTarefas)" in 2973.55ms
+2024-08-21 02:14:10 [Information] Executed action "GerenciamentoTarefasAPI.Controllers.UsuariosController.LoginUsuario (GerenciamentoTarefas)" in 1184.8898ms
+2024-08-21 02:14:10 [Information] Executed endpoint '"GerenciamentoTarefasAPI.Controllers.UsuariosController.LoginUsuario (GerenciamentoTarefas)"'
+2024-08-21 02:14:10 [Information] Executed endpoint '"GerenciamentoTarefasAPI.Controllers.UsuariosController.LoginUsuario (GerenciamentoTarefas)"'
+2024-08-21 02:14:10 [Information] Request finished HTTP/1.1 POST http://localhost:5076/api/Usuarios/login application/json 66 - 200 - application/json;+charset=utf-8 1203.1620ms
+2024-08-21 02:14:10 [Information] Request finished HTTP/1.1 POST http://localhost:5076/api/Usuarios/login application/json 66 - 200 - application/json;+charset=utf-8 3080.6786ms
+2024-08-21 02:14:10 [Information] Request starting HTTP/1.1 OPTIONS http://localhost:5076/api/Tarefas/minhas-tarefas - -
+2024-08-21 02:14:10 [Information] CORS policy execution successful.
+2024-08-21 02:14:10 [Information] Request finished HTTP/1.1 OPTIONS http://localhost:5076/api/Tarefas/minhas-tarefas - - - 204 - - 0.6376ms
+2024-08-21 02:14:10 [Information] Request starting HTTP/1.1 GET http://localhost:5076/api/Tarefas/minhas-tarefas - -
+2024-08-21 02:14:10 [Information] CORS policy execution successful.
+2024-08-21 02:14:10 [Information] Executing endpoint '"GerenciamentoTarefasAPI.Controllers.TarefasController.ObterMinhasTarefas (GerenciamentoTarefas)"'
+2024-08-21 02:14:10 [Information] Route matched with "{action = \"ObterMinhasTarefas\", controller = \"Tarefas\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] ObterMinhasTarefas()" on controller "GerenciamentoTarefasAPI.Controllers.TarefasController" ("GerenciamentoTarefas").
+2024-08-21 02:14:16 [Information] Entity Framework Core "6.0.0" initialized '"GerenciamentoTarefasContext"' using provider '"Npgsql.EntityFrameworkCore.PostgreSQL":"6.0.0+025fc55189ae41e3f2b98bcbe4eb44c505653700"' with options: "None"
+2024-08-21 02:14:16 [Information] Executed DbCommand ("9"ms) [Parameters=["@__usuarioid_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT t.id, t.datavencimento, t.descricao, t.status, t.usuarioid
+FROM tarefas AS t
+WHERE t.usuarioid = @__usuarioid_0"
+2024-08-21 02:14:17 [Information] Executing "OkObjectResult", writing value of type '"System.Collections.Generic.List`1[[GerenciamentoTarefasAPI.Models.Tarefa, GerenciamentoTarefas, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]"'.
+2024-08-21 02:14:17 [Information] Executed action "GerenciamentoTarefasAPI.Controllers.TarefasController.ObterMinhasTarefas (GerenciamentoTarefas)" in 6851.3123ms
+2024-08-21 02:14:17 [Information] Executed endpoint '"GerenciamentoTarefasAPI.Controllers.TarefasController.ObterMinhasTarefas (GerenciamentoTarefas)"'
+2024-08-21 02:14:17 [Information] Request finished HTTP/1.1 GET http://localhost:5076/api/Tarefas/minhas-tarefas - - - 200 - application/json;+charset=utf-8 6918.7966ms
+2024-08-21 02:14:31 [Information] Request starting HTTP/1.1 OPTIONS http://localhost:5076/api/Tarefas/pesquisar?descricao=yuri - -
+2024-08-21 02:14:31 [Information] CORS policy execution successful.
+2024-08-21 02:14:31 [Information] Request finished HTTP/1.1 OPTIONS http://localhost:5076/api/Tarefas/pesquisar?descricao=yuri - - - 204 - - 0.3332ms
+2024-08-21 02:14:31 [Information] Request starting HTTP/1.1 GET http://localhost:5076/api/Tarefas/pesquisar?descricao=yuri - -
+2024-08-21 02:14:31 [Information] CORS policy execution successful.
+2024-08-21 02:14:31 [Information] Executing endpoint '"GerenciamentoTarefasAPI.Controllers.TarefasController.PesquisarTarefas (GerenciamentoTarefas)"'
+2024-08-21 02:14:31 [Information] Route matched with "{action = \"PesquisarTarefas\", controller = \"Tarefas\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] PesquisarTarefas(System.String, System.Nullable`1[System.DateTime], System.String)" on controller "GerenciamentoTarefasAPI.Controllers.TarefasController" ("GerenciamentoTarefas").
+2024-08-21 02:14:33 [Information] Entity Framework Core "6.0.0" initialized '"GerenciamentoTarefasContext"' using provider '"Npgsql.EntityFrameworkCore.PostgreSQL":"6.0.0+025fc55189ae41e3f2b98bcbe4eb44c505653700"' with options: "None"
+2024-08-21 02:14:33 [Information] Executed DbCommand ("3"ms) [Parameters=["@__descricao_0='?'"], CommandType='Text', CommandTimeout='30']"
+""SELECT t.id AS \"Id\", t.descricao AS \"Descricao\", t.status AS \"Status\", t.datavencimento AS \"DataVencimento\", u.nome AS \"UsuarioNome\"
+FROM tarefas AS t
+INNER JOIN usuarios AS u ON t.usuarioid = u.id
+WHERE (@__descricao_0 = '') OR (strpos(t.descricao, @__descricao_0) > 0)"
+2024-08-21 02:14:33 [Information] Executing "OkObjectResult", writing value of type '"System.Collections.Generic.List`1[[<>f__AnonymousType1`5[[System.Int32, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.DateTime, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], GerenciamentoTarefas, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]"'.
+2024-08-21 02:14:33 [Information] Executed action "GerenciamentoTarefasAPI.Controllers.TarefasController.PesquisarTarefas (GerenciamentoTarefas)" in 1742.6237ms
+2024-08-21 02:14:33 [Information] Executed endpoint '"GerenciamentoTarefasAPI.Controllers.TarefasController.PesquisarTarefas (GerenciamentoTarefas)"'
+2024-08-21 02:14:33 [Information] Request finished HTTP/1.1 GET http://localhost:5076/api/Tarefas/pesquisar?descricao=yuri - - - 200 - application/json;+charset=utf-8 1746.5161ms
+2024-08-21 02:14:43 [Information] Request starting HTTP/1.1 OPTIONS http://localhost:5076/api/Tarefas/pesquisar?data=2024-08-22 - -
+2024-08-21 02:14:43 [Information] CORS policy execution successful.
+2024-08-21 02:14:43 [Information] Request finished HTTP/1.1 OPTIONS http://localhost:5076/api/Tarefas/pesquisar?data=2024-08-22 - - - 204 - - 0.3262ms
+2024-08-21 02:14:43 [Information] Request starting HTTP/1.1 GET http://localhost:5076/api/Tarefas/pesquisar?data=2024-08-22 - -
+2024-08-21 02:14:43 [Information] CORS policy execution successful.
+2024-08-21 02:14:43 [Information] Executing endpoint '"GerenciamentoTarefasAPI.Controllers.TarefasController.PesquisarTarefas (GerenciamentoTarefas)"'
+2024-08-21 02:14:43 [Information] Route matched with "{action = \"PesquisarTarefas\", controller = \"Tarefas\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] PesquisarTarefas(System.String, System.Nullable`1[System.DateTime], System.String)" on controller "GerenciamentoTarefasAPI.Controllers.TarefasController" ("GerenciamentoTarefas").
+2024-08-21 02:14:46 [Information] Entity Framework Core "6.0.0" initialized '"GerenciamentoTarefasContext"' using provider '"Npgsql.EntityFrameworkCore.PostgreSQL":"6.0.0+025fc55189ae41e3f2b98bcbe4eb44c505653700"' with options: "None"
+2024-08-21 02:14:46 [Information] Executed DbCommand ("6"ms) [Parameters=["@__data_Value_Date_0='?' (DbType = Date)"], CommandType='Text', CommandTimeout='30']"
+""SELECT t.id AS \"Id\", t.descricao AS \"Descricao\", t.status AS \"Status\", t.datavencimento AS \"DataVencimento\", u.nome AS \"UsuarioNome\"
+FROM tarefas AS t
+INNER JOIN usuarios AS u ON t.usuarioid = u.id
+WHERE date_trunc('day', t.datavencimento) = @__data_Value_Date_0"
+2024-08-21 02:14:46 [Information] Executing "OkObjectResult", writing value of type '"System.Collections.Generic.List`1[[<>f__AnonymousType1`5[[System.Int32, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.DateTime, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], GerenciamentoTarefas, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]"'.
+2024-08-21 02:14:46 [Information] Executed action "GerenciamentoTarefasAPI.Controllers.TarefasController.PesquisarTarefas (GerenciamentoTarefas)" in 2753.0938ms
+2024-08-21 02:14:46 [Information] Executed endpoint '"GerenciamentoTarefasAPI.Controllers.TarefasController.PesquisarTarefas (GerenciamentoTarefas)"'
+2024-08-21 02:14:46 [Information] Request finished HTTP/1.1 GET http://localhost:5076/api/Tarefas/pesquisar?data=2024-08-22 - - - 200 - application/json;+charset=utf-8 2753.5641ms
+2024-08-21 02:15:08 [Information] Request starting HTTP/1.1 OPTIONS http://localhost:5076/api/Tarefas - -
+2024-08-21 02:15:08 [Information] CORS policy execution successful.
+2024-08-21 02:15:08 [Information] Request finished HTTP/1.1 OPTIONS http://localhost:5076/api/Tarefas - - - 204 - - 0.3478ms
+2024-08-21 02:15:08 [Information] Request starting HTTP/1.1 POST http://localhost:5076/api/Tarefas application/json 108
+2024-08-21 02:15:08 [Information] CORS policy execution successful.
+2024-08-21 02:15:08 [Information] Executing endpoint '"GerenciamentoTarefasAPI.Controllers.TarefasController.CriarTarefa (GerenciamentoTarefas)"'
+2024-08-21 02:15:08 [Information] Route matched with "{action = \"CriarTarefa\", controller = \"Tarefas\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] CriarTarefa(GerenciamentoTarefas.Domain.TarefaCreateDto)" on controller "GerenciamentoTarefasAPI.Controllers.TarefasController" ("GerenciamentoTarefas").
+2024-08-21 02:15:09 [Information] Entity Framework Core "6.0.0" initialized '"GerenciamentoTarefasContext"' using provider '"Npgsql.EntityFrameworkCore.PostgreSQL":"6.0.0+025fc55189ae41e3f2b98bcbe4eb44c505653700"' with options: "None"
+2024-08-21 02:15:09 [Information] Executed DbCommand ("1"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT t.id, t.datavencimento, t.descricao, t.status, t.usuarioid
+FROM tarefas AS t
+WHERE t.status = 'Pendente'"
+2024-08-21 02:15:10 [Information] Executed DbCommand ("2"ms) [Parameters=["@p0='?' (DbType = Date), @p1='?', @p2='?', @p3='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""INSERT INTO tarefas (datavencimento, descricao, status, usuarioid)
+VALUES (@p0, @p1, @p2, @p3)
+RETURNING id;"
+2024-08-21 02:15:10 [Information] Executing "CreatedAtActionResult", writing value of type '"GerenciamentoTarefasAPI.Models.Tarefa"'.
+2024-08-21 02:15:10 [Information] Executed action "GerenciamentoTarefasAPI.Controllers.TarefasController.CriarTarefa (GerenciamentoTarefas)" in 2330.8214ms
+2024-08-21 02:15:10 [Information] Executed endpoint '"GerenciamentoTarefasAPI.Controllers.TarefasController.CriarTarefa (GerenciamentoTarefas)"'
+2024-08-21 02:15:10 [Information] Request finished HTTP/1.1 POST http://localhost:5076/api/Tarefas application/json 108 - 201 - application/json;+charset=utf-8 2333.1851ms
+2024-08-21 02:47:30 [Information] User profile is available. Using '"C:\Users\Teste\AppData\Local\ASP.NET\DataProtection-Keys"' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-08-21 02:47:30 [Information] Now listening on: "http://localhost:5076"
+2024-08-21 02:47:30 [Information] Application started. Press Ctrl+C to shut down.
+2024-08-21 02:47:30 [Information] Hosting environment: "Development"
+2024-08-21 02:47:30 [Information] Content root path: "C:\B3Projeto\GerenciamentoTarefasAPI\GerenciamentoTarefas\"
+2024-08-21 02:47:58 [Information] User profile is available. Using '"C:\Users\Teste\AppData\Local\ASP.NET\DataProtection-Keys"' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-08-21 02:47:59 [Information] Now listening on: "http://localhost:5076"
+2024-08-21 02:47:59 [Information] Application started. Press Ctrl+C to shut down.
+2024-08-21 02:47:59 [Information] Hosting environment: "Development"
+2024-08-21 02:47:59 [Information] Content root path: "C:\B3Projeto\GerenciamentoTarefasAPI\GerenciamentoTarefas\"
+2024-08-21 02:48:37 [Information] User profile is available. Using '"C:\Users\Teste\AppData\Local\ASP.NET\DataProtection-Keys"' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-08-21 02:48:37 [Information] Now listening on: "http://localhost:5076"
+2024-08-21 02:48:37 [Information] Application started. Press Ctrl+C to shut down.
+2024-08-21 02:48:37 [Information] Hosting environment: "Development"
+2024-08-21 02:48:37 [Information] Content root path: "C:\B3Projeto\GerenciamentoTarefasAPI\GerenciamentoTarefas\"
+2024-08-21 02:49:00 [Information] User profile is available. Using '"C:\Users\Teste\AppData\Local\ASP.NET\DataProtection-Keys"' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-08-21 02:49:00 [Information] Now listening on: "http://localhost:5076"
+2024-08-21 02:49:00 [Information] Application started. Press Ctrl+C to shut down.
+2024-08-21 02:49:00 [Information] Hosting environment: "Development"
+2024-08-21 02:49:00 [Information] Content root path: "C:\B3Projeto\GerenciamentoTarefasAPI\GerenciamentoTarefas\"
+2024-08-21 02:49:02 [Information] Request starting HTTP/1.1 GET http://localhost:5076/swagger - -
+2024-08-21 02:49:02 [Information] Request finished HTTP/1.1 GET http://localhost:5076/swagger - - - 301 0 - 193.0715ms
+2024-08-21 02:49:02 [Information] Request starting HTTP/1.1 GET http://localhost:5076/swagger/index.html - -
+2024-08-21 02:49:02 [Information] Request starting HTTP/1.1 GET http://localhost:5076/swagger/swagger-ui.css - -
+2024-08-21 02:49:02 [Information] Request starting HTTP/1.1 GET http://localhost:5076/_framework/aspnetcore-browser-refresh.js - -
+2024-08-21 02:49:02 [Information] Request starting HTTP/1.1 GET http://localhost:5076/swagger/swagger-ui-bundle.js - -
+2024-08-21 02:49:02 [Information] Request starting HTTP/1.1 GET http://localhost:5076/swagger/swagger-ui-standalone-preset.js - -
+2024-08-21 02:49:02 [Information] Request finished HTTP/1.1 GET http://localhost:5076/swagger/index.html - - - 200 - text/html;charset=utf-8 252.9980ms
+2024-08-21 02:49:02 [Information] Request finished HTTP/1.1 GET http://localhost:5076/_framework/aspnetcore-browser-refresh.js - - - 200 11954 application/javascript;+charset=utf-8 9.3735ms
+2024-08-21 02:49:02 [Information] Sending file. Request path: '"/swagger-ui-bundle.js"'. Physical path: '"N/A"'
+2024-08-21 02:49:02 [Information] Sending file. Request path: '"/swagger-ui-standalone-preset.js"'. Physical path: '"N/A"'
+2024-08-21 02:49:02 [Information] Sending file. Request path: '"/swagger-ui.css"'. Physical path: '"N/A"'
+2024-08-21 02:49:02 [Information] Request finished HTTP/1.1 GET http://localhost:5076/swagger/swagger-ui-bundle.js - - - 200 1092889 application/javascript 60.1466ms
+2024-08-21 02:49:02 [Information] Request finished HTTP/1.1 GET http://localhost:5076/swagger/swagger-ui-standalone-preset.js - - - 200 337162 application/javascript 58.6428ms
+2024-08-21 02:49:02 [Information] Request finished HTTP/1.1 GET http://localhost:5076/swagger/swagger-ui.css - - - 200 143632 text/css 66.8118ms
+2024-08-21 02:49:03 [Information] Request starting HTTP/1.1 GET http://localhost:5076/swagger/v1/swagger.json - -
+2024-08-21 02:49:03 [Information] Request finished HTTP/1.1 GET http://localhost:5076/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 198.7578ms
+2024-08-21 02:49:44 [Information] Request starting HTTP/1.1 POST http://localhost:5076/api/Usuarios/registrar application/json 80
+2024-08-21 02:49:44 [Information] CORS policy execution failed.
+2024-08-21 02:49:44 [Information] Request origin "http://localhost:5076" does not have permission to access the resource.
+2024-08-21 02:49:44 [Information] Executing endpoint '"GerenciamentoTarefasAPI.Controllers.UsuariosController.RegistrarUsuario (GerenciamentoTarefas)"'
+2024-08-21 02:49:44 [Information] Route matched with "{action = \"RegistrarUsuario\", controller = \"Usuarios\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] RegistrarUsuario(GerenciamentoTarefas.Domain.UsuariosCreatedDto)" on controller "GerenciamentoTarefasAPI.Controllers.UsuariosController" ("GerenciamentoTarefas").
+2024-08-21 02:50:00 [Information] Entity Framework Core "6.0.0" initialized '"GerenciamentoTarefasContext"' using provider '"Npgsql.EntityFrameworkCore.PostgreSQL":"6.0.0+025fc55189ae41e3f2b98bcbe4eb44c505653700"' with options: "None"
+2024-08-21 02:50:01 [Error] Failed executing DbCommand ("81"ms) [Parameters=["@p0='?', @p1='?', @p2='?'"], CommandType='Text', CommandTimeout='30']"
+""INSERT INTO usuarios (email, nome, senha)
+VALUES (@p0, @p1, @p2)
+RETURNING id;"
+2024-08-21 02:50:01 [Error] An exception occurred in the database while saving changes for context type '"GerenciamentoTarefasAPI.Repository.GerenciamentoTarefasContext"'."
+""Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> Npgsql.PostgresException (0x80004005): 23505: duplicar valor da chave viola a restrição de unicidade \"usuarios_email_key\"
+
+DETAIL: Detail redacted as it may contain sensitive data. Specify 'Include Error Detail' in the connection string to include this information.
+   at Npgsql.Internal.NpgsqlConnector.<ReadMessage>g__ReadMessageLong|213_0(NpgsqlConnector connector, Boolean async, DataRowLoadingMode dataRowLoadingMode, Boolean readingNotifications, Boolean isReadingPrependedMessage)
+   at Npgsql.NpgsqlDataReader.NextResult(Boolean async, Boolean isConsuming, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteReader(CommandBehavior behavior, Boolean async, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteReader(CommandBehavior behavior, Boolean async, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteDbDataReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+  Exception data:
+    Severity: ERRO
+    SqlState: 23505
+    MessageText: duplicar valor da chave viola a restrição de unicidade \"usuarios_email_key\"
+    Detail: Detail redacted as it may contain sensitive data. Specify 'Include Error Detail' in the connection string to include this information.
+    SchemaName: public
+    TableName: usuarios
+    ConstraintName: usuarios_email_key
+    File: nbtinsert.c
+    Line: 673
+    Routine: _bt_check_unique
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Npgsql.EntityFrameworkCore.PostgreSQL.Storage.Internal.NpgsqlExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)"
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> Npgsql.PostgresException (0x80004005): 23505: duplicar valor da chave viola a restrição de unicidade "usuarios_email_key"
+
+DETAIL: Detail redacted as it may contain sensitive data. Specify 'Include Error Detail' in the connection string to include this information.
+   at Npgsql.Internal.NpgsqlConnector.<ReadMessage>g__ReadMessageLong|213_0(NpgsqlConnector connector, Boolean async, DataRowLoadingMode dataRowLoadingMode, Boolean readingNotifications, Boolean isReadingPrependedMessage)
+   at Npgsql.NpgsqlDataReader.NextResult(Boolean async, Boolean isConsuming, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteReader(CommandBehavior behavior, Boolean async, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteReader(CommandBehavior behavior, Boolean async, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteDbDataReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+  Exception data:
+    Severity: ERRO
+    SqlState: 23505
+    MessageText: duplicar valor da chave viola a restrição de unicidade "usuarios_email_key"
+    Detail: Detail redacted as it may contain sensitive data. Specify 'Include Error Detail' in the connection string to include this information.
+    SchemaName: public
+    TableName: usuarios
+    ConstraintName: usuarios_email_key
+    File: nbtinsert.c
+    Line: 673
+    Routine: _bt_check_unique
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Npgsql.EntityFrameworkCore.PostgreSQL.Storage.Internal.NpgsqlExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+2024-08-21 02:50:01 [Information] Executed action "GerenciamentoTarefasAPI.Controllers.UsuariosController.RegistrarUsuario (GerenciamentoTarefas)" in 17049.3413ms
+2024-08-21 02:50:01 [Information] Executed endpoint '"GerenciamentoTarefasAPI.Controllers.UsuariosController.RegistrarUsuario (GerenciamentoTarefas)"'
+2024-08-21 02:50:01 [Error] An unhandled exception has occurred while executing the request.
+Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while saving the entity changes. See the inner exception for details.
+ ---> Npgsql.PostgresException (0x80004005): 23505: duplicar valor da chave viola a restrição de unicidade "usuarios_email_key"
+
+DETAIL: Detail redacted as it may contain sensitive data. Specify 'Include Error Detail' in the connection string to include this information.
+   at Npgsql.Internal.NpgsqlConnector.<ReadMessage>g__ReadMessageLong|213_0(NpgsqlConnector connector, Boolean async, DataRowLoadingMode dataRowLoadingMode, Boolean readingNotifications, Boolean isReadingPrependedMessage)
+   at Npgsql.NpgsqlDataReader.NextResult(Boolean async, Boolean isConsuming, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteReader(CommandBehavior behavior, Boolean async, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteReader(CommandBehavior behavior, Boolean async, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteDbDataReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+  Exception data:
+    Severity: ERRO
+    SqlState: 23505
+    MessageText: duplicar valor da chave viola a restrição de unicidade "usuarios_email_key"
+    Detail: Detail redacted as it may contain sensitive data. Specify 'Include Error Detail' in the connection string to include this information.
+    SchemaName: public
+    TableName: usuarios
+    ConstraintName: usuarios_email_key
+    File: nbtinsert.c
+    Line: 673
+    Routine: _bt_check_unique
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(StateManager stateManager, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Npgsql.EntityFrameworkCore.PostgreSQL.Storage.Internal.NpgsqlExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at GerenciamentoTarefasAPI.Services.UsuarioService.RegistrarUsuario(UsuariosCreatedDto novoUsuario) in C:\B3Projeto\GerenciamentoTarefasAPI\GerenciamentoTarefas\Services\UsuarioService.cs:line 39
+   at GerenciamentoTarefasAPI.Controllers.UsuariosController.RegistrarUsuario(UsuariosCreatedDto novoUsuario) in C:\B3Projeto\GerenciamentoTarefasAPI\GerenciamentoTarefas\Controllers\UsuariosController.cs:line 27
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2024-08-21 02:50:01 [Information] Request finished HTTP/1.1 POST http://localhost:5076/api/Usuarios/registrar application/json 80 - 500 - text/plain;+charset=utf-8 17278.8117ms
+2024-08-21 02:53:13 [Information] Request starting HTTP/1.1 POST http://localhost:5076/api/Usuarios/registrar application/json 87
+2024-08-21 02:53:13 [Information] CORS policy execution failed.
+2024-08-21 02:53:13 [Information] Request origin "http://localhost:5076" does not have permission to access the resource.
+2024-08-21 02:53:13 [Information] Executing endpoint '"GerenciamentoTarefasAPI.Controllers.UsuariosController.RegistrarUsuario (GerenciamentoTarefas)"'
+2024-08-21 02:53:13 [Information] Route matched with "{action = \"RegistrarUsuario\", controller = \"Usuarios\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] RegistrarUsuario(GerenciamentoTarefas.Domain.UsuariosCreatedDto)" on controller "GerenciamentoTarefasAPI.Controllers.UsuariosController" ("GerenciamentoTarefas").
+2024-08-21 02:53:20 [Information] Entity Framework Core "6.0.0" initialized '"GerenciamentoTarefasContext"' using provider '"Npgsql.EntityFrameworkCore.PostgreSQL":"6.0.0+025fc55189ae41e3f2b98bcbe4eb44c505653700"' with options: "None"
+2024-08-21 02:53:26 [Information] Executed DbCommand ("28"ms) [Parameters=["@p0='?', @p1='?', @p2='?'"], CommandType='Text', CommandTimeout='30']"
+""INSERT INTO usuarios (email, nome, senha)
+VALUES (@p0, @p1, @p2)
+RETURNING id;"
+2024-08-21 02:53:42 [Information] Executing "CreatedAtActionResult", writing value of type '"GerenciamentoTarefasAPI.Models.Usuario"'.
+2024-08-21 02:53:42 [Information] Executed action "GerenciamentoTarefasAPI.Controllers.UsuariosController.RegistrarUsuario (GerenciamentoTarefas)" in 29384.7047ms
+2024-08-21 02:53:42 [Information] Executed endpoint '"GerenciamentoTarefasAPI.Controllers.UsuariosController.RegistrarUsuario (GerenciamentoTarefas)"'
+2024-08-21 02:53:42 [Information] Request finished HTTP/1.1 POST http://localhost:5076/api/Usuarios/registrar application/json 87 - 201 - application/json;+charset=utf-8 29392.9771ms
+2024-08-21 02:53:43 [Information] Request starting HTTP/1.1 GET http://localhost:5076/swagger/index.html - -
+2024-08-21 02:53:43 [Information] Request finished HTTP/1.1 GET http://localhost:5076/swagger/index.html - - - 200 - text/html;charset=utf-8 25.9544ms
+2024-08-21 02:53:43 [Information] Request starting HTTP/1.1 GET http://localhost:5076/swagger/swagger-ui.css - -
+2024-08-21 02:53:43 [Information] Request starting HTTP/1.1 GET http://localhost:5076/swagger/swagger-ui-standalone-preset.js - -
+2024-08-21 02:53:43 [Information] Request starting HTTP/1.1 GET http://localhost:5076/swagger/swagger-ui-bundle.js - -
+2024-08-21 02:53:43 [Information] Sending file. Request path: '"/swagger-ui.css"'. Physical path: '"N/A"'
+2024-08-21 02:53:43 [Information] Request starting HTTP/1.1 GET http://localhost:5076/_framework/aspnetcore-browser-refresh.js - -
+2024-08-21 02:53:43 [Information] Request finished HTTP/1.1 GET http://localhost:5076/swagger/swagger-ui.css - - - 200 143632 text/css 37.4507ms
+2024-08-21 02:53:43 [Information] Request finished HTTP/1.1 GET http://localhost:5076/_framework/aspnetcore-browser-refresh.js - - - 200 11954 application/javascript;+charset=utf-8 2.7876ms
+2024-08-21 02:53:43 [Information] Sending file. Request path: '"/swagger-ui-standalone-preset.js"'. Physical path: '"N/A"'
+2024-08-21 02:53:43 [Information] Request finished HTTP/1.1 GET http://localhost:5076/swagger/swagger-ui-standalone-preset.js - - - 200 337162 application/javascript 39.2025ms
+2024-08-21 02:53:43 [Information] Sending file. Request path: '"/swagger-ui-bundle.js"'. Physical path: '"N/A"'
+2024-08-21 02:53:43 [Information] Request finished HTTP/1.1 GET http://localhost:5076/swagger/swagger-ui-bundle.js - - - 200 1092889 application/javascript 32.5753ms
+2024-08-21 02:53:43 [Information] Request starting HTTP/1.1 GET http://localhost:5076/swagger/v1/swagger.json - -
+2024-08-21 02:53:43 [Information] Request starting HTTP/1.1 GET http://localhost:5076/swagger/favicon-32x32.png - -
+2024-08-21 02:53:43 [Information] Sending file. Request path: '"/favicon-32x32.png"'. Physical path: '"N/A"'
+2024-08-21 02:53:43 [Information] Request finished HTTP/1.1 GET http://localhost:5076/swagger/favicon-32x32.png - - - 200 628 image/png 0.3584ms
+2024-08-21 02:53:43 [Information] Request finished HTTP/1.1 GET http://localhost:5076/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 16.8499ms
+2024-08-21 03:04:03 [Information] User profile is available. Using '"C:\Users\Teste\AppData\Local\ASP.NET\DataProtection-Keys"' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-08-21 03:04:04 [Information] Now listening on: "http://localhost:5076"
+2024-08-21 03:04:04 [Information] Application started. Press Ctrl+C to shut down.
+2024-08-21 03:04:04 [Information] Hosting environment: "Development"
+2024-08-21 03:04:04 [Information] Content root path: "C:\B3Projeto\GerenciamentoTarefasAPI\GerenciamentoTarefas\"
+2024-08-21 03:04:05 [Information] Request starting HTTP/1.1 GET http://localhost:5076/swagger - -
+2024-08-21 03:04:05 [Information] Request finished HTTP/1.1 GET http://localhost:5076/swagger - - - 301 0 - 138.4444ms
+2024-08-21 03:04:05 [Information] Request starting HTTP/1.1 GET http://localhost:5076/swagger/index.html - -
+2024-08-21 03:04:05 [Information] Request starting HTTP/1.1 GET http://localhost:5076/swagger/swagger-ui-standalone-preset.js - -
+2024-08-21 03:04:05 [Information] Request starting HTTP/1.1 GET http://localhost:5076/swagger/swagger-ui-bundle.js - -
+2024-08-21 03:04:05 [Information] Request starting HTTP/1.1 GET http://localhost:5076/swagger/swagger-ui.css - -
+2024-08-21 03:04:05 [Information] Request starting HTTP/1.1 GET http://localhost:5076/_framework/aspnetcore-browser-refresh.js - -
+2024-08-21 03:04:05 [Information] Request finished HTTP/1.1 GET http://localhost:5076/swagger/index.html - - - 200 - text/html;charset=utf-8 200.7068ms
+2024-08-21 03:04:05 [Information] Request finished HTTP/1.1 GET http://localhost:5076/_framework/aspnetcore-browser-refresh.js - - - 200 11954 application/javascript;+charset=utf-8 6.4901ms
+2024-08-21 03:04:05 [Information] Sending file. Request path: '"/swagger-ui-bundle.js"'. Physical path: '"N/A"'
+2024-08-21 03:04:05 [Information] Sending file. Request path: '"/swagger-ui.css"'. Physical path: '"N/A"'
+2024-08-21 03:04:05 [Information] Sending file. Request path: '"/swagger-ui-standalone-preset.js"'. Physical path: '"N/A"'
+2024-08-21 03:04:05 [Information] Request finished HTTP/1.1 GET http://localhost:5076/swagger/swagger-ui-bundle.js - - - 200 1092889 application/javascript 48.0676ms
+2024-08-21 03:04:05 [Information] Request finished HTTP/1.1 GET http://localhost:5076/swagger/swagger-ui.css - - - 200 143632 text/css 50.6069ms
+2024-08-21 03:04:05 [Information] Request finished HTTP/1.1 GET http://localhost:5076/swagger/swagger-ui-standalone-preset.js - - - 200 337162 application/javascript 48.2163ms
+2024-08-21 03:04:05 [Information] Request starting HTTP/1.1 GET http://localhost:5076/swagger/v1/swagger.json - -
+2024-08-21 03:04:06 [Information] Request finished HTTP/1.1 GET http://localhost:5076/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 158.7084ms
+2024-08-21 03:04:44 [Information] Request starting HTTP/1.1 POST http://localhost:5076/api/Usuarios/registrar application/json 96
+2024-08-21 03:04:44 [Information] CORS policy execution failed.
+2024-08-21 03:04:44 [Information] Request origin "http://localhost:5076" does not have permission to access the resource.
+2024-08-21 03:04:44 [Information] Executing endpoint '"GerenciamentoTarefasAPI.Controllers.UsuariosController.RegistrarUsuario (GerenciamentoTarefas)"'
+2024-08-21 03:04:44 [Information] Route matched with "{action = \"RegistrarUsuario\", controller = \"Usuarios\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] RegistrarUsuario(GerenciamentoTarefas.Domain.UsuariosCreatedDto)" on controller "GerenciamentoTarefasAPI.Controllers.UsuariosController" ("GerenciamentoTarefas").
+2024-08-21 03:05:03 [Information] Entity Framework Core "6.0.0" initialized '"GerenciamentoTarefasContext"' using provider '"Npgsql.EntityFrameworkCore.PostgreSQL":"6.0.0+025fc55189ae41e3f2b98bcbe4eb44c505653700"' with options: "None"
+2024-08-21 03:05:04 [Information] Executed DbCommand ("87"ms) [Parameters=["@__novoUsuario_email_0='?'"], CommandType='Text', CommandTimeout='30']"
+""SELECT u.id, u.email, u.nome, u.senha
+FROM usuarios AS u
+WHERE u.email = @__novoUsuario_email_0
+LIMIT 1"
+2024-08-21 03:05:12 [Information] Executed action "GerenciamentoTarefasAPI.Controllers.UsuariosController.RegistrarUsuario (GerenciamentoTarefas)" in 27439.6053ms
+2024-08-21 03:05:12 [Information] Executed endpoint '"GerenciamentoTarefasAPI.Controllers.UsuariosController.RegistrarUsuario (GerenciamentoTarefas)"'
+2024-08-21 03:05:12 [Error] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: Já existe um usuário com este e-mail.
+   at GerenciamentoTarefasAPI.Services.UsuarioService.RegistrarUsuario(UsuariosCreatedDto novoUsuario) in C:\B3Projeto\GerenciamentoTarefasAPI\GerenciamentoTarefas\Services\UsuarioService.cs:line 47
+   at GerenciamentoTarefasAPI.Controllers.UsuariosController.RegistrarUsuario(UsuariosCreatedDto novoUsuario) in C:\B3Projeto\GerenciamentoTarefasAPI\GerenciamentoTarefas\Controllers\UsuariosController.cs:line 27
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2024-08-21 03:05:12 [Information] Request finished HTTP/1.1 POST http://localhost:5076/api/Usuarios/registrar application/json 96 - 500 - text/plain;+charset=utf-8 27727.0414ms
+2024-08-21 03:05:36 [Information] User profile is available. Using '"C:\Users\Teste\AppData\Local\ASP.NET\DataProtection-Keys"' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-08-21 03:05:36 [Information] Now listening on: "http://localhost:5076"
+2024-08-21 03:05:36 [Information] Application started. Press Ctrl+C to shut down.
+2024-08-21 03:05:36 [Information] Hosting environment: "Development"
+2024-08-21 03:05:36 [Information] Content root path: "C:\B3Projeto\GerenciamentoTarefasAPI\GerenciamentoTarefas\"
+2024-08-21 03:05:37 [Information] Request starting HTTP/1.1 GET http://localhost:5076/swagger - -
+2024-08-21 03:05:37 [Information] Request finished HTTP/1.1 GET http://localhost:5076/swagger - - - 301 0 - 187.4763ms
+2024-08-21 03:05:37 [Information] Request starting HTTP/1.1 GET http://localhost:5076/swagger/index.html - -
+2024-08-21 03:05:38 [Information] Request starting HTTP/1.1 GET http://localhost:5076/swagger/swagger-ui.css - -
+2024-08-21 03:05:38 [Information] Request starting HTTP/1.1 GET http://localhost:5076/_framework/aspnetcore-browser-refresh.js - -
+2024-08-21 03:05:38 [Information] Request starting HTTP/1.1 GET http://localhost:5076/swagger/swagger-ui-standalone-preset.js - -
+2024-08-21 03:05:38 [Information] Request starting HTTP/1.1 GET http://localhost:5076/swagger/swagger-ui-bundle.js - -
+2024-08-21 03:05:38 [Information] Request finished HTTP/1.1 GET http://localhost:5076/_framework/aspnetcore-browser-refresh.js - - - 200 11954 application/javascript;+charset=utf-8 12.3754ms
+2024-08-21 03:05:38 [Information] Request finished HTTP/1.1 GET http://localhost:5076/swagger/index.html - - - 200 - text/html;charset=utf-8 185.5743ms
+2024-08-21 03:05:38 [Information] Sending file. Request path: '"/swagger-ui.css"'. Physical path: '"N/A"'
+2024-08-21 03:05:38 [Information] Sending file. Request path: '"/swagger-ui-standalone-preset.js"'. Physical path: '"N/A"'
+2024-08-21 03:05:38 [Information] Sending file. Request path: '"/swagger-ui-bundle.js"'. Physical path: '"N/A"'
+2024-08-21 03:05:38 [Information] Request finished HTTP/1.1 GET http://localhost:5076/swagger/swagger-ui.css - - - 200 143632 text/css 61.9094ms
+2024-08-21 03:05:38 [Information] Request finished HTTP/1.1 GET http://localhost:5076/swagger/swagger-ui-standalone-preset.js - - - 200 337162 application/javascript 54.5214ms
+2024-08-21 03:05:38 [Information] Request finished HTTP/1.1 GET http://localhost:5076/swagger/swagger-ui-bundle.js - - - 200 1092889 application/javascript 47.9530ms
+2024-08-21 03:05:38 [Information] Request starting HTTP/1.1 GET http://localhost:5076/swagger/v1/swagger.json - -
+2024-08-21 03:05:38 [Information] Request finished HTTP/1.1 GET http://localhost:5076/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 170.9391ms
+2024-08-21 03:06:31 [Information] Request starting HTTP/1.1 OPTIONS http://localhost:5076/api/Usuarios/login - -
+2024-08-21 03:06:31 [Information] CORS policy execution successful.
+2024-08-21 03:06:31 [Information] Request finished HTTP/1.1 OPTIONS http://localhost:5076/api/Usuarios/login - - - 204 - - 14.8224ms
+2024-08-21 03:06:31 [Information] Request starting HTTP/1.1 POST http://localhost:5076/api/Usuarios/login application/json 74
+2024-08-21 03:06:31 [Information] CORS policy execution successful.
+2024-08-21 03:06:31 [Information] Executing endpoint '"GerenciamentoTarefasAPI.Controllers.UsuariosController.LoginUsuario (GerenciamentoTarefas)"'
+2024-08-21 03:06:31 [Information] Route matched with "{action = \"LoginUsuario\", controller = \"Usuarios\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] LoginUsuario(GerenciamentoTarefas.Domain.LoginRequest)" on controller "GerenciamentoTarefasAPI.Controllers.UsuariosController" ("GerenciamentoTarefas").
+2024-08-21 03:06:32 [Information] Entity Framework Core "6.0.0" initialized '"GerenciamentoTarefasContext"' using provider '"Npgsql.EntityFrameworkCore.PostgreSQL":"6.0.0+025fc55189ae41e3f2b98bcbe4eb44c505653700"' with options: "None"
+2024-08-21 03:06:33 [Information] Executed DbCommand ("75"ms) [Parameters=["@__email_0='?'"], CommandType='Text', CommandTimeout='30']"
+""SELECT u.id, u.email, u.nome, u.senha
+FROM usuarios AS u
+WHERE u.email = @__email_0
+LIMIT 1"
+2024-08-21 03:06:33 [Information] Executing "BadRequestObjectResult", writing value of type '"System.String"'.
+2024-08-21 03:06:33 [Information] Executed action "GerenciamentoTarefasAPI.Controllers.UsuariosController.LoginUsuario (GerenciamentoTarefas)" in 1671.9347ms
+2024-08-21 03:06:33 [Information] Executed endpoint '"GerenciamentoTarefasAPI.Controllers.UsuariosController.LoginUsuario (GerenciamentoTarefas)"'
+2024-08-21 03:06:33 [Information] Request finished HTTP/1.1 POST http://localhost:5076/api/Usuarios/login application/json 74 - 400 - text/plain;+charset=utf-8 1772.4149ms
+2024-08-21 03:06:37 [Information] Request starting HTTP/1.1 OPTIONS http://localhost:5076/api/Usuarios/login - -
+2024-08-21 03:06:37 [Information] CORS policy execution successful.
+2024-08-21 03:06:37 [Information] Request finished HTTP/1.1 OPTIONS http://localhost:5076/api/Usuarios/login - - - 204 - - 2.3653ms
+2024-08-21 03:06:37 [Information] Request starting HTTP/1.1 POST http://localhost:5076/api/Usuarios/login application/json 74
+2024-08-21 03:06:37 [Information] CORS policy execution successful.
+2024-08-21 03:06:37 [Information] Executing endpoint '"GerenciamentoTarefasAPI.Controllers.UsuariosController.LoginUsuario (GerenciamentoTarefas)"'
+2024-08-21 03:06:37 [Information] Route matched with "{action = \"LoginUsuario\", controller = \"Usuarios\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] LoginUsuario(GerenciamentoTarefas.Domain.LoginRequest)" on controller "GerenciamentoTarefasAPI.Controllers.UsuariosController" ("GerenciamentoTarefas").
+2024-08-21 03:06:37 [Information] Entity Framework Core "6.0.0" initialized '"GerenciamentoTarefasContext"' using provider '"Npgsql.EntityFrameworkCore.PostgreSQL":"6.0.0+025fc55189ae41e3f2b98bcbe4eb44c505653700"' with options: "None"
+2024-08-21 03:06:37 [Information] Executed DbCommand ("5"ms) [Parameters=["@__email_0='?'"], CommandType='Text', CommandTimeout='30']"
+""SELECT u.id, u.email, u.nome, u.senha
+FROM usuarios AS u
+WHERE u.email = @__email_0
+LIMIT 1"
+2024-08-21 03:06:37 [Information] Executing "BadRequestObjectResult", writing value of type '"System.String"'.
+2024-08-21 03:06:37 [Information] Executed action "GerenciamentoTarefasAPI.Controllers.UsuariosController.LoginUsuario (GerenciamentoTarefas)" in 21.2834ms
+2024-08-21 03:06:37 [Information] Executed endpoint '"GerenciamentoTarefasAPI.Controllers.UsuariosController.LoginUsuario (GerenciamentoTarefas)"'
+2024-08-21 03:06:37 [Information] Request finished HTTP/1.1 POST http://localhost:5076/api/Usuarios/login application/json 74 - 400 - text/plain;+charset=utf-8 22.2411ms
+2024-08-21 03:07:59 [Information] Request starting HTTP/1.1 POST http://localhost:5076/api/Usuarios/login application/json 66
+2024-08-21 03:07:59 [Information] CORS policy execution failed.
+2024-08-21 03:07:59 [Information] Request origin "http://localhost:5076" does not have permission to access the resource.
+2024-08-21 03:07:59 [Information] Executing endpoint '"GerenciamentoTarefasAPI.Controllers.UsuariosController.LoginUsuario (GerenciamentoTarefas)"'
+2024-08-21 03:07:59 [Information] Route matched with "{action = \"LoginUsuario\", controller = \"Usuarios\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] LoginUsuario(GerenciamentoTarefas.Domain.LoginRequest)" on controller "GerenciamentoTarefasAPI.Controllers.UsuariosController" ("GerenciamentoTarefas").
+2024-08-21 03:07:59 [Information] Entity Framework Core "6.0.0" initialized '"GerenciamentoTarefasContext"' using provider '"Npgsql.EntityFrameworkCore.PostgreSQL":"6.0.0+025fc55189ae41e3f2b98bcbe4eb44c505653700"' with options: "None"
+2024-08-21 03:07:59 [Information] Executed DbCommand ("1"ms) [Parameters=["@__email_0='?'"], CommandType='Text', CommandTimeout='30']"
+""SELECT u.id, u.email, u.nome, u.senha
+FROM usuarios AS u
+WHERE u.email = @__email_0
+LIMIT 1"
+2024-08-21 03:07:59 [Information] Executing "BadRequestObjectResult", writing value of type '"System.String"'.
+2024-08-21 03:07:59 [Information] Executed action "GerenciamentoTarefasAPI.Controllers.UsuariosController.LoginUsuario (GerenciamentoTarefas)" in 45.671ms
+2024-08-21 03:07:59 [Information] Executed endpoint '"GerenciamentoTarefasAPI.Controllers.UsuariosController.LoginUsuario (GerenciamentoTarefas)"'
+2024-08-21 03:07:59 [Information] Request finished HTTP/1.1 POST http://localhost:5076/api/Usuarios/login application/json 66 - 400 - text/plain;+charset=utf-8 54.2616ms
+2024-08-21 03:08:32 [Information] Request starting HTTP/1.1 POST http://localhost:5076/api/Usuarios/login application/json 58
+2024-08-21 03:08:32 [Information] CORS policy execution failed.
+2024-08-21 03:08:32 [Information] Request origin "http://localhost:5076" does not have permission to access the resource.
+2024-08-21 03:08:32 [Information] Executing endpoint '"GerenciamentoTarefasAPI.Controllers.UsuariosController.LoginUsuario (GerenciamentoTarefas)"'
+2024-08-21 03:08:32 [Information] Route matched with "{action = \"LoginUsuario\", controller = \"Usuarios\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] LoginUsuario(GerenciamentoTarefas.Domain.LoginRequest)" on controller "GerenciamentoTarefasAPI.Controllers.UsuariosController" ("GerenciamentoTarefas").
+2024-08-21 03:08:32 [Information] Entity Framework Core "6.0.0" initialized '"GerenciamentoTarefasContext"' using provider '"Npgsql.EntityFrameworkCore.PostgreSQL":"6.0.0+025fc55189ae41e3f2b98bcbe4eb44c505653700"' with options: "None"
+2024-08-21 03:08:32 [Information] Executed DbCommand ("6"ms) [Parameters=["@__email_0='?'"], CommandType='Text', CommandTimeout='30']"
+""SELECT u.id, u.email, u.nome, u.senha
+FROM usuarios AS u
+WHERE u.email = @__email_0
+LIMIT 1"
+2024-08-21 03:08:33 [Information] Executing "OkObjectResult", writing value of type '"<>f__AnonymousType2`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]"'.
+2024-08-21 03:08:33 [Information] Executed action "GerenciamentoTarefasAPI.Controllers.UsuariosController.LoginUsuario (GerenciamentoTarefas)" in 288.5637ms
+2024-08-21 03:08:33 [Information] Executed endpoint '"GerenciamentoTarefasAPI.Controllers.UsuariosController.LoginUsuario (GerenciamentoTarefas)"'
+2024-08-21 03:08:33 [Information] Request finished HTTP/1.1 POST http://localhost:5076/api/Usuarios/login application/json 58 - 200 - application/json;+charset=utf-8 294.1983ms
+2024-08-21 03:08:54 [Information] Request starting HTTP/1.1 OPTIONS http://localhost:5076/api/Usuarios/login - -
+2024-08-21 03:08:54 [Information] CORS policy execution successful.
+2024-08-21 03:08:54 [Information] Request finished HTTP/1.1 OPTIONS http://localhost:5076/api/Usuarios/login - - - 204 - - 1.0477ms
+2024-08-21 03:08:54 [Information] Request starting HTTP/1.1 POST http://localhost:5076/api/Usuarios/login application/json 66
+2024-08-21 03:08:54 [Information] CORS policy execution successful.
+2024-08-21 03:08:54 [Information] Executing endpoint '"GerenciamentoTarefasAPI.Controllers.UsuariosController.LoginUsuario (GerenciamentoTarefas)"'
+2024-08-21 03:08:54 [Information] Route matched with "{action = \"LoginUsuario\", controller = \"Usuarios\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] LoginUsuario(GerenciamentoTarefas.Domain.LoginRequest)" on controller "GerenciamentoTarefasAPI.Controllers.UsuariosController" ("GerenciamentoTarefas").
+2024-08-21 03:08:54 [Information] Entity Framework Core "6.0.0" initialized '"GerenciamentoTarefasContext"' using provider '"Npgsql.EntityFrameworkCore.PostgreSQL":"6.0.0+025fc55189ae41e3f2b98bcbe4eb44c505653700"' with options: "None"
+2024-08-21 03:08:54 [Information] Executed DbCommand ("1"ms) [Parameters=["@__email_0='?'"], CommandType='Text', CommandTimeout='30']"
+""SELECT u.id, u.email, u.nome, u.senha
+FROM usuarios AS u
+WHERE u.email = @__email_0
+LIMIT 1"
+2024-08-21 03:08:54 [Information] Executing "OkObjectResult", writing value of type '"<>f__AnonymousType2`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]"'.
+2024-08-21 03:08:54 [Information] Executed action "GerenciamentoTarefasAPI.Controllers.UsuariosController.LoginUsuario (GerenciamentoTarefas)" in 3.5735ms
+2024-08-21 03:08:54 [Information] Executed endpoint '"GerenciamentoTarefasAPI.Controllers.UsuariosController.LoginUsuario (GerenciamentoTarefas)"'
+2024-08-21 03:08:54 [Information] Request finished HTTP/1.1 POST http://localhost:5076/api/Usuarios/login application/json 66 - 200 - application/json;+charset=utf-8 4.1255ms
+2024-08-21 03:08:54 [Information] Request starting HTTP/1.1 OPTIONS http://localhost:5076/api/Tarefas/minhas-tarefas - -
+2024-08-21 03:08:54 [Information] CORS policy execution successful.
+2024-08-21 03:08:54 [Information] Request finished HTTP/1.1 OPTIONS http://localhost:5076/api/Tarefas/minhas-tarefas - - - 204 - - 0.5477ms
+2024-08-21 03:08:54 [Information] Request starting HTTP/1.1 GET http://localhost:5076/api/Tarefas/minhas-tarefas - -
+2024-08-21 03:08:54 [Information] CORS policy execution successful.
+2024-08-21 03:08:54 [Information] Executing endpoint '"GerenciamentoTarefasAPI.Controllers.TarefasController.ObterMinhasTarefas (GerenciamentoTarefas)"'
+2024-08-21 03:08:54 [Information] Route matched with "{action = \"ObterMinhasTarefas\", controller = \"Tarefas\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] ObterMinhasTarefas()" on controller "GerenciamentoTarefasAPI.Controllers.TarefasController" ("GerenciamentoTarefas").
+2024-08-21 03:08:57 [Information] Entity Framework Core "6.0.0" initialized '"GerenciamentoTarefasContext"' using provider '"Npgsql.EntityFrameworkCore.PostgreSQL":"6.0.0+025fc55189ae41e3f2b98bcbe4eb44c505653700"' with options: "None"
+2024-08-21 03:08:57 [Information] Executed DbCommand ("6"ms) [Parameters=["@__usuarioid_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT t.id, t.datavencimento, t.descricao, t.status, t.usuarioid
+FROM tarefas AS t
+WHERE t.usuarioid = @__usuarioid_0"
+2024-08-21 03:08:58 [Information] Executing "OkObjectResult", writing value of type '"System.Collections.Generic.List`1[[GerenciamentoTarefasAPI.Models.Tarefa, GerenciamentoTarefas, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]"'.
+2024-08-21 03:08:58 [Information] Executed action "GerenciamentoTarefasAPI.Controllers.TarefasController.ObterMinhasTarefas (GerenciamentoTarefas)" in 3811.7768ms
+2024-08-21 03:08:58 [Information] Executed endpoint '"GerenciamentoTarefasAPI.Controllers.TarefasController.ObterMinhasTarefas (GerenciamentoTarefas)"'
+2024-08-21 03:08:58 [Information] Request finished HTTP/1.1 GET http://localhost:5076/api/Tarefas/minhas-tarefas - - - 200 - application/json;+charset=utf-8 3884.4978ms
+2024-08-21 03:09:08 [Information] Request starting HTTP/1.1 OPTIONS http://localhost:5076/api/Tarefas/3 - -
+2024-08-21 03:09:08 [Information] CORS policy execution successful.
+2024-08-21 03:09:08 [Information] Request finished HTTP/1.1 OPTIONS http://localhost:5076/api/Tarefas/3 - - - 204 - - 0.3044ms
+2024-08-21 03:09:08 [Information] Request starting HTTP/1.1 GET http://localhost:5076/api/Tarefas/3 - -
+2024-08-21 03:09:08 [Information] CORS policy execution successful.
+2024-08-21 03:09:08 [Information] Executing endpoint '"GerenciamentoTarefasAPI.Controllers.TarefasController.ObterTarefaPorId (GerenciamentoTarefas)"'
+2024-08-21 03:09:08 [Information] Route matched with "{action = \"ObterTarefaPorId\", controller = \"Tarefas\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] ObterTarefaPorId(Int32)" on controller "GerenciamentoTarefasAPI.Controllers.TarefasController" ("GerenciamentoTarefas").
+2024-08-21 03:09:10 [Information] Entity Framework Core "6.0.0" initialized '"GerenciamentoTarefasContext"' using provider '"Npgsql.EntityFrameworkCore.PostgreSQL":"6.0.0+025fc55189ae41e3f2b98bcbe4eb44c505653700"' with options: "None"
+2024-08-21 03:09:10 [Information] Executed DbCommand ("1"ms) [Parameters=["@__p_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT t.id, t.datavencimento, t.descricao, t.status, t.usuarioid
+FROM tarefas AS t
+WHERE t.id = @__p_0
+LIMIT 1"
+2024-08-21 03:09:10 [Information] Executing "OkObjectResult", writing value of type '"GerenciamentoTarefasAPI.Models.Tarefa"'.
+2024-08-21 03:09:10 [Information] Executed action "GerenciamentoTarefasAPI.Controllers.TarefasController.ObterTarefaPorId (GerenciamentoTarefas)" in 1604.6576ms
+2024-08-21 03:09:10 [Information] Executed endpoint '"GerenciamentoTarefasAPI.Controllers.TarefasController.ObterTarefaPorId (GerenciamentoTarefas)"'
+2024-08-21 03:09:10 [Information] Request finished HTTP/1.1 GET http://localhost:5076/api/Tarefas/3 - - - 200 - application/json;+charset=utf-8 1607.8679ms
+2024-08-21 03:09:13 [Information] Request starting HTTP/1.1 OPTIONS http://localhost:5076/api/Tarefas/3 - -
+2024-08-21 03:09:13 [Information] CORS policy execution successful.
+2024-08-21 03:09:13 [Information] Request finished HTTP/1.1 OPTIONS http://localhost:5076/api/Tarefas/3 - - - 204 - - 0.5042ms
+2024-08-21 03:09:13 [Information] Request starting HTTP/1.1 PUT http://localhost:5076/api/Tarefas/3 application/json 101
+2024-08-21 03:09:13 [Information] CORS policy execution successful.
+2024-08-21 03:09:13 [Information] Executing endpoint '"GerenciamentoTarefasAPI.Controllers.TarefasController.AlterarTarefa (GerenciamentoTarefas)"'
+2024-08-21 03:09:13 [Information] Route matched with "{action = \"AlterarTarefa\", controller = \"Tarefas\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] AlterarTarefa(Int32, GerenciamentoTarefas.Domain.TarefaUpdateDto)" on controller "GerenciamentoTarefasAPI.Controllers.TarefasController" ("GerenciamentoTarefas").
+2024-08-21 03:09:16 [Information] Entity Framework Core "6.0.0" initialized '"GerenciamentoTarefasContext"' using provider '"Npgsql.EntityFrameworkCore.PostgreSQL":"6.0.0+025fc55189ae41e3f2b98bcbe4eb44c505653700"' with options: "None"
+2024-08-21 03:09:16 [Information] Executed DbCommand ("4"ms) [Parameters=["@__p_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT t.id, t.datavencimento, t.descricao, t.status, t.usuarioid
+FROM tarefas AS t
+WHERE t.id = @__p_0
+LIMIT 1"
+2024-08-21 03:09:17 [Information] Executed DbCommand ("16"ms) [Parameters=["@p4='?' (DbType = Int32), @p0='?' (DbType = Date), @p1='?', @p2='?', @p3='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""UPDATE tarefas SET datavencimento = @p0, descricao = @p1, status = @p2, usuarioid = @p3
+WHERE id = @p4;"
+2024-08-21 03:09:17 [Information] Executing StatusCodeResult, setting HTTP status code 204
+2024-08-21 03:09:17 [Information] Executed action "GerenciamentoTarefasAPI.Controllers.TarefasController.AlterarTarefa (GerenciamentoTarefas)" in 4155.0284ms
+2024-08-21 03:09:17 [Information] Executed endpoint '"GerenciamentoTarefasAPI.Controllers.TarefasController.AlterarTarefa (GerenciamentoTarefas)"'
+2024-08-21 03:09:17 [Information] Request finished HTTP/1.1 PUT http://localhost:5076/api/Tarefas/3 application/json 101 - 204 - - 4159.1281ms
+2024-08-21 03:09:17 [Information] Request starting HTTP/1.1 OPTIONS http://localhost:5076/api/Tarefas/minhas-tarefas - -
+2024-08-21 03:09:17 [Information] CORS policy execution successful.
+2024-08-21 03:09:17 [Information] Request finished HTTP/1.1 OPTIONS http://localhost:5076/api/Tarefas/minhas-tarefas - - - 204 - - 0.3860ms
+2024-08-21 03:09:17 [Information] Request starting HTTP/1.1 GET http://localhost:5076/api/Tarefas/minhas-tarefas - -
+2024-08-21 03:09:17 [Information] CORS policy execution successful.
+2024-08-21 03:09:17 [Information] Executing endpoint '"GerenciamentoTarefasAPI.Controllers.TarefasController.ObterMinhasTarefas (GerenciamentoTarefas)"'
+2024-08-21 03:09:17 [Information] Route matched with "{action = \"ObterMinhasTarefas\", controller = \"Tarefas\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] ObterMinhasTarefas()" on controller "GerenciamentoTarefasAPI.Controllers.TarefasController" ("GerenciamentoTarefas").
+2024-08-21 03:09:18 [Information] Entity Framework Core "6.0.0" initialized '"GerenciamentoTarefasContext"' using provider '"Npgsql.EntityFrameworkCore.PostgreSQL":"6.0.0+025fc55189ae41e3f2b98bcbe4eb44c505653700"' with options: "None"
+2024-08-21 03:09:18 [Information] Executed DbCommand ("1"ms) [Parameters=["@__usuarioid_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT t.id, t.datavencimento, t.descricao, t.status, t.usuarioid
+FROM tarefas AS t
+WHERE t.usuarioid = @__usuarioid_0"
+2024-08-21 03:09:18 [Information] Executing "OkObjectResult", writing value of type '"System.Collections.Generic.List`1[[GerenciamentoTarefasAPI.Models.Tarefa, GerenciamentoTarefas, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]"'.
+2024-08-21 03:09:18 [Information] Executed action "GerenciamentoTarefasAPI.Controllers.TarefasController.ObterMinhasTarefas (GerenciamentoTarefas)" in 1748.0062ms
+2024-08-21 03:09:18 [Information] Executed endpoint '"GerenciamentoTarefasAPI.Controllers.TarefasController.ObterMinhasTarefas (GerenciamentoTarefas)"'
+2024-08-21 03:09:18 [Information] Request finished HTTP/1.1 GET http://localhost:5076/api/Tarefas/minhas-tarefas - - - 200 - application/json;+charset=utf-8 1748.8941ms
+2024-08-21 03:09:26 [Information] Request starting HTTP/1.1 OPTIONS http://localhost:5076/api/Tarefas/pesquisar?status=Pendente - -
+2024-08-21 03:09:26 [Information] CORS policy execution successful.
+2024-08-21 03:09:26 [Information] Request finished HTTP/1.1 OPTIONS http://localhost:5076/api/Tarefas/pesquisar?status=Pendente - - - 204 - - 0.2923ms
+2024-08-21 03:09:26 [Information] Request starting HTTP/1.1 GET http://localhost:5076/api/Tarefas/pesquisar?status=Pendente - -
+2024-08-21 03:09:26 [Information] CORS policy execution successful.
+2024-08-21 03:09:26 [Information] Executing endpoint '"GerenciamentoTarefasAPI.Controllers.TarefasController.PesquisarTarefas (GerenciamentoTarefas)"'
+2024-08-21 03:09:26 [Information] Route matched with "{action = \"PesquisarTarefas\", controller = \"Tarefas\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] PesquisarTarefas(System.String, System.Nullable`1[System.DateTime], System.String)" on controller "GerenciamentoTarefasAPI.Controllers.TarefasController" ("GerenciamentoTarefas").
+2024-08-21 03:09:29 [Information] Entity Framework Core "6.0.0" initialized '"GerenciamentoTarefasContext"' using provider '"Npgsql.EntityFrameworkCore.PostgreSQL":"6.0.0+025fc55189ae41e3f2b98bcbe4eb44c505653700"' with options: "None"
+2024-08-21 03:09:29 [Information] Executed DbCommand ("1"ms) [Parameters=["@__ToLower_0='?'"], CommandType='Text', CommandTimeout='30']"
+""SELECT t.id AS \"Id\", t.descricao AS \"Descricao\", t.status AS \"Status\", t.datavencimento AS \"DataVencimento\", u.nome AS \"UsuarioNome\"
+FROM tarefas AS t
+INNER JOIN usuarios AS u ON t.usuarioid = u.id
+WHERE lower(t.status) = @__ToLower_0"
+2024-08-21 03:09:29 [Information] Executing "OkObjectResult", writing value of type '"System.Collections.Generic.List`1[[<>f__AnonymousType1`5[[System.Int32, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.DateTime, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], GerenciamentoTarefas, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]"'.
+2024-08-21 03:09:29 [Information] Executed action "GerenciamentoTarefasAPI.Controllers.TarefasController.PesquisarTarefas (GerenciamentoTarefas)" in 3522.5911ms
+2024-08-21 03:09:29 [Information] Executed endpoint '"GerenciamentoTarefasAPI.Controllers.TarefasController.PesquisarTarefas (GerenciamentoTarefas)"'
+2024-08-21 03:09:29 [Information] Request finished HTTP/1.1 GET http://localhost:5076/api/Tarefas/pesquisar?status=Pendente - - - 200 - application/json;+charset=utf-8 3526.5650ms
+2024-08-21 03:09:38 [Information] Request starting HTTP/1.1 OPTIONS http://localhost:5076/api/Tarefas/pesquisar?status=Cancelada - -
+2024-08-21 03:09:38 [Information] CORS policy execution successful.
+2024-08-21 03:09:38 [Information] Request finished HTTP/1.1 OPTIONS http://localhost:5076/api/Tarefas/pesquisar?status=Cancelada - - - 204 - - 0.3117ms
+2024-08-21 03:09:38 [Information] Request starting HTTP/1.1 GET http://localhost:5076/api/Tarefas/pesquisar?status=Cancelada - -
+2024-08-21 03:09:38 [Information] CORS policy execution successful.
+2024-08-21 03:09:38 [Information] Executing endpoint '"GerenciamentoTarefasAPI.Controllers.TarefasController.PesquisarTarefas (GerenciamentoTarefas)"'
+2024-08-21 03:09:38 [Information] Route matched with "{action = \"PesquisarTarefas\", controller = \"Tarefas\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] PesquisarTarefas(System.String, System.Nullable`1[System.DateTime], System.String)" on controller "GerenciamentoTarefasAPI.Controllers.TarefasController" ("GerenciamentoTarefas").
+2024-08-21 03:09:39 [Information] Entity Framework Core "6.0.0" initialized '"GerenciamentoTarefasContext"' using provider '"Npgsql.EntityFrameworkCore.PostgreSQL":"6.0.0+025fc55189ae41e3f2b98bcbe4eb44c505653700"' with options: "None"
+2024-08-21 03:09:39 [Information] Executed DbCommand ("1"ms) [Parameters=["@__ToLower_0='?'"], CommandType='Text', CommandTimeout='30']"
+""SELECT t.id AS \"Id\", t.descricao AS \"Descricao\", t.status AS \"Status\", t.datavencimento AS \"DataVencimento\", u.nome AS \"UsuarioNome\"
+FROM tarefas AS t
+INNER JOIN usuarios AS u ON t.usuarioid = u.id
+WHERE lower(t.status) = @__ToLower_0"
+2024-08-21 03:09:39 [Information] Executing "OkObjectResult", writing value of type '"System.Collections.Generic.List`1[[<>f__AnonymousType1`5[[System.Int32, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.DateTime, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], GerenciamentoTarefas, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]"'.
+2024-08-21 03:09:39 [Information] Executed action "GerenciamentoTarefasAPI.Controllers.TarefasController.PesquisarTarefas (GerenciamentoTarefas)" in 1417.7924ms
+2024-08-21 03:09:39 [Information] Executed endpoint '"GerenciamentoTarefasAPI.Controllers.TarefasController.PesquisarTarefas (GerenciamentoTarefas)"'
+2024-08-21 03:09:39 [Information] Request finished HTTP/1.1 GET http://localhost:5076/api/Tarefas/pesquisar?status=Cancelada - - - 200 - application/json;+charset=utf-8 1418.6337ms
+2024-08-21 03:09:47 [Information] Request starting HTTP/1.1 OPTIONS http://localhost:5076/api/Tarefas/pesquisar - -
+2024-08-21 03:09:47 [Information] CORS policy execution successful.
+2024-08-21 03:09:47 [Information] Request finished HTTP/1.1 OPTIONS http://localhost:5076/api/Tarefas/pesquisar - - - 204 - - 0.3789ms
+2024-08-21 03:09:47 [Information] Request starting HTTP/1.1 GET http://localhost:5076/api/Tarefas/pesquisar - -
+2024-08-21 03:09:47 [Information] CORS policy execution successful.
+2024-08-21 03:09:47 [Information] Executing endpoint '"GerenciamentoTarefasAPI.Controllers.TarefasController.PesquisarTarefas (GerenciamentoTarefas)"'
+2024-08-21 03:09:47 [Information] Route matched with "{action = \"PesquisarTarefas\", controller = \"Tarefas\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] PesquisarTarefas(System.String, System.Nullable`1[System.DateTime], System.String)" on controller "GerenciamentoTarefasAPI.Controllers.TarefasController" ("GerenciamentoTarefas").
+2024-08-21 03:09:49 [Information] Entity Framework Core "6.0.0" initialized '"GerenciamentoTarefasContext"' using provider '"Npgsql.EntityFrameworkCore.PostgreSQL":"6.0.0+025fc55189ae41e3f2b98bcbe4eb44c505653700"' with options: "None"
+2024-08-21 03:09:49 [Information] Executed DbCommand ("1"ms) [Parameters=[""], CommandType='Text', CommandTimeout='30']"
+""SELECT t.id AS \"Id\", t.descricao AS \"Descricao\", t.status AS \"Status\", t.datavencimento AS \"DataVencimento\", u.nome AS \"UsuarioNome\"
+FROM tarefas AS t
+INNER JOIN usuarios AS u ON t.usuarioid = u.id"
+2024-08-21 03:09:49 [Information] Executing "OkObjectResult", writing value of type '"System.Collections.Generic.List`1[[<>f__AnonymousType1`5[[System.Int32, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.DateTime, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e],[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]], GerenciamentoTarefas, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]"'.
+2024-08-21 03:09:49 [Information] Executed action "GerenciamentoTarefasAPI.Controllers.TarefasController.PesquisarTarefas (GerenciamentoTarefas)" in 1483.7146ms
+2024-08-21 03:09:49 [Information] Executed endpoint '"GerenciamentoTarefasAPI.Controllers.TarefasController.PesquisarTarefas (GerenciamentoTarefas)"'
+2024-08-21 03:09:49 [Information] Request finished HTTP/1.1 GET http://localhost:5076/api/Tarefas/pesquisar - - - 200 - application/json;+charset=utf-8 1484.4415ms
+2024-08-21 03:11:00 [Information] User profile is available. Using '"C:\Users\Teste\AppData\Local\ASP.NET\DataProtection-Keys"' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-08-21 03:11:00 [Information] Now listening on: "http://localhost:5076"
+2024-08-21 03:11:00 [Information] Application started. Press Ctrl+C to shut down.
+2024-08-21 03:11:00 [Information] Hosting environment: "Development"
+2024-08-21 03:11:00 [Information] Content root path: "C:\B3Projeto\GerenciamentoTarefasAPI\GerenciamentoTarefas\"
+2024-08-21 03:11:02 [Information] Request starting HTTP/1.1 GET http://localhost:5076/swagger - -
+2024-08-21 03:11:02 [Information] Request finished HTTP/1.1 GET http://localhost:5076/swagger - - - 301 0 - 143.8415ms
+2024-08-21 03:11:02 [Information] Request starting HTTP/1.1 GET http://localhost:5076/swagger/index.html - -
+2024-08-21 03:11:02 [Information] Request starting HTTP/1.1 GET http://localhost:5076/_framework/aspnetcore-browser-refresh.js - -
+2024-08-21 03:11:02 [Information] Request starting HTTP/1.1 GET http://localhost:5076/swagger/swagger-ui.css - -
+2024-08-21 03:11:02 [Information] Request starting HTTP/1.1 GET http://localhost:5076/swagger/swagger-ui-bundle.js - -
+2024-08-21 03:11:02 [Information] Request starting HTTP/1.1 GET http://localhost:5076/swagger/swagger-ui-standalone-preset.js - -
+2024-08-21 03:11:02 [Information] Request finished HTTP/1.1 GET http://localhost:5076/swagger/index.html - - - 200 - text/html;charset=utf-8 237.3235ms
+2024-08-21 03:11:02 [Information] Request finished HTTP/1.1 GET http://localhost:5076/_framework/aspnetcore-browser-refresh.js - - - 200 11954 application/javascript;+charset=utf-8 5.2299ms
+2024-08-21 03:11:02 [Information] Sending file. Request path: '"/swagger-ui.css"'. Physical path: '"N/A"'
+2024-08-21 03:11:02 [Information] Sending file. Request path: '"/swagger-ui-bundle.js"'. Physical path: '"N/A"'
+2024-08-21 03:11:02 [Information] Sending file. Request path: '"/swagger-ui-standalone-preset.js"'. Physical path: '"N/A"'
+2024-08-21 03:11:02 [Information] Request finished HTTP/1.1 GET http://localhost:5076/swagger/swagger-ui.css - - - 200 143632 text/css 52.7129ms
+2024-08-21 03:11:02 [Information] Request finished HTTP/1.1 GET http://localhost:5076/swagger/swagger-ui-bundle.js - - - 200 1092889 application/javascript 52.7470ms
+2024-08-21 03:11:02 [Information] Request finished HTTP/1.1 GET http://localhost:5076/swagger/swagger-ui-standalone-preset.js - - - 200 337162 application/javascript 52.4787ms
+2024-08-21 03:11:03 [Information] Request starting HTTP/1.1 GET http://localhost:5076/swagger/v1/swagger.json - -
+2024-08-21 03:11:03 [Information] Request finished HTTP/1.1 GET http://localhost:5076/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 229.8074ms
+2024-08-21 09:00:12 [Information] User profile is available. Using '"C:\Users\Teste\AppData\Local\ASP.NET\DataProtection-Keys"' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-08-21 09:00:12 [Information] Now listening on: "http://localhost:5076"
+2024-08-21 09:00:12 [Information] Application started. Press Ctrl+C to shut down.
+2024-08-21 09:00:12 [Information] Hosting environment: "Development"
+2024-08-21 09:00:12 [Information] Content root path: "C:\B3Projeto\GerenciamentoTarefasAPI\GerenciamentoTarefas\"
+2024-08-21 09:00:14 [Information] Request starting HTTP/1.1 GET http://localhost:5076/swagger - -
+2024-08-21 09:00:14 [Information] Request finished HTTP/1.1 GET http://localhost:5076/swagger - - - 301 0 - 157.6216ms
+2024-08-21 09:00:14 [Information] Request starting HTTP/1.1 GET http://localhost:5076/swagger/index.html - -
+2024-08-21 09:00:14 [Information] Request starting HTTP/1.1 GET http://localhost:5076/swagger/swagger-ui-bundle.js - -
+2024-08-21 09:00:14 [Information] Request starting HTTP/1.1 GET http://localhost:5076/swagger/swagger-ui-standalone-preset.js - -
+2024-08-21 09:00:14 [Information] Request starting HTTP/1.1 GET http://localhost:5076/_framework/aspnetcore-browser-refresh.js - -
+2024-08-21 09:00:14 [Information] Request starting HTTP/1.1 GET http://localhost:5076/swagger/swagger-ui.css - -
+2024-08-21 09:00:14 [Information] Request finished HTTP/1.1 GET http://localhost:5076/_framework/aspnetcore-browser-refresh.js - - - 200 11954 application/javascript;+charset=utf-8 4.6115ms
+2024-08-21 09:00:14 [Information] Request finished HTTP/1.1 GET http://localhost:5076/swagger/index.html - - - 200 - text/html;charset=utf-8 197.5444ms
+2024-08-21 09:00:14 [Information] Sending file. Request path: '"/swagger-ui.css"'. Physical path: '"N/A"'
+2024-08-21 09:00:14 [Information] Sending file. Request path: '"/swagger-ui-standalone-preset.js"'. Physical path: '"N/A"'
+2024-08-21 09:00:14 [Information] Request finished HTTP/1.1 GET http://localhost:5076/swagger/swagger-ui.css - - - 200 143632 text/css 47.5974ms
+2024-08-21 09:00:14 [Information] Request finished HTTP/1.1 GET http://localhost:5076/swagger/swagger-ui-standalone-preset.js - - - 200 337162 application/javascript 46.3756ms
+2024-08-21 09:00:14 [Information] Sending file. Request path: '"/swagger-ui-bundle.js"'. Physical path: '"N/A"'
+2024-08-21 09:00:14 [Information] Request finished HTTP/1.1 GET http://localhost:5076/swagger/swagger-ui-bundle.js - - - 200 1092889 application/javascript 49.4894ms
+2024-08-21 09:00:15 [Information] Request starting HTTP/1.1 GET http://localhost:5076/swagger/v1/swagger.json - -
+2024-08-21 09:00:15 [Information] Request finished HTTP/1.1 GET http://localhost:5076/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 247.5177ms

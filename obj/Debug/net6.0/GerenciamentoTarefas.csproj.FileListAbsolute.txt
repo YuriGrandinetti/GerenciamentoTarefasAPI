@@ -44,4 +44,14 @@ C:\B3Projeto\GerenciamentoTarefasAPI\GerenciamentoTarefas\bin\Debug\net6.0\Micro
 C:\B3Projeto\GerenciamentoTarefasAPI\GerenciamentoTarefas\bin\Debug\net6.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
 C:\B3Projeto\GerenciamentoTarefasAPI\GerenciamentoTarefas\bin\Debug\net6.0\Microsoft.IdentityModel.Tokens.dll
 C:\B3Projeto\GerenciamentoTarefasAPI\GerenciamentoTarefas\bin\Debug\net6.0\System.IdentityModel.Tokens.Jwt.dll
+C:\B3Projeto\GerenciamentoTarefasAPI\GerenciamentoTarefas\bin\Debug\net6.0\Microsoft.Extensions.DependencyModel.dll
+C:\B3Projeto\GerenciamentoTarefasAPI\GerenciamentoTarefas\bin\Debug\net6.0\Serilog.dll
+C:\B3Projeto\GerenciamentoTarefasAPI\GerenciamentoTarefas\bin\Debug\net6.0\Serilog.AspNetCore.dll
+C:\B3Projeto\GerenciamentoTarefasAPI\GerenciamentoTarefas\bin\Debug\net6.0\Serilog.Extensions.Hosting.dll
+C:\B3Projeto\GerenciamentoTarefasAPI\GerenciamentoTarefas\bin\Debug\net6.0\Serilog.Extensions.Logging.dll
+C:\B3Projeto\GerenciamentoTarefasAPI\GerenciamentoTarefas\bin\Debug\net6.0\Serilog.Formatting.Compact.dll
+C:\B3Projeto\GerenciamentoTarefasAPI\GerenciamentoTarefas\bin\Debug\net6.0\Serilog.Settings.Configuration.dll
+C:\B3Projeto\GerenciamentoTarefasAPI\GerenciamentoTarefas\bin\Debug\net6.0\Serilog.Sinks.Console.dll
+C:\B3Projeto\GerenciamentoTarefasAPI\GerenciamentoTarefas\bin\Debug\net6.0\Serilog.Sinks.Debug.dll
+C:\B3Projeto\GerenciamentoTarefasAPI\GerenciamentoTarefas\bin\Debug\net6.0\Serilog.Sinks.File.dll
 C:\B3Projeto\GerenciamentoTarefasAPI\GerenciamentoTarefas\obj\Debug\net6.0\GerenciamentoTarefas.csproj.AssemblyReference.cache

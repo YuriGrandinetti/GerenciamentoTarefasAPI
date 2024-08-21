@@ -1,3 +1,4 @@
+using GerenciamentoTarefas.Domain.Interfaces;
 using GerenciamentoTarefasAPI.Repository;
 using GerenciamentoTarefasAPI.Services;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
@@ -5,8 +6,18 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
 using System.Text;
+using Serilog;
 
 var builder = WebApplication.CreateBuilder(args);
+
+// Configurar o Serilog
+Log.Logger = new LoggerConfiguration()
+    .WriteTo.File("logs/logB3-.txt",
+                  rollingInterval: RollingInterval.Day,
+                  outputTemplate: "{Timestamp:yyyy-MM-dd HH:mm:ss} [{Level}] {Message}{NewLine}{Exception}")
+    .CreateLogger();
+
+builder.Host.UseSerilog();
 
 // Configuração de variáveis de ambiente e arquivos de configuração
 builder.Configuration
@@ -70,6 +81,8 @@ builder.Services.AddScoped<TarefasRepository>();
 
 // Registro do UsuarioService
 builder.Services.AddScoped<UsuarioService>();
+
+builder.Services.AddScoped<ITarefasRepository, TarefasRepository>();
 
 // Leitura da chave JWT do Configuration
 var jwtKey = builder.Configuration["Jwt:Key"];

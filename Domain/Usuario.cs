@@ -19,7 +19,7 @@ namespace GerenciamentoTarefasAPI.Models
         public string Senha { get; set; }
 
         // Propriedade de navegação para tarefas
-     
+        [JsonIgnore]  // Ignora a desserialização
         public ICollection<Tarefa> Tarefas { get; set; }
     }
 }

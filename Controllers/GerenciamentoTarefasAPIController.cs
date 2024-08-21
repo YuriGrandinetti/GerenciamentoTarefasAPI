@@ -1,15 +1,16 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using GerenciamentoTarefasAPI.Models;
-using GerenciamentoTarefasAPI.Repository;
 using GerenciamentoTarefasAPI.Services;
 using System.Threading.Tasks;
 using static GerenciamentoTarefas.Domain.Enumeradores;
 using Microsoft.EntityFrameworkCore;
 using Swashbuckle.AspNetCore.Annotations;
 using System.Collections.Generic;
-using System.Globalization;
 using System.IdentityModel.Tokens.Jwt;
 using GerenciamentoTarefas.Domain;
+using System.Linq;
+using GerenciamentoTarefas.Domain.Interfaces;
+using GerenciamentoTarefasAPI.Repository;
 
 namespace GerenciamentoTarefasAPI.Controllers
 {
@@ -18,17 +19,21 @@ namespace GerenciamentoTarefasAPI.Controllers
     public class TarefasController : ControllerBase
     {
         private readonly GerenciamentoTarefasContext _context;
+        private readonly ITarefasRepository _tarefasRepository;
         private readonly NotificationService _notificationService;
         private readonly RabbitMQLogger _rabbitMQLogger;
-        private readonly TarefasRepository _tarefasRepository;
-        public TarefasController(GerenciamentoTarefasContext context, RabbitMQService rabbitMQService, TarefasRepository tarefasRepository)
+
+        public TarefasController(GerenciamentoTarefasContext context,
+            ITarefasRepository tarefasRepository,
+            RabbitMQService rabbitMQService)
         {
             _context = context;
+            _tarefasRepository = tarefasRepository;
             _notificationService = new NotificationService(rabbitMQService);
             _rabbitMQLogger = new RabbitMQLogger(rabbitMQService);
-            _tarefasRepository = tarefasRepository;
         }
-              
+
+        // Mantendo os métodos existentes, mas substituindo o uso do contexto direto pelo repositório.
 
         [HttpPut("{id}/iniciar")]
         [SwaggerOperation(Summary = "Inicia o progresso de uma tarefa.", Description = "Altera o status de uma tarefa para 'Em Progresso'.")]
@@ -36,7 +41,7 @@ namespace GerenciamentoTarefasAPI.Controllers
         [ProducesResponseType(404)]
         public async Task<IActionResult> IniciarTarefa(int id)
         {
-            var tarefa = await _context.Tarefas.FindAsync(id);
+            var tarefa = await _tarefasRepository.ObterTarefaPorId(id);
             if (tarefa == null)
             {
                 _rabbitMQLogger.LogError($"Tentativa de iniciar tarefa não encontrada: {id}");
@@ -44,7 +49,7 @@ namespace GerenciamentoTarefasAPI.Controllers
             }
 
             tarefa.Status = StatusTarefa.EmProgresso.ToString();
-            await _context.SaveChangesAsync();
+            await _tarefasRepository.AtualizarTarefa(tarefa);
 
             _rabbitMQLogger.LogInformation($"Tarefa iniciada: {tarefa.Descricao}");
             _rabbitMQLogger.LogInformation($"Status da tarefa {tarefa.Descricao} alterado para Em Progresso");
@@ -58,7 +63,7 @@ namespace GerenciamentoTarefasAPI.Controllers
         [ProducesResponseType(404)]
         public async Task<IActionResult> ConcluirTarefa(int id)
         {
-            var tarefa = await _context.Tarefas.FindAsync(id);
+            var tarefa = await _tarefasRepository.ObterTarefaPorId(id);
             if (tarefa == null)
             {
                 _rabbitMQLogger.LogError($"Tentativa de concluir tarefa não encontrada: {id}");
@@ -66,7 +71,7 @@ namespace GerenciamentoTarefasAPI.Controllers
             }
 
             tarefa.Status = StatusTarefa.Concluida.ToString();
-            await _context.SaveChangesAsync();
+            await _tarefasRepository.AtualizarTarefa(tarefa);
 
             _rabbitMQLogger.LogInformation($"Tarefa concluída: {tarefa.Descricao}");
             _rabbitMQLogger.LogInformation($"Status da tarefa {tarefa.Descricao} alterado para Concluída");
@@ -81,7 +86,7 @@ namespace GerenciamentoTarefasAPI.Controllers
         [ProducesResponseType(404)]
         public async Task<IActionResult> CancelarTarefa(int id)
         {
-            var tarefa = await _context.Tarefas.FindAsync(id);
+            var tarefa = await _tarefasRepository.ObterTarefaPorId(id);
             if (tarefa == null)
             {
                 _rabbitMQLogger.LogError($"Tentativa de cancelar tarefa não encontrada: {id}");
@@ -89,7 +94,7 @@ namespace GerenciamentoTarefasAPI.Controllers
             }
 
             tarefa.Status = StatusTarefa.Cancelada.ToString();
-            await _context.SaveChangesAsync();
+            await _tarefasRepository.AtualizarTarefa(tarefa);
 
             _rabbitMQLogger.LogInformation($"Tarefa cancelada: {tarefa.Descricao}");
             _rabbitMQLogger.LogInformation($"Status da tarefa {tarefa.Descricao} alterado para Cancelada");
@@ -102,8 +107,8 @@ namespace GerenciamentoTarefasAPI.Controllers
         [ProducesResponseType(typeof(IEnumerable<Tarefa>), 200)]
         public async Task<IActionResult> ObterTarefas()
         {
-            var tarefas = await _context.Tarefas.ToListAsync();
-            _rabbitMQLogger.LogInformation($"Obtendo todas as tarefas. Total de tarefas: {tarefas.Count}");
+            var tarefas = await _tarefasRepository.ObterTarefas();
+            _rabbitMQLogger.LogInformation($"Obtendo todas as tarefas. Total de tarefas: {tarefas.Count()}");
             return Ok(tarefas);
         }
 
@@ -113,7 +118,7 @@ namespace GerenciamentoTarefasAPI.Controllers
         [ProducesResponseType(404)]
         public async Task<IActionResult> ObterTarefaPorId(int id)
         {
-            var tarefa = await _context.Tarefas.FindAsync(id);
+            var tarefa = await _tarefasRepository.ObterTarefaPorId(id);
             if (tarefa == null)
             {
                 _rabbitMQLogger.LogError($"Tentativa de obter tarefa não encontrada: {id}");
@@ -129,11 +134,8 @@ namespace GerenciamentoTarefasAPI.Controllers
         [ProducesResponseType(typeof(IEnumerable<Tarefa>), 200)]
         public async Task<IActionResult> ObterTarefasPendentes()
         {
-            var tarefasPendentes = await _context.Tarefas
-                .Where(t => t.Status == StatusTarefa.Pendente.ToString())
-                .ToListAsync();
-
-            _rabbitMQLogger.LogInformation($"Obtendo todas as tarefas pendentes. Total de tarefas pendentes: {tarefasPendentes.Count}");
+            var tarefasPendentes = await _tarefasRepository.ObterTarefasPendentes();
+            _rabbitMQLogger.LogInformation($"Obtendo todas as tarefas pendentes. Total de tarefas: {tarefasPendentes.Count()}");
             return Ok(tarefasPendentes);
         }
 
@@ -142,11 +144,8 @@ namespace GerenciamentoTarefasAPI.Controllers
         [ProducesResponseType(typeof(IEnumerable<Tarefa>), 200)]
         public async Task<IActionResult> ObterTarefasConcluidas()
         {
-            var tarefasConcluidas = await _context.Tarefas
-                .Where(t => t.Status == StatusTarefa.Concluida.ToString())
-                .ToListAsync();
-
-            _rabbitMQLogger.LogInformation($"Obtendo todas as tarefas concluídas. Total de tarefas concluídas: {tarefasConcluidas.Count}");
+            var tarefasConcluidas = await _tarefasRepository.ObterTarefasConcluidas();
+            _rabbitMQLogger.LogInformation($"Obtendo todas as tarefas concluídas. Total de tarefas: {tarefasConcluidas.Count()}");
             return Ok(tarefasConcluidas);
         }
 
@@ -159,7 +158,7 @@ namespace GerenciamentoTarefasAPI.Controllers
             try
             {
                 // Verifica se o usuário existe
-                var usuario = await _context.Usuarios.FindAsync(novaTarefaDto.usuarioid);
+                var usuario = await _tarefasRepository.ObterTarefasPorUsuarioId(novaTarefaDto.usuarioid);
                 if (usuario == null)
                 {
                     return NotFound("Usuário não encontrado");
@@ -174,12 +173,11 @@ namespace GerenciamentoTarefasAPI.Controllers
                     usuarioid = novaTarefaDto.usuarioid
                 };
 
-                // Adiciona a nova tarefa ao contexto
-                _context.Tarefas.Add(novaTarefa);
-                await _context.SaveChangesAsync();
+                // Adiciona a nova tarefa ao repositório
+                await _tarefasRepository.AdicionarTarefa(novaTarefa);
 
                 // Envia a notificação para o RabbitMQ
-                _rabbitMQLogger.LogInformation($"Tarefa criada: {novaTarefa.Descricao} para o usuário {usuario.Nome}");
+                _rabbitMQLogger.LogInformation($"Tarefa criada: {novaTarefa.Descricao} para o usuário {novaTarefa.usuarioid}");
                 _notificationService.EnviarNotificacaoDeTarefaCriada(novaTarefa.Descricao);
 
                 return CreatedAtAction(nameof(ObterTarefaPorId), new { id = novaTarefa.Id }, novaTarefa);
@@ -200,26 +198,23 @@ namespace GerenciamentoTarefasAPI.Controllers
         {
             try
             {
-                // Busca a tarefa existente no banco de dados
-                var tarefaExistente = await _context.Tarefas.FindAsync(id);
+                // Busca a tarefa existente no repositório
+                var tarefaExistente = await _tarefasRepository.ObterTarefaPorId(id);
                 if (tarefaExistente == null)
                 {
                     _rabbitMQLogger.LogError($"Tentativa de alterar tarefa não encontrada: {id}");
                     return NotFound();
                 }
 
-                // Atualiza os campos da tarefa existente com os valores do DTO
+                // Atualiza as propriedades da tarefa existente
                 tarefaExistente.Descricao = tarefaAlteradaDto.descricao;
                 tarefaExistente.Status = tarefaAlteradaDto.status;
-                tarefaExistente.DataVencimento = tarefaAlteradaDto.datavencimento.Date;
-                tarefaExistente.usuarioid = tarefaAlteradaDto.usuarioid;  // Atualiza o usuário se necessário
+                tarefaExistente.DataVencimento = tarefaAlteradaDto.datavencimento;
 
-                // Salva as alterações no banco de dados
-                await _context.SaveChangesAsync();
+                // Salva as alterações no repositório
+                await _tarefasRepository.AtualizarTarefa(tarefaExistente);
 
                 _rabbitMQLogger.LogInformation($"Tarefa alterada: {tarefaExistente.Descricao}");
-                _notificationService.EnviarNotificacaoDeTarefaAlterada(tarefaExistente.Descricao);
-
                 return NoContent();
             }
             catch (Exception e)
@@ -229,18 +224,33 @@ namespace GerenciamentoTarefasAPI.Controllers
             }
         }
 
+        [HttpDelete("{id}")]
+        [SwaggerOperation(Summary = "Remove uma tarefa existente.", Description = "Remove uma tarefa do banco de dados pelo ID.")]
+        [ProducesResponseType(204)]
+        [ProducesResponseType(404)]
+        public async Task<IActionResult> RemoverTarefa(int id)
+        {
+            var tarefaExistente = await _tarefasRepository.ObterTarefaPorId(id);
+            if (tarefaExistente == null)
+            {
+                _rabbitMQLogger.LogError($"Tentativa de remover tarefa não encontrada: {id}");
+                return NotFound();
+            }
 
+            await _tarefasRepository.RemoverTarefa(tarefaExistente);
 
-
+            _rabbitMQLogger.LogInformation($"Tarefa removida: {tarefaExistente.Descricao}");
+            return NoContent();
+        }
 
         [HttpGet("minhas-tarefas")]
         [SwaggerOperation(Summary = "Obtém as tarefas do usuário logado.", Description = "Recupera a lista de tarefas associadas ao usuário atualmente logado.")]
         [ProducesResponseType(typeof(IEnumerable<Tarefa>), 200)]
         public async Task<IActionResult> ObterMinhasTarefas()
         {
-            
+
             var allClaims = User.Claims.ToList();
-            string valorusuario=null;
+            string valorusuario = null;
 
             // Loga todos os claims para depuração
             foreach (var claim in allClaims)
@@ -251,7 +261,7 @@ namespace GerenciamentoTarefasAPI.Controllers
             }
             var usuarioId = valorusuario; // User.FindFirst(JwtRegisteredClaimNames.Sub)?.Value;
 
-           
+
             if (string.IsNullOrEmpty(usuarioId))
             {
                 _rabbitMQLogger.LogError("Usuário não identificado.");
@@ -266,38 +276,6 @@ namespace GerenciamentoTarefasAPI.Controllers
 
             _rabbitMQLogger.LogInformation($"Obtendo tarefas do usuário {usuarioIdInt}. Total de tarefas: {minhasTarefas.Count()}");
             return Ok(minhasTarefas);
-        }
-
-        [HttpDelete("{id}")]
-        [SwaggerOperation(Summary = "Exclui uma tarefa existente.", Description = "Remove uma tarefa do banco de dados com base no ID fornecido.")]
-        [ProducesResponseType(204)]
-        [ProducesResponseType(404)]
-        public async Task<IActionResult> ExcluirTarefa(int id)
-        {
-            try
-            {
-                // Busca a tarefa pelo ID
-                var tarefa = await _context.Tarefas.FindAsync(id);
-                if (tarefa == null)
-                {
-                    _rabbitMQLogger.LogError($"Tentativa de excluir tarefa não encontrada: {id}");
-                    return NotFound("Tarefa não encontrada.");
-                }
-
-                // Remove a tarefa do contexto
-                _context.Tarefas.Remove(tarefa);
-                await _context.SaveChangesAsync();
-
-                // Loga a exclusão
-                _rabbitMQLogger.LogInformation($"Tarefa excluída: {tarefa.Descricao}");
-
-                return NoContent();
-            }
-            catch (Exception e)
-            {
-                _rabbitMQLogger.LogError($"Erro ao excluir tarefa: {e.Message}");
-                return StatusCode(500, "Ocorreu um erro ao excluir a tarefa.");
-            }
         }
 
         [HttpGet("pesquisar")]
@@ -350,10 +328,6 @@ namespace GerenciamentoTarefasAPI.Controllers
                 return StatusCode(500, "Ocorreu um erro ao pesquisar as tarefas.");
             }
         }
-
-
-
-
 
 
     }

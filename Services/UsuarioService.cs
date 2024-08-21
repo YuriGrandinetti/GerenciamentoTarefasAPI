@@ -9,9 +9,15 @@ using System.Text;
 using System.Threading.Tasks;
 using Microsoft.Extensions.Configuration;
 using System.Security.Cryptography;
+using GerenciamentoTarefas.Domain;
 
 namespace GerenciamentoTarefasAPI.Services
 {
+    /// <summary>
+    /// Classe criada apenas para fazer o registro do usuario no postgree
+    /// e fazer o login 
+    /// nao foi criada injecao de dependencia para efeito de tempo.
+    /// </summary>
     public class UsuarioService
     {
         private readonly GerenciamentoTarefasContext _context;
@@ -22,15 +28,36 @@ namespace GerenciamentoTarefasAPI.Services
             _context = context;
             _configuration = configuration;
         }
-
-        public async Task<Usuario> RegistrarUsuario(Usuario novoUsuario)
+        /// <summary>
+        /// Registrar o usuario apenas pelo swagger, pois ele grava o hash da senha no campo senha
+        /// </summary>
+        /// <param name="novoUsuario"></param>
+        /// <returns></returns>
+        /// <exception cref="InvalidOperationException"></exception>
+        public async Task<Usuario> RegistrarUsuario(UsuariosCreatedDto novoUsuario)
         {
-            novoUsuario.Senha = HashSenha(novoUsuario.Senha);
+            novoUsuario.senha = HashSenha(novoUsuario.senha);
 
-            _context.Usuarios.Add(novoUsuario);
+            // Verifica se já existe um usuário com o mesmo e-mail
+            var usuarioExistente = await _context.Usuarios.FirstOrDefaultAsync(u => u.Email == novoUsuario.email);
+
+            if (usuarioExistente != null)
+            {
+                // Retorna um erro ou uma resposta apropriada, ou lance uma exceção
+                throw new InvalidOperationException("Já existe um usuário com este e-mail.");
+            }
+            // Cria uma nova instância de Tarefa a partir do DTO
+            var novousuariodto = new Usuario
+            {
+                Nome = novoUsuario.nome,
+                Email = novoUsuario.email,
+                Senha = HashSenha(novoUsuario.senha)
+
+            };
+            _context.Usuarios.Add(novousuariodto);
             await _context.SaveChangesAsync();
 
-            return novoUsuario;
+            return novousuariodto;
         }
 
         public async Task<Usuario> LoginUsuario(string email, string senha)
