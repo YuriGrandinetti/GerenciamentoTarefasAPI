@@ -1,10 +1,11 @@
-﻿using RabbitMQ.Client;
+﻿using GerenciamentoTarefas.Domain.Interfaces;
+using RabbitMQ.Client;
 using System;
 using System.Text;
 
 namespace GerenciamentoTarefasAPI.Services
 {
-    public class RabbitMQService : IDisposable
+    public class RabbitMQService : IDisposable, IRabbitMQService
     {
         private readonly IConnection _connection;
         private readonly IModel _channel;
@@ -16,7 +17,7 @@ namespace GerenciamentoTarefasAPI.Services
             _channel = _connection.CreateModel();
         }
 
-        public void EnviarMensagem(string fila, string mensagem)
+        public virtual void EnviarMensagem(string fila, string mensagem)
         {
             _channel.QueueDeclare(queue: fila,
                                  durable: true,

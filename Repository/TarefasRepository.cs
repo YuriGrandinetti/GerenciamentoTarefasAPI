@@ -3,17 +3,24 @@ using GerenciamentoTarefasAPI.Models;
 using Microsoft.Extensions.Logging;
 using Microsoft.EntityFrameworkCore;
 using static GerenciamentoTarefas.Domain.Enumeradores;
+using GerenciamentoTarefas.Domain;
+using GerenciamentoTarefasAPI.Services;
 
 namespace GerenciamentoTarefasAPI.Repository
 {
     public class TarefasRepository : ITarefasRepository
     {
         private readonly GerenciamentoTarefasContext _context;
-        private readonly GerenciamentoTarefasAPI.Services.RabbitMQService _rabbitMQService;
+      //  private readonly GerenciamentoTarefasAPI.Services.RabbitMQService _rabbitMQService;
+        private readonly IRabbitMQService _rabbitMQService;
         private readonly ILogger<TarefasRepository> _logger;
 
-        public TarefasRepository(GerenciamentoTarefasContext context, 
-            GerenciamentoTarefasAPI.Services.RabbitMQService rabbitMQService,
+        public GerenciamentoTarefasContext Contexto { get; }
+       // public GerenciamentoTarefas.BDDTests.Steps.RabbitMQService Object1 { get; }
+        public ILogger<TarefasRepository> Object2 { get; }
+
+        public TarefasRepository(GerenciamentoTarefasContext context,
+            IRabbitMQService rabbitMQService,
             ILogger<TarefasRepository> logger)
         {
             _context = context;
@@ -21,6 +28,8 @@ namespace GerenciamentoTarefasAPI.Repository
             _logger = logger;
 
         }
+
+        
 
         public async Task<IEnumerable<Tarefa>> ObterTarefas()
         {
@@ -36,12 +45,19 @@ namespace GerenciamentoTarefasAPI.Repository
 
 
         }
-
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
         public async Task<Tarefa> ObterTarefaPorId(int id)
         {
             try
             {
-                return await _context.Tarefas.FindAsync(id);
+                Tarefa _tarefa =  new Tarefa();
+                _tarefa = await _context.Tarefas.FindAsync(id);
+                return _tarefa;
+             //   return await _context.Tarefas.FindAsync(id);
             }
             catch (Exception ex)
             {
@@ -76,7 +92,7 @@ namespace GerenciamentoTarefasAPI.Repository
                 await _context.SaveChangesAsync();
 
                 // Enviar mensagem para o RabbitMQ sobre a atualização da tarefa
-                _rabbitMQService.EnviarMensagem("task_queue", $"Tarefa atualizada: {tarefaAtualizada.Descricao}");
+                _rabbitMQService?.EnviarMensagem("task_queue", $"Tarefa atualizada: {tarefaAtualizada.Descricao}");
             }
             catch (Exception ex)
             {

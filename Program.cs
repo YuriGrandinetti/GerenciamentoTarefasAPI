@@ -83,6 +83,8 @@ builder.Services.AddScoped<TarefasRepository>();
 builder.Services.AddScoped<UsuarioService>();
 
 builder.Services.AddScoped<ITarefasRepository, TarefasRepository>();
+builder.Services.AddScoped<IRabbitMQService,RabbitMQService>();
+
 
 // Leitura da chave JWT do Configuration
 var jwtKey = builder.Configuration["Jwt:Key"];
