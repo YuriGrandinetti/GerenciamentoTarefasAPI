@@ -7,6 +7,7 @@ using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
 using System.Text;
 using Serilog;
+using GerenciamentoTarefas.Repository;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -84,6 +85,13 @@ builder.Services.AddScoped<UsuarioService>();
 
 builder.Services.AddScoped<ITarefasRepository, TarefasRepository>();
 builder.Services.AddScoped<IRabbitMQService,RabbitMQService>();
+
+// Registrar IPerfilUsuarioRepository e sua implementação
+builder.Services.AddScoped<IPerfilUsuarioRepository, PerfilUsuarioRepository>();
+
+// Registrar IUsuarioPerfilUsuarioRepository e sua implementação
+builder.Services.AddScoped<IUsuarioPerfilUsuarioRepository, UsuarioPerfilUsuarioRepository>();
+
 
 
 // Leitura da chave JWT do Configuration

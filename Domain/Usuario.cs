@@ -1,4 +1,5 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using GerenciamentoTarefas.Domain;
+using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Text.Json.Serialization;
 
@@ -21,5 +22,9 @@ namespace GerenciamentoTarefasAPI.Models
         // Propriedade de navegação para tarefas
         [JsonIgnore]  // Ignora a desserialização
         public ICollection<Tarefa> Tarefas { get; set; }
+
+        public int? IdPerfilUsuario { get; set; } // Campo opcional
+
+        public ICollection<UsuarioPerfilUsuario> UsuariosPerfis { get; set; }
     }
 }
