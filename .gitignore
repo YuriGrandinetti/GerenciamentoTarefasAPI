@@ -1,2 +1,12 @@
-# Ignorar arquivos e pastas específicos do Visual Studio
-.vs/GerenciamentoTarefas/
+ Build Folders
+bin/
+obj/
+
+# Visual Studio specific
+.vscode/
+.vs/
+.vscode/settings.json
+*.suo
+*.user
+*.userosscache
+*.sln.docstates

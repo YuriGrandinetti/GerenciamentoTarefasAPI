@@ -120,6 +120,12 @@ Este projeto é licenciado sob a Licença MIT - veja o arquivo LICENSE.md para m
    ```bash
    git clone https://github.com/YuriGrandinetti/GerenciamentoTarefasAPI.git
    cd GerenciamentosTarefasAPI
+
+1.1.  **Clonar o Repositório**: para compor o projeto GerenciamentoTarefas.BDDTests da solucao
+de teste BDD que faz parte
+   ```bash
+   git clone https://github.com/YuriGrandinetti/GerenciamentoTarefas.BDDTests.git
+   cd seurepositorio
 2. **Configuração do Banco de Dados:**  
 
 Atualize a string de conexão no appsettings.json com as informações do seu banco de dados.
