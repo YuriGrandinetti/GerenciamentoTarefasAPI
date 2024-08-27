@@ -231,3 +231,127 @@ WHERE lower(t.status) = @__ToLower_0"
 2024-08-25 02:03:11 [Information] Executed action "GerenciamentoTarefasAPI.Controllers.TarefasController.PesquisarTarefas (GerenciamentoTarefas)" in 130.48ms
 2024-08-25 02:03:11 [Information] Executed endpoint '"GerenciamentoTarefasAPI.Controllers.TarefasController.PesquisarTarefas (GerenciamentoTarefas)"'
 2024-08-25 02:03:11 [Information] Request finished HTTP/1.1 GET http://localhost:5076/api/Tarefas/pesquisar?status=Pendente - - - 200 - application/json;+charset=utf-8 134.6492ms
+2024-08-25 14:16:37 [Information] User profile is available. Using '"C:\Users\Teste\AppData\Local\ASP.NET\DataProtection-Keys"' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-08-25 14:16:38 [Information] Now listening on: "http://localhost:5076"
+2024-08-25 14:16:38 [Information] Application started. Press Ctrl+C to shut down.
+2024-08-25 14:16:38 [Information] Hosting environment: "Development"
+2024-08-25 14:16:38 [Information] Content root path: "C:\B3Projeto\GerenciamentoTarefasAPI\GerenciamentoTarefas\"
+2024-08-25 14:16:39 [Information] Request starting HTTP/1.1 GET http://localhost:5076/swagger - -
+2024-08-25 14:16:39 [Information] Request finished HTTP/1.1 GET http://localhost:5076/swagger - - - 301 0 - 86.2535ms
+2024-08-25 14:16:39 [Information] Request starting HTTP/1.1 GET http://localhost:5076/swagger/index.html - -
+2024-08-25 14:16:40 [Information] Request starting HTTP/1.1 GET http://localhost:5076/swagger/swagger-ui.css - -
+2024-08-25 14:16:40 [Information] Request starting HTTP/1.1 GET http://localhost:5076/_framework/aspnetcore-browser-refresh.js - -
+2024-08-25 14:16:40 [Information] Request starting HTTP/1.1 GET http://localhost:5076/swagger/swagger-ui-bundle.js - -
+2024-08-25 14:16:40 [Information] Request starting HTTP/1.1 GET http://localhost:5076/swagger/swagger-ui-standalone-preset.js - -
+2024-08-25 14:16:40 [Information] Request finished HTTP/1.1 GET http://localhost:5076/_framework/aspnetcore-browser-refresh.js - - - 200 11954 application/javascript;+charset=utf-8 11.6292ms
+2024-08-25 14:16:40 [Information] Request finished HTTP/1.1 GET http://localhost:5076/swagger/index.html - - - 200 - text/html;charset=utf-8 192.6822ms
+2024-08-25 14:16:40 [Information] Sending file. Request path: '"/swagger-ui-standalone-preset.js"'. Physical path: '"N/A"'
+2024-08-25 14:16:40 [Information] Request finished HTTP/1.1 GET http://localhost:5076/swagger/swagger-ui-standalone-preset.js - - - 200 337162 application/javascript 37.8607ms
+2024-08-25 14:16:40 [Information] Sending file. Request path: '"/swagger-ui.css"'. Physical path: '"N/A"'
+2024-08-25 14:16:40 [Information] Request finished HTTP/1.1 GET http://localhost:5076/swagger/swagger-ui.css - - - 200 143632 text/css 42.9297ms
+2024-08-25 14:16:40 [Information] Sending file. Request path: '"/swagger-ui-bundle.js"'. Physical path: '"N/A"'
+2024-08-25 14:16:40 [Information] Request finished HTTP/1.1 GET http://localhost:5076/swagger/swagger-ui-bundle.js - - - 200 1092889 application/javascript 39.1197ms
+2024-08-25 14:16:40 [Information] Request starting HTTP/1.1 GET http://localhost:5076/swagger/v1/swagger.json - -
+2024-08-25 14:16:40 [Information] Request finished HTTP/1.1 GET http://localhost:5076/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 143.0038ms
+2024-08-25 17:02:01 [Information] User profile is available. Using '"C:\Users\Teste\AppData\Local\ASP.NET\DataProtection-Keys"' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-08-25 17:02:01 [Information] Now listening on: "http://localhost:5076"
+2024-08-25 17:02:01 [Information] Application started. Press Ctrl+C to shut down.
+2024-08-25 17:02:01 [Information] Hosting environment: "Development"
+2024-08-25 17:02:01 [Information] Content root path: "C:\B3Projeto\GerenciamentoTarefasAPI\GerenciamentoTarefas\"
+2024-08-25 17:02:03 [Information] Request starting HTTP/1.1 GET http://localhost:5076/swagger - -
+2024-08-25 17:02:03 [Information] Request finished HTTP/1.1 GET http://localhost:5076/swagger - - - 301 0 - 95.8193ms
+2024-08-25 17:02:03 [Information] Request starting HTTP/1.1 GET http://localhost:5076/swagger/index.html - -
+2024-08-25 17:02:04 [Information] Request finished HTTP/1.1 GET http://localhost:5076/swagger/index.html - - - 200 - text/html;charset=utf-8 395.0433ms
+2024-08-25 17:02:04 [Information] Request starting HTTP/1.1 GET http://localhost:5076/swagger/swagger-ui.css - -
+2024-08-25 17:02:04 [Information] Request starting HTTP/1.1 GET http://localhost:5076/swagger/swagger-ui-bundle.js - -
+2024-08-25 17:02:04 [Information] Request starting HTTP/1.1 GET http://localhost:5076/swagger/swagger-ui-standalone-preset.js - -
+2024-08-25 17:02:04 [Information] Request starting HTTP/1.1 GET http://localhost:5076/_framework/aspnetcore-browser-refresh.js - -
+2024-08-25 17:02:04 [Information] Request finished HTTP/1.1 GET http://localhost:5076/_framework/aspnetcore-browser-refresh.js - - - 200 11954 application/javascript;+charset=utf-8 4.3981ms
+2024-08-25 17:02:04 [Information] Sending file. Request path: '"/swagger-ui.css"'. Physical path: '"N/A"'
+2024-08-25 17:02:04 [Information] Request finished HTTP/1.1 GET http://localhost:5076/swagger/swagger-ui.css - - - 200 143632 text/css 311.1222ms
+2024-08-25 17:02:04 [Information] Sending file. Request path: '"/swagger-ui-standalone-preset.js"'. Physical path: '"N/A"'
+2024-08-25 17:02:04 [Information] Request finished HTTP/1.1 GET http://localhost:5076/swagger/swagger-ui-standalone-preset.js - - - 200 337162 application/javascript 375.9407ms
+2024-08-25 17:02:04 [Information] Sending file. Request path: '"/swagger-ui-bundle.js"'. Physical path: '"N/A"'
+2024-08-25 17:02:04 [Information] Request finished HTTP/1.1 GET http://localhost:5076/swagger/swagger-ui-bundle.js - - - 200 1092889 application/javascript 485.5952ms
+2024-08-25 17:02:05 [Information] Request starting HTTP/1.1 GET http://localhost:5076/swagger/v1/swagger.json - -
+2024-08-25 17:02:05 [Information] Request finished HTTP/1.1 GET http://localhost:5076/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 220.2840ms
+2024-08-25 17:02:57 [Information] Request starting HTTP/1.1 POST http://localhost:5076/api/Usuarios/login application/json 42
+2024-08-25 17:02:57 [Information] CORS policy execution failed.
+2024-08-25 17:02:57 [Information] Request origin "http://localhost:5076" does not have permission to access the resource.
+2024-08-25 17:02:57 [Information] Executing endpoint '"GerenciamentoTarefasAPI.Controllers.UsuariosController.LoginUsuario (GerenciamentoTarefas)"'
+2024-08-25 17:02:57 [Information] Route matched with "{action = \"LoginUsuario\", controller = \"Usuarios\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] LoginUsuario(GerenciamentoTarefas.Domain.LoginRequest)" on controller "GerenciamentoTarefasAPI.Controllers.UsuariosController" ("GerenciamentoTarefas").
+2024-08-25 17:02:58 [Information] Executed action "GerenciamentoTarefasAPI.Controllers.UsuariosController.LoginUsuario (GerenciamentoTarefas)" in 1101.3089ms
+2024-08-25 17:02:58 [Information] Executed endpoint '"GerenciamentoTarefasAPI.Controllers.UsuariosController.LoginUsuario (GerenciamentoTarefas)"'
+2024-08-25 17:02:58 [Error] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: The entity type 'PerfilUsuario' requires a primary key to be defined. If you intended to use a keyless entity type, call 'HasNoKey' in 'OnModelCreating'. For more information on keyless entity types, see https://go.microsoft.com/fwlink/?linkid=2141943.
+   at Microsoft.EntityFrameworkCore.Infrastructure.ModelValidator.ValidateNonNullPrimaryKeys(IModel model, IDiagnosticsLogger`1 logger)
+   at Microsoft.EntityFrameworkCore.Infrastructure.ModelValidator.Validate(IModel model, IDiagnosticsLogger`1 logger)
+   at Microsoft.EntityFrameworkCore.Infrastructure.RelationalModelValidator.Validate(IModel model, IDiagnosticsLogger`1 logger)
+   at Npgsql.EntityFrameworkCore.PostgreSQL.Infrastructure.NpgsqlModelValidator.Validate(IModel model, IDiagnosticsLogger`1 logger)
+   at Microsoft.EntityFrameworkCore.Infrastructure.ModelRuntimeInitializer.Initialize(IModel model, Boolean designTime, IDiagnosticsLogger`1 validationLogger)
+   at Microsoft.EntityFrameworkCore.Infrastructure.ModelSource.GetModel(DbContext context, ModelCreationDependencies modelCreationDependencies, Boolean designTime)
+   at Microsoft.EntityFrameworkCore.Internal.DbContextServices.CreateModel(Boolean designTime)
+   at Microsoft.EntityFrameworkCore.Internal.DbContextServices.get_Model()
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSiteMain(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitCache(ServiceCallSite callSite, RuntimeResolverContext context, ServiceProviderEngineScope serviceProviderEngine, RuntimeResolverLock lockType)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitScopeCache(ServiceCallSite callSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSite(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitConstructor(ConstructorCallSite constructorCallSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSiteMain(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitCache(ServiceCallSite callSite, RuntimeResolverContext context, ServiceProviderEngineScope serviceProviderEngine, RuntimeResolverLock lockType)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitScopeCache(ServiceCallSite callSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSite(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitConstructor(ConstructorCallSite constructorCallSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSiteMain(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitCache(ServiceCallSite callSite, RuntimeResolverContext context, ServiceProviderEngineScope serviceProviderEngine, RuntimeResolverLock lockType)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitScopeCache(ServiceCallSite callSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSite(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitConstructor(ConstructorCallSite constructorCallSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSiteMain(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitCache(ServiceCallSite callSite, RuntimeResolverContext context, ServiceProviderEngineScope serviceProviderEngine, RuntimeResolverLock lockType)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitScopeCache(ServiceCallSite callSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSite(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitConstructor(ConstructorCallSite constructorCallSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSiteMain(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitCache(ServiceCallSite callSite, RuntimeResolverContext context, ServiceProviderEngineScope serviceProviderEngine, RuntimeResolverLock lockType)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitScopeCache(ServiceCallSite callSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSite(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitConstructor(ConstructorCallSite constructorCallSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSiteMain(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitCache(ServiceCallSite callSite, RuntimeResolverContext context, ServiceProviderEngineScope serviceProviderEngine, RuntimeResolverLock lockType)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitScopeCache(ServiceCallSite callSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSite(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.Resolve(ServiceCallSite callSite, ServiceProviderEngineScope scope)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.DynamicServiceProviderEngine.<>c__DisplayClass2_0.<RealizeService>b__0(ServiceProviderEngineScope scope)
+   at Microsoft.Extensions.DependencyInjection.ServiceProvider.GetService(Type serviceType, ServiceProviderEngineScope serviceProviderEngineScope)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.ServiceProviderEngineScope.GetService(Type serviceType)
+   at Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetRequiredService(IServiceProvider provider, Type serviceType)
+   at Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetRequiredService[T](IServiceProvider provider)
+   at Microsoft.EntityFrameworkCore.DbContext.get_DbContextDependencies()
+   at Microsoft.EntityFrameworkCore.DbContext.get_ContextServices()
+   at Microsoft.EntityFrameworkCore.DbContext.get_Model()
+   at Microsoft.EntityFrameworkCore.Internal.InternalDbSet`1.get_EntityType()
+   at Microsoft.EntityFrameworkCore.Internal.InternalDbSet`1.get_EntityQueryable()
+   at Microsoft.EntityFrameworkCore.Internal.InternalDbSet`1.System.Linq.IQueryable.get_Provider()
+   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.ExecuteAsync[TSource,TResult](MethodInfo operatorMethodInfo, IQueryable`1 source, Expression expression, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.ExecuteAsync[TSource,TResult](MethodInfo operatorMethodInfo, IQueryable`1 source, LambdaExpression expression, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.FirstOrDefaultAsync[TSource](IQueryable`1 source, Expression`1 predicate, CancellationToken cancellationToken)
+   at GerenciamentoTarefasAPI.Services.UsuarioService.LoginUsuario(String email, String senha) in C:\B3Projeto\GerenciamentoTarefasAPI\GerenciamentoTarefas\Services\UsuarioService.cs:line 65
+   at GerenciamentoTarefasAPI.Controllers.UsuariosController.LoginUsuario(LoginRequest loginUsuario) in C:\B3Projeto\GerenciamentoTarefasAPI\GerenciamentoTarefas\Controllers\UsuariosController.cs:line 37
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2024-08-25 17:02:58 [Information] Request finished HTTP/1.1 POST http://localhost:5076/api/Usuarios/login application/json 42 - 500 - text/plain;+charset=utf-8 1273.2665ms
