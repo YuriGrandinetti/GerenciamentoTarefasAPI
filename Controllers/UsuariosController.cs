@@ -4,6 +4,7 @@ using GerenciamentoTarefasAPI.Services;
 using System.Threading.Tasks;
 using Swashbuckle.AspNetCore.Annotations;
 using GerenciamentoTarefas.Domain;
+using GerenciamentoTarefas.Domain.Interfaces;
 
 namespace GerenciamentoTarefasAPI.Controllers
 {
@@ -11,9 +12,11 @@ namespace GerenciamentoTarefasAPI.Controllers
     [Route("api/[controller]")]
     public class UsuariosController : ControllerBase
     {
-        private readonly UsuarioService _usuarioService;
+        private readonly IUsuarioService _usuarioService;
 
-        public UsuariosController(UsuarioService usuarioService)
+       // private readonly UsuarioService _usuarioService;
+
+        public UsuariosController(IUsuarioService usuarioService)
         {
             _usuarioService = usuarioService;
         }
@@ -61,5 +64,40 @@ namespace GerenciamentoTarefasAPI.Controllers
 
             return Ok(usuario);
         }
+
+        [HttpGet("getUsuarios")]
+        [SwaggerOperation(Summary = "Carrega todos os usuários.", Description = "Retorna uma lista de todos os usuários.")]
+        [ProducesResponseType(typeof(IEnumerable<UauarioDto>), 200)]
+        [ProducesResponseType(404)]
+        public async Task<IActionResult> getUsuarios()
+        {
+            var usuarios = await _usuarioService.ObterTodosUsuarios();
+
+            if (usuarios == null || usuarios.Count == 0)
+            {
+                return NotFound("Nenhum usuário encontrado.");
+            }
+
+            return Ok(usuarios);
+        }
+
+        [HttpPut("{id}")]
+        [SwaggerOperation(Summary = "Atualiza um usuário existente.", Description = "Atualiza as informações de um usuário existente com base no ID fornecido.")]
+        [ProducesResponseType(typeof(Usuario), 200)]
+        [ProducesResponseType(404)]
+        [ProducesResponseType(400)]
+        public async Task<IActionResult> UpdateUsuario(int id, [FromBody] UsuarioAtualizadoDto usuarioAtualizado)
+        {
+            var usuario = await _usuarioService.UpdateUsuario(id, usuarioAtualizado);
+
+            if (usuario == null)
+            {
+                return NotFound();
+            }
+
+            return Ok(usuario);
+        }
+
+
     }
 }

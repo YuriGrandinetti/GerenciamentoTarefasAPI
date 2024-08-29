@@ -29,6 +29,14 @@ namespace GerenciamentoTarefasAPI.Repository
                 .WithMany(u => u.Tarefas)           // Um Usuario pode ter muitas Tarefas
                 .HasForeignKey(t => t.usuarioid);   // Chave estrangeira em Tarefa é UsuarioId
 
+            // Configura a chave primária para PerfilUsuario
+            modelBuilder.Entity<PerfilUsuario>()
+                .HasKey(pu => pu.IdPerfilUsuario);
+
+            modelBuilder.Entity<PerfilUsuario>()
+                .Property(pu => pu.IdPerfilUsuario)
+                .HasColumnName("idperfilusuario");
+
             // Configuração da chave primária composta na tabela intermediária
             modelBuilder.Entity<UsuarioPerfilUsuario>()
                 .HasKey(up => new { up.UsuarioId, up.IdPerfilUsuario });

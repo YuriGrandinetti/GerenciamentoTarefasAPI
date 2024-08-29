@@ -47,19 +47,20 @@ namespace GerenciamentoTarefas.Controllers
         }
 
         [HttpPost]
-        public async Task<IActionResult> CreatePerfilUsuario([FromBody] PerfilUsuario perfilUsuario)
+        public async Task<IActionResult> CreatePerfilUsuario([FromBody] PerfilUsuarioDto perfilUsuario)
         {
             // Criar o perfil de usuário
             var novoPerfil = await _perfilUsuarioRepository.CreatePerfilUsuarioAsync(perfilUsuario);
 
             // Registrar a criação no RabbitMQ
-            _rabbitMQLogger.LogError($"Perfil de usuário criado: {novoPerfil.DescricaoPerfil}");
+            _rabbitMQLogger.LogError($"Perfil de usuário criado: {novoPerfil.descricaoperfid}");
 
             // Enviar notificação sobre a criação do novo perfil
-            _notificationService.EnviarNotificacao($"Novo perfil de usuário criado: {novoPerfil.DescricaoPerfil}");
+            _notificationService.EnviarNotificacao($"Novo perfil de usuário criado: {novoPerfil?.descricaoperfid}");
+            
 
             // Retornar a resposta com o novo perfil criado
-            return CreatedAtAction(nameof(GetPerfilUsuarioById), new { id = novoPerfil.IdPerfilUsuario }, novoPerfil);
+            return CreatedAtAction(nameof(GetPerfilUsuarioById), new { id = novoPerfil.idperfiluuario }, novoPerfil);
         }
 
         [HttpDelete("{id}")]

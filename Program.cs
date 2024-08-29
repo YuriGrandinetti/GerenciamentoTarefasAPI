@@ -81,7 +81,7 @@ builder.Services.AddSingleton<RabbitMQService>();
 builder.Services.AddScoped<TarefasRepository>();
 
 // Registro do UsuarioService
-builder.Services.AddScoped<UsuarioService>();
+builder.Services.AddScoped< IUsuarioService,  UsuarioService >();
 
 builder.Services.AddScoped<ITarefasRepository, TarefasRepository>();
 builder.Services.AddScoped<IRabbitMQService,RabbitMQService>();
@@ -92,7 +92,9 @@ builder.Services.AddScoped<IPerfilUsuarioRepository, PerfilUsuarioRepository>();
 // Registrar IUsuarioPerfilUsuarioRepository e sua implementação
 builder.Services.AddScoped<IUsuarioPerfilUsuarioRepository, UsuarioPerfilUsuarioRepository>();
 
+builder.Services.AddScoped<NotificationService>();
 
+builder.Services.AddScoped<RabbitMQLogger>(); 
 
 // Leitura da chave JWT do Configuration
 var jwtKey = builder.Configuration["Jwt:Key"];

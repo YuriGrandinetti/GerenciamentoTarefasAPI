@@ -22,7 +22,7 @@ namespace GerenciamentoTarefas.Services
             return await _perfilUsuarioRepository.GetPerfilUsuarioByIdAsync(id);
         }
 
-        public async Task<PerfilUsuario> CreatePerfilUsuarioAsync(PerfilUsuario perfilUsuario)
+        public async Task<PerfilUsuarioDto> CreatePerfilUsuarioAsync(PerfilUsuarioDto perfilUsuario)
         {
             return await _perfilUsuarioRepository.CreatePerfilUsuarioAsync(perfilUsuario);
         }

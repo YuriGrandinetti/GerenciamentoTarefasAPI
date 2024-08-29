@@ -10,6 +10,7 @@ using System.Threading.Tasks;
 using Microsoft.Extensions.Configuration;
 using System.Security.Cryptography;
 using GerenciamentoTarefas.Domain;
+using GerenciamentoTarefas.Domain.Interfaces;
 
 namespace GerenciamentoTarefasAPI.Services
 {
@@ -18,7 +19,7 @@ namespace GerenciamentoTarefasAPI.Services
     /// e fazer o login 
     /// nao foi criada injecao de dependencia para efeito de tempo.
     /// </summary>
-    public class UsuarioService
+    public class UsuarioService : IUsuarioService
     {
         private readonly GerenciamentoTarefasContext _context;
         private readonly IConfiguration _configuration;
@@ -115,5 +116,59 @@ namespace GerenciamentoTarefasAPI.Services
             var hashDigitado = HashSenha(senhaDigitada);
             return hashDigitado == senhaHash;
         }
+
+        public async Task<List<UauarioDto>> ObterTodosUsuarios()
+        {
+            var usuarios = await _context.Usuarios.ToListAsync(); // Aqui, 'Usuarios' deve ser um DbSet<Usuario>
+
+            // Converte a lista de Usuario para UsuarioDto
+            var usuariosDto = new List<UauarioDto>();
+
+            foreach (var usuario in usuarios)
+            {
+                usuariosDto.Add(new UauarioDto
+                {
+                    Id = usuario.Id,
+                    Nome = usuario.Nome,
+                    Email = usuario.Email
+                });
+            }
+
+            return usuariosDto;
+        }
+
+        /// <summary>
+        /// Atualiza um usuário existente com os novos dados fornecidos.
+        /// </summary>
+        /// <param name="id">O ID do usuário a ser atualizado.</param>
+        /// <param name="usuarioAtualizado">Objeto DTO contendo os dados atualizados do usuário.</param>
+        /// <returns>O usuário atualizado ou null se o usuário não for encontrado.</returns>
+        public async Task<Usuario> UpdateUsuario(int id, UsuarioAtualizadoDto usuarioAtualizado)
+        {
+            // Busca o usuário pelo ID
+            var usuarioExistente = await _context.Usuarios.FindAsync(id);
+
+            // Verifica se o usuário existe
+            if (usuarioExistente == null)
+            {
+                throw new InvalidOperationException("Usuário não encontrado.");
+            }
+
+            // Atualiza os campos necessários
+            usuarioExistente.Nome = usuarioAtualizado.Nome ?? usuarioExistente.Nome;
+            usuarioExistente.Email = usuarioAtualizado.Email ?? usuarioExistente.Email;
+
+            //// Atualiza a senha somente se uma nova senha foi fornecida
+            //if (!string.IsNullOrEmpty(usuarioAtualizado.Senha))
+            //{
+            //    usuarioExistente.Senha = HashSenha(usuarioAtualizado.Senha);
+            //}
+
+            // Salva as alterações no banco de dados
+            await _context.SaveChangesAsync();
+
+            return usuarioExistente;
+        }
     }
 }
+

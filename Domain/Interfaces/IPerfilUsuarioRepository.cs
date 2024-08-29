@@ -4,7 +4,7 @@
     {
         Task<IEnumerable<PerfilUsuario>> GetPerfisUsuariosAsync();
         Task<PerfilUsuario> GetPerfilUsuarioByIdAsync(int id);
-        Task<PerfilUsuario> CreatePerfilUsuarioAsync(PerfilUsuario perfilUsuario);
+        Task<PerfilUsuarioDto> CreatePerfilUsuarioAsync(PerfilUsuarioDto perfilUsuario);
         Task<bool> DeletePerfilUsuarioAsync(int id);
     }
 }

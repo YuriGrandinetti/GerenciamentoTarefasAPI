@@ -459,3 +459,1006 @@ System.InvalidOperationException: The entity type 'PerfilUsuario' requires a pri
 2024-08-27 11:55:07 [Information] Executed action "GerenciamentoTarefasAPI.Controllers.UsuariosController.ObterUsuarioPorId (GerenciamentoTarefas)" in 20.6078ms
 2024-08-27 11:55:07 [Information] Executed endpoint '"GerenciamentoTarefasAPI.Controllers.UsuariosController.ObterUsuarioPorId (GerenciamentoTarefas)"'
 2024-08-27 11:55:07 [Information] Request finished HTTP/1.1 GET http://localhost:5076/api/Usuarios/login - - - 400 - application/problem+json;+charset=utf-8 31.7783ms
+2024-08-27 12:24:58 [Information] User profile is available. Using '"C:\Users\Teste\AppData\Local\ASP.NET\DataProtection-Keys"' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-08-27 12:24:58 [Information] Now listening on: "http://localhost:5076"
+2024-08-27 12:24:58 [Information] Application started. Press Ctrl+C to shut down.
+2024-08-27 12:24:58 [Information] Hosting environment: "Development"
+2024-08-27 12:24:58 [Information] Content root path: "C:\B3Projeto\GerenciamentoTarefasAPI\GerenciamentoTarefas\"
+2024-08-27 12:24:59 [Information] Request starting HTTP/1.1 GET http://localhost:5076/swagger - -
+2024-08-27 12:24:59 [Information] Request finished HTTP/1.1 GET http://localhost:5076/swagger - - - 301 0 - 103.1700ms
+2024-08-27 12:24:59 [Information] Request starting HTTP/1.1 GET http://localhost:5076/swagger/index.html - -
+2024-08-27 12:25:00 [Information] Request starting HTTP/1.1 GET http://localhost:5076/swagger/swagger-ui.css - -
+2024-08-27 12:25:00 [Information] Request starting HTTP/1.1 GET http://localhost:5076/swagger/swagger-ui-bundle.js - -
+2024-08-27 12:25:00 [Information] Request starting HTTP/1.1 GET http://localhost:5076/swagger/swagger-ui-standalone-preset.js - -
+2024-08-27 12:25:00 [Information] Request starting HTTP/1.1 GET http://localhost:5076/_framework/aspnetcore-browser-refresh.js - -
+2024-08-27 12:25:00 [Information] Request finished HTTP/1.1 GET http://localhost:5076/swagger/index.html - - - 200 - text/html;charset=utf-8 167.1984ms
+2024-08-27 12:25:00 [Information] Request finished HTTP/1.1 GET http://localhost:5076/_framework/aspnetcore-browser-refresh.js - - - 200 11954 application/javascript;+charset=utf-8 3.6289ms
+2024-08-27 12:25:00 [Information] Sending file. Request path: '"/swagger-ui-bundle.js"'. Physical path: '"N/A"'
+2024-08-27 12:25:00 [Information] Sending file. Request path: '"/swagger-ui-standalone-preset.js"'. Physical path: '"N/A"'
+2024-08-27 12:25:00 [Information] Sending file. Request path: '"/swagger-ui.css"'. Physical path: '"N/A"'
+2024-08-27 12:25:00 [Information] Request finished HTTP/1.1 GET http://localhost:5076/swagger/swagger-ui-bundle.js - - - 200 1092889 application/javascript 45.5264ms
+2024-08-27 12:25:00 [Information] Request finished HTTP/1.1 GET http://localhost:5076/swagger/swagger-ui-standalone-preset.js - - - 200 337162 application/javascript 45.0918ms
+2024-08-27 12:25:00 [Information] Request finished HTTP/1.1 GET http://localhost:5076/swagger/swagger-ui.css - - - 200 143632 text/css 47.0909ms
+2024-08-27 12:25:00 [Information] Request starting HTTP/1.1 GET http://localhost:5076/swagger/v1/swagger.json - -
+2024-08-27 12:25:00 [Information] Request finished HTTP/1.1 GET http://localhost:5076/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 138.3637ms
+2024-08-27 12:25:48 [Information] Request starting HTTP/1.1 OPTIONS http://localhost:5076/api/Usuarios/login - -
+2024-08-27 12:25:48 [Information] CORS policy execution successful.
+2024-08-27 12:25:48 [Information] Request finished HTTP/1.1 OPTIONS http://localhost:5076/api/Usuarios/login - - - 204 - - 12.5120ms
+2024-08-27 12:25:48 [Information] Request starting HTTP/1.1 POST http://localhost:5076/api/Usuarios/login application/json 66
+2024-08-27 12:25:48 [Information] CORS policy execution successful.
+2024-08-27 12:25:48 [Information] Executing endpoint '"GerenciamentoTarefasAPI.Controllers.UsuariosController.LoginUsuario (GerenciamentoTarefas)"'
+2024-08-27 12:25:48 [Information] Route matched with "{action = \"LoginUsuario\", controller = \"Usuarios\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] LoginUsuario(GerenciamentoTarefas.Domain.LoginRequest)" on controller "GerenciamentoTarefasAPI.Controllers.UsuariosController" ("GerenciamentoTarefas").
+2024-08-27 12:27:07 [Information] Executed action "GerenciamentoTarefasAPI.Controllers.UsuariosController.LoginUsuario (GerenciamentoTarefas)" in 79372.3765ms
+2024-08-27 12:27:07 [Information] Executed endpoint '"GerenciamentoTarefasAPI.Controllers.UsuariosController.LoginUsuario (GerenciamentoTarefas)"'
+2024-08-27 12:27:07 [Error] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: The entity type 'PerfilUsuario' requires a primary key to be defined. If you intended to use a keyless entity type, call 'HasNoKey' in 'OnModelCreating'. For more information on keyless entity types, see https://go.microsoft.com/fwlink/?linkid=2141943.
+   at Microsoft.EntityFrameworkCore.Infrastructure.ModelValidator.ValidateNonNullPrimaryKeys(IModel model, IDiagnosticsLogger`1 logger)
+   at Microsoft.EntityFrameworkCore.Infrastructure.ModelValidator.Validate(IModel model, IDiagnosticsLogger`1 logger)
+   at Microsoft.EntityFrameworkCore.Infrastructure.RelationalModelValidator.Validate(IModel model, IDiagnosticsLogger`1 logger)
+   at Npgsql.EntityFrameworkCore.PostgreSQL.Infrastructure.NpgsqlModelValidator.Validate(IModel model, IDiagnosticsLogger`1 logger)
+   at Microsoft.EntityFrameworkCore.Infrastructure.ModelRuntimeInitializer.Initialize(IModel model, Boolean designTime, IDiagnosticsLogger`1 validationLogger)
+   at Microsoft.EntityFrameworkCore.Infrastructure.ModelSource.GetModel(DbContext context, ModelCreationDependencies modelCreationDependencies, Boolean designTime)
+   at Microsoft.EntityFrameworkCore.Internal.DbContextServices.CreateModel(Boolean designTime)
+   at Microsoft.EntityFrameworkCore.Internal.DbContextServices.get_Model()
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSiteMain(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitCache(ServiceCallSite callSite, RuntimeResolverContext context, ServiceProviderEngineScope serviceProviderEngine, RuntimeResolverLock lockType)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitScopeCache(ServiceCallSite callSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSite(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitConstructor(ConstructorCallSite constructorCallSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSiteMain(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitCache(ServiceCallSite callSite, RuntimeResolverContext context, ServiceProviderEngineScope serviceProviderEngine, RuntimeResolverLock lockType)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitScopeCache(ServiceCallSite callSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSite(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitConstructor(ConstructorCallSite constructorCallSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSiteMain(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitCache(ServiceCallSite callSite, RuntimeResolverContext context, ServiceProviderEngineScope serviceProviderEngine, RuntimeResolverLock lockType)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitScopeCache(ServiceCallSite callSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSite(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitConstructor(ConstructorCallSite constructorCallSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSiteMain(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitCache(ServiceCallSite callSite, RuntimeResolverContext context, ServiceProviderEngineScope serviceProviderEngine, RuntimeResolverLock lockType)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitScopeCache(ServiceCallSite callSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSite(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitConstructor(ConstructorCallSite constructorCallSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSiteMain(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitCache(ServiceCallSite callSite, RuntimeResolverContext context, ServiceProviderEngineScope serviceProviderEngine, RuntimeResolverLock lockType)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitScopeCache(ServiceCallSite callSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSite(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitConstructor(ConstructorCallSite constructorCallSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSiteMain(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitCache(ServiceCallSite callSite, RuntimeResolverContext context, ServiceProviderEngineScope serviceProviderEngine, RuntimeResolverLock lockType)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitScopeCache(ServiceCallSite callSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSite(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.Resolve(ServiceCallSite callSite, ServiceProviderEngineScope scope)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.DynamicServiceProviderEngine.<>c__DisplayClass2_0.<RealizeService>b__0(ServiceProviderEngineScope scope)
+   at Microsoft.Extensions.DependencyInjection.ServiceProvider.GetService(Type serviceType, ServiceProviderEngineScope serviceProviderEngineScope)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.ServiceProviderEngineScope.GetService(Type serviceType)
+   at Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetRequiredService(IServiceProvider provider, Type serviceType)
+   at Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetRequiredService[T](IServiceProvider provider)
+   at Microsoft.EntityFrameworkCore.DbContext.get_DbContextDependencies()
+   at Microsoft.EntityFrameworkCore.DbContext.get_ContextServices()
+   at Microsoft.EntityFrameworkCore.DbContext.get_Model()
+   at Microsoft.EntityFrameworkCore.Internal.InternalDbSet`1.get_EntityType()
+   at Microsoft.EntityFrameworkCore.Internal.InternalDbSet`1.get_EntityQueryable()
+   at Microsoft.EntityFrameworkCore.Internal.InternalDbSet`1.System.Linq.IQueryable.get_Provider()
+   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.ExecuteAsync[TSource,TResult](MethodInfo operatorMethodInfo, IQueryable`1 source, Expression expression, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.ExecuteAsync[TSource,TResult](MethodInfo operatorMethodInfo, IQueryable`1 source, LambdaExpression expression, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.FirstOrDefaultAsync[TSource](IQueryable`1 source, Expression`1 predicate, CancellationToken cancellationToken)
+   at GerenciamentoTarefasAPI.Services.UsuarioService.LoginUsuario(String email, String senha) in C:\B3Projeto\GerenciamentoTarefasAPI\GerenciamentoTarefas\Services\UsuarioService.cs:line 65
+   at GerenciamentoTarefasAPI.Controllers.UsuariosController.LoginUsuario(LoginRequest loginUsuario) in C:\B3Projeto\GerenciamentoTarefasAPI\GerenciamentoTarefas\Controllers\UsuariosController.cs:line 37
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2024-08-27 12:27:07 [Information] Request finished HTTP/1.1 POST http://localhost:5076/api/Usuarios/login application/json 66 - 500 - text/plain;+charset=utf-8 79513.6171ms
+2024-08-27 12:27:35 [Information] Request starting HTTP/1.1 GET http://localhost:5076/api/Usuarios/login - -
+2024-08-27 12:27:35 [Information] Executing endpoint '"GerenciamentoTarefasAPI.Controllers.UsuariosController.ObterUsuarioPorId (GerenciamentoTarefas)"'
+2024-08-27 12:27:35 [Information] Route matched with "{action = \"ObterUsuarioPorId\", controller = \"Usuarios\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] ObterUsuarioPorId(Int32)" on controller "GerenciamentoTarefasAPI.Controllers.UsuariosController" ("GerenciamentoTarefas").
+2024-08-27 12:27:35 [Information] Executing "BadRequestObjectResult", writing value of type '"Microsoft.AspNetCore.Mvc.ValidationProblemDetails"'.
+2024-08-27 12:27:35 [Information] Executed action "GerenciamentoTarefasAPI.Controllers.UsuariosController.ObterUsuarioPorId (GerenciamentoTarefas)" in 16.8367ms
+2024-08-27 12:27:35 [Information] Executed endpoint '"GerenciamentoTarefasAPI.Controllers.UsuariosController.ObterUsuarioPorId (GerenciamentoTarefas)"'
+2024-08-27 12:27:35 [Information] Request finished HTTP/1.1 GET http://localhost:5076/api/Usuarios/login - - - 400 - application/problem+json;+charset=utf-8 29.6778ms
+2024-08-27 12:28:20 [Information] Request starting HTTP/1.1 POST http://localhost:5076/api/Usuarios/login application/json 58
+2024-08-27 12:28:20 [Information] CORS policy execution failed.
+2024-08-27 12:28:20 [Information] Request origin "http://localhost:5076" does not have permission to access the resource.
+2024-08-27 12:28:20 [Information] Executing endpoint '"GerenciamentoTarefasAPI.Controllers.UsuariosController.LoginUsuario (GerenciamentoTarefas)"'
+2024-08-27 12:28:20 [Information] Route matched with "{action = \"LoginUsuario\", controller = \"Usuarios\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] LoginUsuario(GerenciamentoTarefas.Domain.LoginRequest)" on controller "GerenciamentoTarefasAPI.Controllers.UsuariosController" ("GerenciamentoTarefas").
+2024-08-27 12:28:36 [Information] Executed action "GerenciamentoTarefasAPI.Controllers.UsuariosController.LoginUsuario (GerenciamentoTarefas)" in 16544.9369ms
+2024-08-27 12:28:36 [Information] Executed endpoint '"GerenciamentoTarefasAPI.Controllers.UsuariosController.LoginUsuario (GerenciamentoTarefas)"'
+2024-08-27 12:28:36 [Error] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: The entity type 'PerfilUsuario' requires a primary key to be defined. If you intended to use a keyless entity type, call 'HasNoKey' in 'OnModelCreating'. For more information on keyless entity types, see https://go.microsoft.com/fwlink/?linkid=2141943.
+   at Microsoft.EntityFrameworkCore.Infrastructure.ModelValidator.ValidateNonNullPrimaryKeys(IModel model, IDiagnosticsLogger`1 logger)
+   at Microsoft.EntityFrameworkCore.Infrastructure.ModelValidator.Validate(IModel model, IDiagnosticsLogger`1 logger)
+   at Microsoft.EntityFrameworkCore.Infrastructure.RelationalModelValidator.Validate(IModel model, IDiagnosticsLogger`1 logger)
+   at Npgsql.EntityFrameworkCore.PostgreSQL.Infrastructure.NpgsqlModelValidator.Validate(IModel model, IDiagnosticsLogger`1 logger)
+   at Microsoft.EntityFrameworkCore.Infrastructure.ModelRuntimeInitializer.Initialize(IModel model, Boolean designTime, IDiagnosticsLogger`1 validationLogger)
+   at Microsoft.EntityFrameworkCore.Infrastructure.ModelSource.GetModel(DbContext context, ModelCreationDependencies modelCreationDependencies, Boolean designTime)
+   at Microsoft.EntityFrameworkCore.Internal.DbContextServices.CreateModel(Boolean designTime)
+   at Microsoft.EntityFrameworkCore.Internal.DbContextServices.get_Model()
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSiteMain(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitCache(ServiceCallSite callSite, RuntimeResolverContext context, ServiceProviderEngineScope serviceProviderEngine, RuntimeResolverLock lockType)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitScopeCache(ServiceCallSite callSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSite(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitConstructor(ConstructorCallSite constructorCallSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSiteMain(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitCache(ServiceCallSite callSite, RuntimeResolverContext context, ServiceProviderEngineScope serviceProviderEngine, RuntimeResolverLock lockType)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitScopeCache(ServiceCallSite callSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSite(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitConstructor(ConstructorCallSite constructorCallSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSiteMain(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitCache(ServiceCallSite callSite, RuntimeResolverContext context, ServiceProviderEngineScope serviceProviderEngine, RuntimeResolverLock lockType)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitScopeCache(ServiceCallSite callSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSite(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitConstructor(ConstructorCallSite constructorCallSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSiteMain(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitCache(ServiceCallSite callSite, RuntimeResolverContext context, ServiceProviderEngineScope serviceProviderEngine, RuntimeResolverLock lockType)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitScopeCache(ServiceCallSite callSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSite(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitConstructor(ConstructorCallSite constructorCallSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSiteMain(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitCache(ServiceCallSite callSite, RuntimeResolverContext context, ServiceProviderEngineScope serviceProviderEngine, RuntimeResolverLock lockType)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitScopeCache(ServiceCallSite callSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSite(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitConstructor(ConstructorCallSite constructorCallSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSiteMain(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitCache(ServiceCallSite callSite, RuntimeResolverContext context, ServiceProviderEngineScope serviceProviderEngine, RuntimeResolverLock lockType)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.VisitScopeCache(ServiceCallSite callSite, RuntimeResolverContext context)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteVisitor`2.VisitCallSite(ServiceCallSite callSite, TArgument argument)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.CallSiteRuntimeResolver.Resolve(ServiceCallSite callSite, ServiceProviderEngineScope scope)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.DynamicServiceProviderEngine.<>c__DisplayClass2_0.<RealizeService>b__0(ServiceProviderEngineScope scope)
+   at Microsoft.Extensions.DependencyInjection.ServiceProvider.GetService(Type serviceType, ServiceProviderEngineScope serviceProviderEngineScope)
+   at Microsoft.Extensions.DependencyInjection.ServiceLookup.ServiceProviderEngineScope.GetService(Type serviceType)
+   at Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetRequiredService(IServiceProvider provider, Type serviceType)
+   at Microsoft.Extensions.DependencyInjection.ServiceProviderServiceExtensions.GetRequiredService[T](IServiceProvider provider)
+   at Microsoft.EntityFrameworkCore.DbContext.get_DbContextDependencies()
+   at Microsoft.EntityFrameworkCore.DbContext.get_ContextServices()
+   at Microsoft.EntityFrameworkCore.DbContext.get_Model()
+   at Microsoft.EntityFrameworkCore.Internal.InternalDbSet`1.get_EntityType()
+   at Microsoft.EntityFrameworkCore.Internal.InternalDbSet`1.get_EntityQueryable()
+   at Microsoft.EntityFrameworkCore.Internal.InternalDbSet`1.System.Linq.IQueryable.get_Provider()
+   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.ExecuteAsync[TSource,TResult](MethodInfo operatorMethodInfo, IQueryable`1 source, Expression expression, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.ExecuteAsync[TSource,TResult](MethodInfo operatorMethodInfo, IQueryable`1 source, LambdaExpression expression, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.EntityFrameworkQueryableExtensions.FirstOrDefaultAsync[TSource](IQueryable`1 source, Expression`1 predicate, CancellationToken cancellationToken)
+   at GerenciamentoTarefasAPI.Services.UsuarioService.LoginUsuario(String email, String senha) in C:\B3Projeto\GerenciamentoTarefasAPI\GerenciamentoTarefas\Services\UsuarioService.cs:line 65
+   at GerenciamentoTarefasAPI.Controllers.UsuariosController.LoginUsuario(LoginRequest loginUsuario) in C:\B3Projeto\GerenciamentoTarefasAPI\GerenciamentoTarefas\Controllers\UsuariosController.cs:line 37
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+2024-08-27 12:28:36 [Information] Request finished HTTP/1.1 POST http://localhost:5076/api/Usuarios/login application/json 58 - 500 - text/plain;+charset=utf-8 16559.1799ms
+2024-08-27 12:42:24 [Information] User profile is available. Using '"C:\Users\Teste\AppData\Local\ASP.NET\DataProtection-Keys"' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-08-27 12:42:24 [Information] Now listening on: "http://localhost:5076"
+2024-08-27 12:42:24 [Information] Application started. Press Ctrl+C to shut down.
+2024-08-27 12:42:24 [Information] Hosting environment: "Development"
+2024-08-27 12:42:24 [Information] Content root path: "C:\B3Projeto\GerenciamentoTarefasAPI\GerenciamentoTarefas\"
+2024-08-27 12:42:25 [Information] Request starting HTTP/1.1 GET http://localhost:5076/swagger - -
+2024-08-27 12:42:25 [Information] Request finished HTTP/1.1 GET http://localhost:5076/swagger - - - 301 0 - 95.3998ms
+2024-08-27 12:42:25 [Information] Request starting HTTP/1.1 GET http://localhost:5076/swagger/index.html - -
+2024-08-27 12:42:26 [Information] Request starting HTTP/1.1 GET http://localhost:5076/swagger/swagger-ui.css - -
+2024-08-27 12:42:26 [Information] Request starting HTTP/1.1 GET http://localhost:5076/swagger/swagger-ui-bundle.js - -
+2024-08-27 12:42:26 [Information] Request starting HTTP/1.1 GET http://localhost:5076/swagger/swagger-ui-standalone-preset.js - -
+2024-08-27 12:42:26 [Information] Request starting HTTP/1.1 GET http://localhost:5076/_framework/aspnetcore-browser-refresh.js - -
+2024-08-27 12:42:26 [Information] Request finished HTTP/1.1 GET http://localhost:5076/swagger/index.html - - - 200 - text/html;charset=utf-8 154.2359ms
+2024-08-27 12:42:26 [Information] Request finished HTTP/1.1 GET http://localhost:5076/_framework/aspnetcore-browser-refresh.js - - - 200 11954 application/javascript;+charset=utf-8 4.2690ms
+2024-08-27 12:42:26 [Information] Sending file. Request path: '"/swagger-ui-bundle.js"'. Physical path: '"N/A"'
+2024-08-27 12:42:26 [Information] Sending file. Request path: '"/swagger-ui.css"'. Physical path: '"N/A"'
+2024-08-27 12:42:26 [Information] Sending file. Request path: '"/swagger-ui-standalone-preset.js"'. Physical path: '"N/A"'
+2024-08-27 12:42:26 [Information] Request finished HTTP/1.1 GET http://localhost:5076/swagger/swagger-ui-bundle.js - - - 200 1092889 application/javascript 39.0836ms
+2024-08-27 12:42:26 [Information] Request finished HTTP/1.1 GET http://localhost:5076/swagger/swagger-ui.css - - - 200 143632 text/css 41.4117ms
+2024-08-27 12:42:26 [Information] Request finished HTTP/1.1 GET http://localhost:5076/swagger/swagger-ui-standalone-preset.js - - - 200 337162 application/javascript 36.3686ms
+2024-08-27 12:42:26 [Information] Request starting HTTP/1.1 GET http://localhost:5076/swagger/v1/swagger.json - -
+2024-08-27 12:42:26 [Information] Request finished HTTP/1.1 GET http://localhost:5076/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 138.2568ms
+2024-08-27 12:42:52 [Information] Request starting HTTP/1.1 POST http://localhost:5076/api/Usuarios/login application/json 58
+2024-08-27 12:42:52 [Information] CORS policy execution failed.
+2024-08-27 12:42:52 [Information] Request origin "http://localhost:5076" does not have permission to access the resource.
+2024-08-27 12:42:53 [Information] Executing endpoint '"GerenciamentoTarefasAPI.Controllers.UsuariosController.LoginUsuario (GerenciamentoTarefas)"'
+2024-08-27 12:42:53 [Information] Route matched with "{action = \"LoginUsuario\", controller = \"Usuarios\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] LoginUsuario(GerenciamentoTarefas.Domain.LoginRequest)" on controller "GerenciamentoTarefasAPI.Controllers.UsuariosController" ("GerenciamentoTarefas").
+2024-08-27 12:43:19 [Information] Entity Framework Core "6.0.0" initialized '"GerenciamentoTarefasContext"' using provider '"Npgsql.EntityFrameworkCore.PostgreSQL":"6.0.0+025fc55189ae41e3f2b98bcbe4eb44c505653700"' with options: "None"
+2024-08-27 12:43:21 [Error] Failed executing DbCommand ("1,539"ms) [Parameters=["@__email_0='?'"], CommandType='Text', CommandTimeout='30']"
+""SELECT u.id, u.email, u.\"IdPerfilUsuario\", u.nome, u.senha
+FROM usuarios AS u
+WHERE u.email = @__email_0
+LIMIT 1"
+2024-08-27 12:43:21 [Error] An exception occurred while iterating over the results of a query for context type '"GerenciamentoTarefasAPI.Repository.GerenciamentoTarefasContext"'."
+""Npgsql.PostgresException (0x80004005): 42703: não existe a coluna u.IdPerfilUsuario
+
+POSITION: 23
+   at Npgsql.Internal.NpgsqlConnector.<ReadMessage>g__ReadMessageLong|213_0(NpgsqlConnector connector, Boolean async, DataRowLoadingMode dataRowLoadingMode, Boolean readingNotifications, Boolean isReadingPrependedMessage)
+   at Npgsql.NpgsqlDataReader.NextResult(Boolean async, Boolean isConsuming, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteReader(CommandBehavior behavior, Boolean async, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteReader(CommandBehavior behavior, Boolean async, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteDbDataReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
+   at Npgsql.EntityFrameworkCore.PostgreSQL.Storage.Internal.NpgsqlExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+  Exception data:
+    Severity: ERRO
+    SqlState: 42703
+    MessageText: não existe a coluna u.IdPerfilUsuario
+    Hint: Talvez você queira fazer referência à coluna \"u.idperfilusuario\".
+    Position: 23
+    File: parse_relation.c
+    Line: 3738
+    Routine: errorMissingColumn"
+Npgsql.PostgresException (0x80004005): 42703: não existe a coluna u.IdPerfilUsuario
+
+POSITION: 23
+   at Npgsql.Internal.NpgsqlConnector.<ReadMessage>g__ReadMessageLong|213_0(NpgsqlConnector connector, Boolean async, DataRowLoadingMode dataRowLoadingMode, Boolean readingNotifications, Boolean isReadingPrependedMessage)
+   at Npgsql.NpgsqlDataReader.NextResult(Boolean async, Boolean isConsuming, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteReader(CommandBehavior behavior, Boolean async, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteReader(CommandBehavior behavior, Boolean async, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteDbDataReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
+   at Npgsql.EntityFrameworkCore.PostgreSQL.Storage.Internal.NpgsqlExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+  Exception data:
+    Severity: ERRO
+    SqlState: 42703
+    MessageText: não existe a coluna u.IdPerfilUsuario
+    Hint: Talvez você queira fazer referência à coluna "u.idperfilusuario".
+    Position: 23
+    File: parse_relation.c
+    Line: 3738
+    Routine: errorMissingColumn
+2024-08-27 12:43:22 [Information] Executed action "GerenciamentoTarefasAPI.Controllers.UsuariosController.LoginUsuario (GerenciamentoTarefas)" in 29029.4906ms
+2024-08-27 12:43:22 [Information] Executed endpoint '"GerenciamentoTarefasAPI.Controllers.UsuariosController.LoginUsuario (GerenciamentoTarefas)"'
+2024-08-27 12:43:22 [Error] An unhandled exception has occurred while executing the request.
+Npgsql.PostgresException (0x80004005): 42703: não existe a coluna u.IdPerfilUsuario
+
+POSITION: 23
+   at Npgsql.Internal.NpgsqlConnector.<ReadMessage>g__ReadMessageLong|213_0(NpgsqlConnector connector, Boolean async, DataRowLoadingMode dataRowLoadingMode, Boolean readingNotifications, Boolean isReadingPrependedMessage)
+   at Npgsql.NpgsqlDataReader.NextResult(Boolean async, Boolean isConsuming, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteReader(CommandBehavior behavior, Boolean async, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteReader(CommandBehavior behavior, Boolean async, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteDbDataReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
+   at Npgsql.EntityFrameworkCore.PostgreSQL.Storage.Internal.NpgsqlExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+   at Microsoft.EntityFrameworkCore.Query.ShapedQueryCompilingExpressionVisitor.SingleOrDefaultAsync[TSource](IAsyncEnumerable`1 asyncEnumerable, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.ShapedQueryCompilingExpressionVisitor.SingleOrDefaultAsync[TSource](IAsyncEnumerable`1 asyncEnumerable, CancellationToken cancellationToken)
+   at GerenciamentoTarefasAPI.Services.UsuarioService.LoginUsuario(String email, String senha) in C:\B3Projeto\GerenciamentoTarefasAPI\GerenciamentoTarefas\Services\UsuarioService.cs:line 65
+   at GerenciamentoTarefasAPI.Controllers.UsuariosController.LoginUsuario(LoginRequest loginUsuario) in C:\B3Projeto\GerenciamentoTarefasAPI\GerenciamentoTarefas\Controllers\UsuariosController.cs:line 37
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+  Exception data:
+    Severity: ERRO
+    SqlState: 42703
+    MessageText: não existe a coluna u.IdPerfilUsuario
+    Hint: Talvez você queira fazer referência à coluna "u.idperfilusuario".
+    Position: 23
+    File: parse_relation.c
+    Line: 3738
+    Routine: errorMissingColumn
+2024-08-27 12:43:22 [Information] Request finished HTTP/1.1 POST http://localhost:5076/api/Usuarios/login application/json 58 - 500 - text/plain;+charset=utf-8 29157.2698ms
+2024-08-27 12:48:05 [Information] User profile is available. Using '"C:\Users\Teste\AppData\Local\ASP.NET\DataProtection-Keys"' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-08-27 12:48:06 [Information] Now listening on: "http://localhost:5076"
+2024-08-27 12:48:06 [Information] Application started. Press Ctrl+C to shut down.
+2024-08-27 12:48:06 [Information] Hosting environment: "Development"
+2024-08-27 12:48:06 [Information] Content root path: "C:\B3Projeto\GerenciamentoTarefasAPI\GerenciamentoTarefas\"
+2024-08-27 12:48:07 [Information] Request starting HTTP/1.1 GET http://localhost:5076/swagger - -
+2024-08-27 12:48:07 [Information] Request finished HTTP/1.1 GET http://localhost:5076/swagger - - - 301 0 - 105.5250ms
+2024-08-27 12:48:07 [Information] Request starting HTTP/1.1 GET http://localhost:5076/swagger/index.html - -
+2024-08-27 12:48:07 [Information] Request starting HTTP/1.1 GET http://localhost:5076/swagger/swagger-ui.css - -
+2024-08-27 12:48:07 [Information] Request starting HTTP/1.1 GET http://localhost:5076/swagger/swagger-ui-bundle.js - -
+2024-08-27 12:48:07 [Information] Request starting HTTP/1.1 GET http://localhost:5076/_framework/aspnetcore-browser-refresh.js - -
+2024-08-27 12:48:07 [Information] Request starting HTTP/1.1 GET http://localhost:5076/swagger/swagger-ui-standalone-preset.js - -
+2024-08-27 12:48:07 [Information] Request finished HTTP/1.1 GET http://localhost:5076/_framework/aspnetcore-browser-refresh.js - - - 200 11954 application/javascript;+charset=utf-8 10.5599ms
+2024-08-27 12:48:07 [Information] Request finished HTTP/1.1 GET http://localhost:5076/swagger/index.html - - - 200 - text/html;charset=utf-8 163.0813ms
+2024-08-27 12:48:07 [Information] Sending file. Request path: '"/swagger-ui-bundle.js"'. Physical path: '"N/A"'
+2024-08-27 12:48:07 [Information] Sending file. Request path: '"/swagger-ui-standalone-preset.js"'. Physical path: '"N/A"'
+2024-08-27 12:48:07 [Information] Sending file. Request path: '"/swagger-ui.css"'. Physical path: '"N/A"'
+2024-08-27 12:48:07 [Information] Request finished HTTP/1.1 GET http://localhost:5076/swagger/swagger-ui-bundle.js - - - 200 1092889 application/javascript 42.0401ms
+2024-08-27 12:48:07 [Information] Request finished HTTP/1.1 GET http://localhost:5076/swagger/swagger-ui-standalone-preset.js - - - 200 337162 application/javascript 39.2859ms
+2024-08-27 12:48:07 [Information] Request finished HTTP/1.1 GET http://localhost:5076/swagger/swagger-ui.css - - - 200 143632 text/css 44.8189ms
+2024-08-27 12:48:07 [Information] Request starting HTTP/1.1 GET http://localhost:5076/swagger/v1/swagger.json - -
+2024-08-27 12:48:08 [Information] Request finished HTTP/1.1 GET http://localhost:5076/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 147.6585ms
+2024-08-27 12:48:31 [Information] Request starting HTTP/1.1 POST http://localhost:5076/api/Usuarios/login application/json 58
+2024-08-27 12:48:31 [Information] CORS policy execution failed.
+2024-08-27 12:48:31 [Information] Request origin "http://localhost:5076" does not have permission to access the resource.
+2024-08-27 12:48:31 [Information] Executing endpoint '"GerenciamentoTarefasAPI.Controllers.UsuariosController.LoginUsuario (GerenciamentoTarefas)"'
+2024-08-27 12:48:31 [Information] Route matched with "{action = \"LoginUsuario\", controller = \"Usuarios\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] LoginUsuario(GerenciamentoTarefas.Domain.LoginRequest)" on controller "GerenciamentoTarefasAPI.Controllers.UsuariosController" ("GerenciamentoTarefas").
+2024-08-27 12:48:48 [Information] Entity Framework Core "6.0.0" initialized '"GerenciamentoTarefasContext"' using provider '"Npgsql.EntityFrameworkCore.PostgreSQL":"6.0.0+025fc55189ae41e3f2b98bcbe4eb44c505653700"' with options: "None"
+2024-08-27 12:48:51 [Error] Failed executing DbCommand ("3,397"ms) [Parameters=["@__email_0='?'"], CommandType='Text', CommandTimeout='30']"
+""SELECT u.id, u.email, u.\"IdPerfilUsuario\", u.nome, u.senha
+FROM usuarios AS u
+WHERE u.email = @__email_0
+LIMIT 1"
+2024-08-27 12:48:51 [Error] An exception occurred while iterating over the results of a query for context type '"GerenciamentoTarefasAPI.Repository.GerenciamentoTarefasContext"'."
+""Npgsql.PostgresException (0x80004005): 42703: não existe a coluna u.IdPerfilUsuario
+
+POSITION: 23
+   at Npgsql.Internal.NpgsqlConnector.<ReadMessage>g__ReadMessageLong|213_0(NpgsqlConnector connector, Boolean async, DataRowLoadingMode dataRowLoadingMode, Boolean readingNotifications, Boolean isReadingPrependedMessage)
+   at Npgsql.NpgsqlDataReader.NextResult(Boolean async, Boolean isConsuming, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteReader(CommandBehavior behavior, Boolean async, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteReader(CommandBehavior behavior, Boolean async, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteDbDataReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
+   at Npgsql.EntityFrameworkCore.PostgreSQL.Storage.Internal.NpgsqlExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+  Exception data:
+    Severity: ERRO
+    SqlState: 42703
+    MessageText: não existe a coluna u.IdPerfilUsuario
+    Hint: Talvez você queira fazer referência à coluna \"u.idperfilusuario\".
+    Position: 23
+    File: parse_relation.c
+    Line: 3738
+    Routine: errorMissingColumn"
+Npgsql.PostgresException (0x80004005): 42703: não existe a coluna u.IdPerfilUsuario
+
+POSITION: 23
+   at Npgsql.Internal.NpgsqlConnector.<ReadMessage>g__ReadMessageLong|213_0(NpgsqlConnector connector, Boolean async, DataRowLoadingMode dataRowLoadingMode, Boolean readingNotifications, Boolean isReadingPrependedMessage)
+   at Npgsql.NpgsqlDataReader.NextResult(Boolean async, Boolean isConsuming, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteReader(CommandBehavior behavior, Boolean async, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteReader(CommandBehavior behavior, Boolean async, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteDbDataReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
+   at Npgsql.EntityFrameworkCore.PostgreSQL.Storage.Internal.NpgsqlExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+  Exception data:
+    Severity: ERRO
+    SqlState: 42703
+    MessageText: não existe a coluna u.IdPerfilUsuario
+    Hint: Talvez você queira fazer referência à coluna "u.idperfilusuario".
+    Position: 23
+    File: parse_relation.c
+    Line: 3738
+    Routine: errorMissingColumn
+2024-08-27 12:48:52 [Information] Executed action "GerenciamentoTarefasAPI.Controllers.UsuariosController.LoginUsuario (GerenciamentoTarefas)" in 20510.1176ms
+2024-08-27 12:48:52 [Information] Executed endpoint '"GerenciamentoTarefasAPI.Controllers.UsuariosController.LoginUsuario (GerenciamentoTarefas)"'
+2024-08-27 12:48:52 [Error] An unhandled exception has occurred while executing the request.
+Npgsql.PostgresException (0x80004005): 42703: não existe a coluna u.IdPerfilUsuario
+
+POSITION: 23
+   at Npgsql.Internal.NpgsqlConnector.<ReadMessage>g__ReadMessageLong|213_0(NpgsqlConnector connector, Boolean async, DataRowLoadingMode dataRowLoadingMode, Boolean readingNotifications, Boolean isReadingPrependedMessage)
+   at Npgsql.NpgsqlDataReader.NextResult(Boolean async, Boolean isConsuming, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteReader(CommandBehavior behavior, Boolean async, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteReader(CommandBehavior behavior, Boolean async, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteDbDataReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
+   at Npgsql.EntityFrameworkCore.PostgreSQL.Storage.Internal.NpgsqlExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+   at Microsoft.EntityFrameworkCore.Query.ShapedQueryCompilingExpressionVisitor.SingleOrDefaultAsync[TSource](IAsyncEnumerable`1 asyncEnumerable, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.ShapedQueryCompilingExpressionVisitor.SingleOrDefaultAsync[TSource](IAsyncEnumerable`1 asyncEnumerable, CancellationToken cancellationToken)
+   at GerenciamentoTarefasAPI.Services.UsuarioService.LoginUsuario(String email, String senha) in C:\B3Projeto\GerenciamentoTarefasAPI\GerenciamentoTarefas\Services\UsuarioService.cs:line 65
+   at GerenciamentoTarefasAPI.Controllers.UsuariosController.LoginUsuario(LoginRequest loginUsuario) in C:\B3Projeto\GerenciamentoTarefasAPI\GerenciamentoTarefas\Controllers\UsuariosController.cs:line 37
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+  Exception data:
+    Severity: ERRO
+    SqlState: 42703
+    MessageText: não existe a coluna u.IdPerfilUsuario
+    Hint: Talvez você queira fazer referência à coluna "u.idperfilusuario".
+    Position: 23
+    File: parse_relation.c
+    Line: 3738
+    Routine: errorMissingColumn
+2024-08-27 12:48:52 [Information] Request finished HTTP/1.1 POST http://localhost:5076/api/Usuarios/login application/json 58 - 500 - text/plain;+charset=utf-8 20639.2487ms
+2024-08-27 12:50:08 [Information] User profile is available. Using '"C:\Users\Teste\AppData\Local\ASP.NET\DataProtection-Keys"' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-08-27 12:50:08 [Information] Now listening on: "http://localhost:5076"
+2024-08-27 12:50:08 [Information] Application started. Press Ctrl+C to shut down.
+2024-08-27 12:50:08 [Information] Hosting environment: "Development"
+2024-08-27 12:50:08 [Information] Content root path: "C:\B3Projeto\GerenciamentoTarefasAPI\GerenciamentoTarefas\"
+2024-08-27 12:50:09 [Information] Request starting HTTP/1.1 GET http://localhost:5076/swagger - -
+2024-08-27 12:50:09 [Information] Request finished HTTP/1.1 GET http://localhost:5076/swagger - - - 301 0 - 96.6140ms
+2024-08-27 12:50:09 [Information] Request starting HTTP/1.1 GET http://localhost:5076/swagger/index.html - -
+2024-08-27 12:50:10 [Information] Request starting HTTP/1.1 GET http://localhost:5076/swagger/swagger-ui.css - -
+2024-08-27 12:50:10 [Information] Request starting HTTP/1.1 GET http://localhost:5076/swagger/swagger-ui-bundle.js - -
+2024-08-27 12:50:10 [Information] Request starting HTTP/1.1 GET http://localhost:5076/swagger/swagger-ui-standalone-preset.js - -
+2024-08-27 12:50:10 [Information] Request starting HTTP/1.1 GET http://localhost:5076/_framework/aspnetcore-browser-refresh.js - -
+2024-08-27 12:50:10 [Information] Request finished HTTP/1.1 GET http://localhost:5076/swagger/index.html - - - 200 - text/html;charset=utf-8 161.5655ms
+2024-08-27 12:50:10 [Information] Request finished HTTP/1.1 GET http://localhost:5076/_framework/aspnetcore-browser-refresh.js - - - 200 11954 application/javascript;+charset=utf-8 4.1365ms
+2024-08-27 12:50:10 [Information] Sending file. Request path: '"/swagger-ui-standalone-preset.js"'. Physical path: '"N/A"'
+2024-08-27 12:50:10 [Information] Sending file. Request path: '"/swagger-ui.css"'. Physical path: '"N/A"'
+2024-08-27 12:50:10 [Information] Sending file. Request path: '"/swagger-ui-bundle.js"'. Physical path: '"N/A"'
+2024-08-27 12:50:10 [Information] Request finished HTTP/1.1 GET http://localhost:5076/swagger/swagger-ui-standalone-preset.js - - - 200 337162 application/javascript 41.8975ms
+2024-08-27 12:50:10 [Information] Request finished HTTP/1.1 GET http://localhost:5076/swagger/swagger-ui.css - - - 200 143632 text/css 45.3715ms
+2024-08-27 12:50:10 [Information] Request finished HTTP/1.1 GET http://localhost:5076/swagger/swagger-ui-bundle.js - - - 200 1092889 application/javascript 42.4470ms
+2024-08-27 12:50:10 [Information] Request starting HTTP/1.1 GET http://localhost:5076/swagger/v1/swagger.json - -
+2024-08-27 12:50:10 [Information] Request finished HTTP/1.1 GET http://localhost:5076/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 138.2962ms
+2024-08-27 12:50:36 [Information] Request starting HTTP/1.1 POST http://localhost:5076/api/Usuarios/login application/json 58
+2024-08-27 12:50:36 [Information] CORS policy execution failed.
+2024-08-27 12:50:36 [Information] Request origin "http://localhost:5076" does not have permission to access the resource.
+2024-08-27 12:50:36 [Information] Executing endpoint '"GerenciamentoTarefasAPI.Controllers.UsuariosController.LoginUsuario (GerenciamentoTarefas)"'
+2024-08-27 12:50:36 [Information] Route matched with "{action = \"LoginUsuario\", controller = \"Usuarios\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] LoginUsuario(GerenciamentoTarefas.Domain.LoginRequest)" on controller "GerenciamentoTarefasAPI.Controllers.UsuariosController" ("GerenciamentoTarefas").
+2024-08-27 12:50:57 [Information] Entity Framework Core "6.0.0" initialized '"GerenciamentoTarefasContext"' using provider '"Npgsql.EntityFrameworkCore.PostgreSQL":"6.0.0+025fc55189ae41e3f2b98bcbe4eb44c505653700"' with options: "None"
+2024-08-27 12:50:58 [Error] Failed executing DbCommand ("1,014"ms) [Parameters=["@__email_0='?'"], CommandType='Text', CommandTimeout='30']"
+""SELECT u.id, u.email, u.\"IdPerfilUsuario\", u.nome, u.senha
+FROM usuarios AS u
+WHERE u.email = @__email_0
+LIMIT 1"
+2024-08-27 12:50:58 [Error] An exception occurred while iterating over the results of a query for context type '"GerenciamentoTarefasAPI.Repository.GerenciamentoTarefasContext"'."
+""Npgsql.PostgresException (0x80004005): 42703: não existe a coluna u.IdPerfilUsuario
+
+POSITION: 23
+   at Npgsql.Internal.NpgsqlConnector.<ReadMessage>g__ReadMessageLong|213_0(NpgsqlConnector connector, Boolean async, DataRowLoadingMode dataRowLoadingMode, Boolean readingNotifications, Boolean isReadingPrependedMessage)
+   at Npgsql.NpgsqlDataReader.NextResult(Boolean async, Boolean isConsuming, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteReader(CommandBehavior behavior, Boolean async, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteReader(CommandBehavior behavior, Boolean async, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteDbDataReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
+   at Npgsql.EntityFrameworkCore.PostgreSQL.Storage.Internal.NpgsqlExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+  Exception data:
+    Severity: ERRO
+    SqlState: 42703
+    MessageText: não existe a coluna u.IdPerfilUsuario
+    Hint: Talvez você queira fazer referência à coluna \"u.idperfilusuario\".
+    Position: 23
+    File: parse_relation.c
+    Line: 3738
+    Routine: errorMissingColumn"
+Npgsql.PostgresException (0x80004005): 42703: não existe a coluna u.IdPerfilUsuario
+
+POSITION: 23
+   at Npgsql.Internal.NpgsqlConnector.<ReadMessage>g__ReadMessageLong|213_0(NpgsqlConnector connector, Boolean async, DataRowLoadingMode dataRowLoadingMode, Boolean readingNotifications, Boolean isReadingPrependedMessage)
+   at Npgsql.NpgsqlDataReader.NextResult(Boolean async, Boolean isConsuming, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteReader(CommandBehavior behavior, Boolean async, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteReader(CommandBehavior behavior, Boolean async, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteDbDataReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
+   at Npgsql.EntityFrameworkCore.PostgreSQL.Storage.Internal.NpgsqlExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+  Exception data:
+    Severity: ERRO
+    SqlState: 42703
+    MessageText: não existe a coluna u.IdPerfilUsuario
+    Hint: Talvez você queira fazer referência à coluna "u.idperfilusuario".
+    Position: 23
+    File: parse_relation.c
+    Line: 3738
+    Routine: errorMissingColumn
+2024-08-27 12:50:58 [Information] Executed action "GerenciamentoTarefasAPI.Controllers.UsuariosController.LoginUsuario (GerenciamentoTarefas)" in 22010.6336ms
+2024-08-27 12:50:58 [Information] Executed endpoint '"GerenciamentoTarefasAPI.Controllers.UsuariosController.LoginUsuario (GerenciamentoTarefas)"'
+2024-08-27 12:50:58 [Error] An unhandled exception has occurred while executing the request.
+Npgsql.PostgresException (0x80004005): 42703: não existe a coluna u.IdPerfilUsuario
+
+POSITION: 23
+   at Npgsql.Internal.NpgsqlConnector.<ReadMessage>g__ReadMessageLong|213_0(NpgsqlConnector connector, Boolean async, DataRowLoadingMode dataRowLoadingMode, Boolean readingNotifications, Boolean isReadingPrependedMessage)
+   at Npgsql.NpgsqlDataReader.NextResult(Boolean async, Boolean isConsuming, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteReader(CommandBehavior behavior, Boolean async, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteReader(CommandBehavior behavior, Boolean async, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteDbDataReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
+   at Npgsql.EntityFrameworkCore.PostgreSQL.Storage.Internal.NpgsqlExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+   at Microsoft.EntityFrameworkCore.Query.ShapedQueryCompilingExpressionVisitor.SingleOrDefaultAsync[TSource](IAsyncEnumerable`1 asyncEnumerable, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.ShapedQueryCompilingExpressionVisitor.SingleOrDefaultAsync[TSource](IAsyncEnumerable`1 asyncEnumerable, CancellationToken cancellationToken)
+   at GerenciamentoTarefasAPI.Services.UsuarioService.LoginUsuario(String email, String senha) in C:\B3Projeto\GerenciamentoTarefasAPI\GerenciamentoTarefas\Services\UsuarioService.cs:line 65
+   at GerenciamentoTarefasAPI.Controllers.UsuariosController.LoginUsuario(LoginRequest loginUsuario) in C:\B3Projeto\GerenciamentoTarefasAPI\GerenciamentoTarefas\Controllers\UsuariosController.cs:line 37
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+  Exception data:
+    Severity: ERRO
+    SqlState: 42703
+    MessageText: não existe a coluna u.IdPerfilUsuario
+    Hint: Talvez você queira fazer referência à coluna "u.idperfilusuario".
+    Position: 23
+    File: parse_relation.c
+    Line: 3738
+    Routine: errorMissingColumn
+2024-08-27 12:50:58 [Information] Request finished HTTP/1.1 POST http://localhost:5076/api/Usuarios/login application/json 58 - 500 - text/plain;+charset=utf-8 22146.0785ms
+2024-08-27 12:59:36 [Information] User profile is available. Using '"C:\Users\Teste\AppData\Local\ASP.NET\DataProtection-Keys"' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-08-27 12:59:36 [Information] Now listening on: "http://localhost:5076"
+2024-08-27 12:59:36 [Information] Application started. Press Ctrl+C to shut down.
+2024-08-27 12:59:36 [Information] Hosting environment: "Development"
+2024-08-27 12:59:36 [Information] Content root path: "C:\B3Projeto\GerenciamentoTarefasAPI\GerenciamentoTarefas\"
+2024-08-27 12:59:38 [Information] Request starting HTTP/1.1 GET http://localhost:5076/swagger - -
+2024-08-27 12:59:38 [Information] Request finished HTTP/1.1 GET http://localhost:5076/swagger - - - 301 0 - 101.5047ms
+2024-08-27 12:59:38 [Information] Request starting HTTP/1.1 GET http://localhost:5076/swagger/index.html - -
+2024-08-27 12:59:38 [Information] Request starting HTTP/1.1 GET http://localhost:5076/swagger/swagger-ui-bundle.js - -
+2024-08-27 12:59:38 [Information] Request starting HTTP/1.1 GET http://localhost:5076/swagger/swagger-ui.css - -
+2024-08-27 12:59:38 [Information] Request starting HTTP/1.1 GET http://localhost:5076/swagger/swagger-ui-standalone-preset.js - -
+2024-08-27 12:59:38 [Information] Request starting HTTP/1.1 GET http://localhost:5076/_framework/aspnetcore-browser-refresh.js - -
+2024-08-27 12:59:38 [Information] Request finished HTTP/1.1 GET http://localhost:5076/_framework/aspnetcore-browser-refresh.js - - - 200 11954 application/javascript;+charset=utf-8 3.8046ms
+2024-08-27 12:59:38 [Information] Request finished HTTP/1.1 GET http://localhost:5076/swagger/index.html - - - 200 - text/html;charset=utf-8 163.2843ms
+2024-08-27 12:59:38 [Information] Sending file. Request path: '"/swagger-ui-bundle.js"'. Physical path: '"N/A"'
+2024-08-27 12:59:38 [Information] Sending file. Request path: '"/swagger-ui-standalone-preset.js"'. Physical path: '"N/A"'
+2024-08-27 12:59:38 [Information] Sending file. Request path: '"/swagger-ui.css"'. Physical path: '"N/A"'
+2024-08-27 12:59:38 [Information] Request finished HTTP/1.1 GET http://localhost:5076/swagger/swagger-ui-bundle.js - - - 200 1092889 application/javascript 35.0035ms
+2024-08-27 12:59:38 [Information] Request finished HTTP/1.1 GET http://localhost:5076/swagger/swagger-ui-standalone-preset.js - - - 200 337162 application/javascript 32.8000ms
+2024-08-27 12:59:38 [Information] Request finished HTTP/1.1 GET http://localhost:5076/swagger/swagger-ui.css - - - 200 143632 text/css 33.1025ms
+2024-08-27 12:59:38 [Information] Request starting HTTP/1.1 GET http://localhost:5076/swagger/v1/swagger.json - -
+2024-08-27 12:59:38 [Information] Request finished HTTP/1.1 GET http://localhost:5076/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 140.3511ms
+2024-08-27 13:00:00 [Information] Request starting HTTP/1.1 POST http://localhost:5076/api/Usuarios/login application/json 58
+2024-08-27 13:00:00 [Information] CORS policy execution failed.
+2024-08-27 13:00:00 [Information] Request origin "http://localhost:5076" does not have permission to access the resource.
+2024-08-27 13:00:00 [Information] Executing endpoint '"GerenciamentoTarefasAPI.Controllers.UsuariosController.LoginUsuario (GerenciamentoTarefas)"'
+2024-08-27 13:00:00 [Information] Route matched with "{action = \"LoginUsuario\", controller = \"Usuarios\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] LoginUsuario(GerenciamentoTarefas.Domain.LoginRequest)" on controller "GerenciamentoTarefasAPI.Controllers.UsuariosController" ("GerenciamentoTarefas").
+2024-08-27 13:00:22 [Information] Entity Framework Core "6.0.0" initialized '"GerenciamentoTarefasContext"' using provider '"Npgsql.EntityFrameworkCore.PostgreSQL":"6.0.0+025fc55189ae41e3f2b98bcbe4eb44c505653700"' with options: "None"
+2024-08-27 13:00:24 [Error] Failed executing DbCommand ("1,165"ms) [Parameters=["@__email_0='?'"], CommandType='Text', CommandTimeout='30']"
+""SELECT u.id, u.email, u.\"IdPerfilUsuario\", u.nome, u.senha
+FROM usuarios AS u
+WHERE u.email = @__email_0
+LIMIT 1"
+2024-08-27 13:00:24 [Error] An exception occurred while iterating over the results of a query for context type '"GerenciamentoTarefasAPI.Repository.GerenciamentoTarefasContext"'."
+""Npgsql.PostgresException (0x80004005): 42703: não existe a coluna u.IdPerfilUsuario
+
+POSITION: 23
+   at Npgsql.Internal.NpgsqlConnector.<ReadMessage>g__ReadMessageLong|213_0(NpgsqlConnector connector, Boolean async, DataRowLoadingMode dataRowLoadingMode, Boolean readingNotifications, Boolean isReadingPrependedMessage)
+   at Npgsql.NpgsqlDataReader.NextResult(Boolean async, Boolean isConsuming, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteReader(CommandBehavior behavior, Boolean async, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteReader(CommandBehavior behavior, Boolean async, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteDbDataReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
+   at Npgsql.EntityFrameworkCore.PostgreSQL.Storage.Internal.NpgsqlExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+  Exception data:
+    Severity: ERRO
+    SqlState: 42703
+    MessageText: não existe a coluna u.IdPerfilUsuario
+    Hint: Talvez você queira fazer referência à coluna \"u.idperfilusuario\".
+    Position: 23
+    File: parse_relation.c
+    Line: 3738
+    Routine: errorMissingColumn"
+Npgsql.PostgresException (0x80004005): 42703: não existe a coluna u.IdPerfilUsuario
+
+POSITION: 23
+   at Npgsql.Internal.NpgsqlConnector.<ReadMessage>g__ReadMessageLong|213_0(NpgsqlConnector connector, Boolean async, DataRowLoadingMode dataRowLoadingMode, Boolean readingNotifications, Boolean isReadingPrependedMessage)
+   at Npgsql.NpgsqlDataReader.NextResult(Boolean async, Boolean isConsuming, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteReader(CommandBehavior behavior, Boolean async, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteReader(CommandBehavior behavior, Boolean async, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteDbDataReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
+   at Npgsql.EntityFrameworkCore.PostgreSQL.Storage.Internal.NpgsqlExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+  Exception data:
+    Severity: ERRO
+    SqlState: 42703
+    MessageText: não existe a coluna u.IdPerfilUsuario
+    Hint: Talvez você queira fazer referência à coluna "u.idperfilusuario".
+    Position: 23
+    File: parse_relation.c
+    Line: 3738
+    Routine: errorMissingColumn
+2024-08-27 13:00:24 [Information] Executed action "GerenciamentoTarefasAPI.Controllers.UsuariosController.LoginUsuario (GerenciamentoTarefas)" in 23860.6894ms
+2024-08-27 13:00:24 [Information] Executed endpoint '"GerenciamentoTarefasAPI.Controllers.UsuariosController.LoginUsuario (GerenciamentoTarefas)"'
+2024-08-27 13:00:24 [Error] An unhandled exception has occurred while executing the request.
+Npgsql.PostgresException (0x80004005): 42703: não existe a coluna u.IdPerfilUsuario
+
+POSITION: 23
+   at Npgsql.Internal.NpgsqlConnector.<ReadMessage>g__ReadMessageLong|213_0(NpgsqlConnector connector, Boolean async, DataRowLoadingMode dataRowLoadingMode, Boolean readingNotifications, Boolean isReadingPrependedMessage)
+   at Npgsql.NpgsqlDataReader.NextResult(Boolean async, Boolean isConsuming, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteReader(CommandBehavior behavior, Boolean async, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteReader(CommandBehavior behavior, Boolean async, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteDbDataReaderAsync(CommandBehavior behavior, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.InitializeReaderAsync(AsyncEnumerator enumerator, CancellationToken cancellationToken)
+   at Npgsql.EntityFrameworkCore.PostgreSQL.Storage.Internal.NpgsqlExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.Internal.SingleQueryingEnumerable`1.AsyncEnumerator.MoveNextAsync()
+   at Microsoft.EntityFrameworkCore.Query.ShapedQueryCompilingExpressionVisitor.SingleOrDefaultAsync[TSource](IAsyncEnumerable`1 asyncEnumerable, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Query.ShapedQueryCompilingExpressionVisitor.SingleOrDefaultAsync[TSource](IAsyncEnumerable`1 asyncEnumerable, CancellationToken cancellationToken)
+   at GerenciamentoTarefasAPI.Services.UsuarioService.LoginUsuario(String email, String senha) in C:\B3Projeto\GerenciamentoTarefasAPI\GerenciamentoTarefas\Services\UsuarioService.cs:line 65
+   at GerenciamentoTarefasAPI.Controllers.UsuariosController.LoginUsuario(LoginRequest loginUsuario) in C:\B3Projeto\GerenciamentoTarefasAPI\GerenciamentoTarefas\Controllers\UsuariosController.cs:line 37
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|6_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddleware.Invoke(HttpContext context)
+  Exception data:
+    Severity: ERRO
+    SqlState: 42703
+    MessageText: não existe a coluna u.IdPerfilUsuario
+    Hint: Talvez você queira fazer referência à coluna "u.idperfilusuario".
+    Position: 23
+    File: parse_relation.c
+    Line: 3738
+    Routine: errorMissingColumn
+2024-08-27 13:00:24 [Information] Request finished HTTP/1.1 POST http://localhost:5076/api/Usuarios/login application/json 58 - 500 - text/plain;+charset=utf-8 23988.1606ms
+2024-08-27 13:04:39 [Information] User profile is available. Using '"C:\Users\Teste\AppData\Local\ASP.NET\DataProtection-Keys"' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-08-27 13:04:39 [Information] Now listening on: "http://localhost:5076"
+2024-08-27 13:04:39 [Information] Application started. Press Ctrl+C to shut down.
+2024-08-27 13:04:39 [Information] Hosting environment: "Development"
+2024-08-27 13:04:39 [Information] Content root path: "C:\B3Projeto\GerenciamentoTarefasAPI\GerenciamentoTarefas\"
+2024-08-27 13:04:40 [Information] Request starting HTTP/1.1 GET http://localhost:5076/swagger - -
+2024-08-27 13:04:40 [Information] Request finished HTTP/1.1 GET http://localhost:5076/swagger - - - 301 0 - 103.8015ms
+2024-08-27 13:04:40 [Information] Request starting HTTP/1.1 GET http://localhost:5076/swagger/index.html - -
+2024-08-27 13:04:40 [Information] Request starting HTTP/1.1 GET http://localhost:5076/swagger/swagger-ui.css - -
+2024-08-27 13:04:40 [Information] Request starting HTTP/1.1 GET http://localhost:5076/swagger/swagger-ui-bundle.js - -
+2024-08-27 13:04:40 [Information] Request starting HTTP/1.1 GET http://localhost:5076/swagger/swagger-ui-standalone-preset.js - -
+2024-08-27 13:04:40 [Information] Request starting HTTP/1.1 GET http://localhost:5076/_framework/aspnetcore-browser-refresh.js - -
+2024-08-27 13:04:40 [Information] Request finished HTTP/1.1 GET http://localhost:5076/swagger/index.html - - - 200 - text/html;charset=utf-8 146.4908ms
+2024-08-27 13:04:40 [Information] Request finished HTTP/1.1 GET http://localhost:5076/_framework/aspnetcore-browser-refresh.js - - - 200 11954 application/javascript;+charset=utf-8 3.8624ms
+2024-08-27 13:04:40 [Information] Sending file. Request path: '"/swagger-ui-bundle.js"'. Physical path: '"N/A"'
+2024-08-27 13:04:40 [Information] Sending file. Request path: '"/swagger-ui.css"'. Physical path: '"N/A"'
+2024-08-27 13:04:40 [Information] Sending file. Request path: '"/swagger-ui-standalone-preset.js"'. Physical path: '"N/A"'
+2024-08-27 13:04:40 [Information] Request finished HTTP/1.1 GET http://localhost:5076/swagger/swagger-ui.css - - - 200 143632 text/css 36.7263ms
+2024-08-27 13:04:40 [Information] Request finished HTTP/1.1 GET http://localhost:5076/swagger/swagger-ui-bundle.js - - - 200 1092889 application/javascript 34.5198ms
+2024-08-27 13:04:40 [Information] Request finished HTTP/1.1 GET http://localhost:5076/swagger/swagger-ui-standalone-preset.js - - - 200 337162 application/javascript 31.2043ms
+2024-08-27 13:04:41 [Information] Request starting HTTP/1.1 GET http://localhost:5076/swagger/v1/swagger.json - -
+2024-08-27 13:04:41 [Information] Request finished HTTP/1.1 GET http://localhost:5076/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 138.7926ms
+2024-08-27 13:05:25 [Information] Request starting HTTP/1.1 POST http://localhost:5076/api/Usuarios/login application/json 58
+2024-08-27 13:05:25 [Information] CORS policy execution failed.
+2024-08-27 13:05:25 [Information] Request origin "http://localhost:5076" does not have permission to access the resource.
+2024-08-27 13:05:25 [Information] Executing endpoint '"GerenciamentoTarefasAPI.Controllers.UsuariosController.LoginUsuario (GerenciamentoTarefas)"'
+2024-08-27 13:05:25 [Information] Route matched with "{action = \"LoginUsuario\", controller = \"Usuarios\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] LoginUsuario(GerenciamentoTarefas.Domain.LoginRequest)" on controller "GerenciamentoTarefasAPI.Controllers.UsuariosController" ("GerenciamentoTarefas").
+2024-08-27 13:05:41 [Information] Entity Framework Core "6.0.0" initialized '"GerenciamentoTarefasContext"' using provider '"Npgsql.EntityFrameworkCore.PostgreSQL":"6.0.0+025fc55189ae41e3f2b98bcbe4eb44c505653700"' with options: "None"
+2024-08-27 13:05:42 [Information] Executed DbCommand ("65"ms) [Parameters=["@__email_0='?'"], CommandType='Text', CommandTimeout='30']"
+""SELECT u.id, u.email, u.idperfilusuario, u.nome, u.senha
+FROM usuarios AS u
+WHERE u.email = @__email_0
+LIMIT 1"
+2024-08-27 13:05:59 [Information] Executing "OkObjectResult", writing value of type '"<>f__AnonymousType2`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]"'.
+2024-08-27 13:05:59 [Information] Executed action "GerenciamentoTarefasAPI.Controllers.UsuariosController.LoginUsuario (GerenciamentoTarefas)" in 33709.1063ms
+2024-08-27 13:05:59 [Information] Executed endpoint '"GerenciamentoTarefasAPI.Controllers.UsuariosController.LoginUsuario (GerenciamentoTarefas)"'
+2024-08-27 13:05:59 [Information] Request finished HTTP/1.1 POST http://localhost:5076/api/Usuarios/login application/json 58 - 200 - application/json;+charset=utf-8 33818.7087ms
+2024-08-27 13:06:58 [Information] Request starting HTTP/1.1 OPTIONS http://localhost:5076/api/Usuarios/login - -
+2024-08-27 13:06:58 [Information] CORS policy execution successful.
+2024-08-27 13:06:58 [Information] Request finished HTTP/1.1 OPTIONS http://localhost:5076/api/Usuarios/login - - - 204 - - 7.3509ms
+2024-08-27 13:06:58 [Information] Request starting HTTP/1.1 POST http://localhost:5076/api/Usuarios/login application/json 66
+2024-08-27 13:06:58 [Information] CORS policy execution successful.
+2024-08-27 13:06:58 [Information] Executing endpoint '"GerenciamentoTarefasAPI.Controllers.UsuariosController.LoginUsuario (GerenciamentoTarefas)"'
+2024-08-27 13:06:58 [Information] Route matched with "{action = \"LoginUsuario\", controller = \"Usuarios\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] LoginUsuario(GerenciamentoTarefas.Domain.LoginRequest)" on controller "GerenciamentoTarefasAPI.Controllers.UsuariosController" ("GerenciamentoTarefas").
+2024-08-27 13:07:01 [Information] Entity Framework Core "6.0.0" initialized '"GerenciamentoTarefasContext"' using provider '"Npgsql.EntityFrameworkCore.PostgreSQL":"6.0.0+025fc55189ae41e3f2b98bcbe4eb44c505653700"' with options: "None"
+2024-08-27 13:07:01 [Information] Executed DbCommand ("5"ms) [Parameters=["@__email_0='?'"], CommandType='Text', CommandTimeout='30']"
+""SELECT u.id, u.email, u.idperfilusuario, u.nome, u.senha
+FROM usuarios AS u
+WHERE u.email = @__email_0
+LIMIT 1"
+2024-08-27 13:07:02 [Information] Executing "OkObjectResult", writing value of type '"<>f__AnonymousType2`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]"'.
+2024-08-27 13:07:02 [Information] Executed action "GerenciamentoTarefasAPI.Controllers.UsuariosController.LoginUsuario (GerenciamentoTarefas)" in 3994.6605ms
+2024-08-27 13:07:02 [Information] Executed endpoint '"GerenciamentoTarefasAPI.Controllers.UsuariosController.LoginUsuario (GerenciamentoTarefas)"'
+2024-08-27 13:07:02 [Information] Request finished HTTP/1.1 POST http://localhost:5076/api/Usuarios/login application/json 66 - 200 - application/json;+charset=utf-8 3996.1279ms
+2024-08-27 13:07:02 [Information] Request starting HTTP/1.1 OPTIONS http://localhost:5076/api/Tarefas/minhas-tarefas - -
+2024-08-27 13:07:02 [Information] CORS policy execution successful.
+2024-08-27 13:07:02 [Information] Request finished HTTP/1.1 OPTIONS http://localhost:5076/api/Tarefas/minhas-tarefas - - - 204 - - 0.4203ms
+2024-08-27 13:07:02 [Information] Request starting HTTP/1.1 GET http://localhost:5076/api/Tarefas/minhas-tarefas - -
+2024-08-27 13:07:02 [Information] CORS policy execution successful.
+2024-08-27 13:07:02 [Information] Executing endpoint '"GerenciamentoTarefasAPI.Controllers.TarefasController.ObterMinhasTarefas (GerenciamentoTarefas)"'
+2024-08-27 13:07:02 [Information] Route matched with "{action = \"ObterMinhasTarefas\", controller = \"Tarefas\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] ObterMinhasTarefas()" on controller "GerenciamentoTarefasAPI.Controllers.TarefasController" ("GerenciamentoTarefas").
+2024-08-27 13:07:02 [Information] Entity Framework Core "6.0.0" initialized '"GerenciamentoTarefasContext"' using provider '"Npgsql.EntityFrameworkCore.PostgreSQL":"6.0.0+025fc55189ae41e3f2b98bcbe4eb44c505653700"' with options: "None"
+2024-08-27 13:07:02 [Information] Executed DbCommand ("8"ms) [Parameters=["@__usuarioid_0='?' (DbType = Int32)"], CommandType='Text', CommandTimeout='30']"
+""SELECT t.id, t.datavencimento, t.descricao, t.status, t.usuarioid
+FROM tarefas AS t
+WHERE t.usuarioid = @__usuarioid_0"
+2024-08-27 13:07:02 [Information] Executing "OkObjectResult", writing value of type '"System.Collections.Generic.List`1[[GerenciamentoTarefasAPI.Models.Tarefa, GerenciamentoTarefas, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]"'.
+2024-08-27 13:07:02 [Information] Executed action "GerenciamentoTarefasAPI.Controllers.TarefasController.ObterMinhasTarefas (GerenciamentoTarefas)" in 352.7599ms
+2024-08-27 13:07:02 [Information] Executed endpoint '"GerenciamentoTarefasAPI.Controllers.TarefasController.ObterMinhasTarefas (GerenciamentoTarefas)"'
+2024-08-27 13:07:02 [Information] Request finished HTTP/1.1 GET http://localhost:5076/api/Tarefas/minhas-tarefas - - - 200 - application/json;+charset=utf-8 435.5537ms
+2024-08-27 22:16:15 [Information] User profile is available. Using '"C:\Users\Teste\AppData\Local\ASP.NET\DataProtection-Keys"' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-08-27 22:16:16 [Information] Now listening on: "http://localhost:5076"
+2024-08-27 22:16:16 [Information] Application started. Press Ctrl+C to shut down.
+2024-08-27 22:16:16 [Information] Hosting environment: "Development"
+2024-08-27 22:16:16 [Information] Content root path: "C:\B3Projeto\GerenciamentoTarefasAPI\GerenciamentoTarefas\"
+2024-08-27 22:16:44 [Information] User profile is available. Using '"C:\Users\Teste\AppData\Local\ASP.NET\DataProtection-Keys"' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-08-27 22:16:45 [Information] Now listening on: "http://localhost:5076"
+2024-08-27 22:16:45 [Information] Application started. Press Ctrl+C to shut down.
+2024-08-27 22:16:45 [Information] Hosting environment: "Development"
+2024-08-27 22:16:45 [Information] Content root path: "C:\B3Projeto\GerenciamentoTarefasAPI\GerenciamentoTarefas\"
+2024-08-27 22:17:30 [Information] User profile is available. Using '"C:\Users\Teste\AppData\Local\ASP.NET\DataProtection-Keys"' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-08-27 22:17:31 [Information] Now listening on: "http://localhost:5076"
+2024-08-27 22:17:31 [Information] Application started. Press Ctrl+C to shut down.
+2024-08-27 22:17:31 [Information] Hosting environment: "Development"
+2024-08-27 22:17:31 [Information] Content root path: "C:\B3Projeto\GerenciamentoTarefasAPI\GerenciamentoTarefas\"
+2024-08-27 22:17:32 [Information] Request starting HTTP/1.1 GET http://localhost:5076/swagger - -
+2024-08-27 22:17:32 [Information] Request finished HTTP/1.1 GET http://localhost:5076/swagger - - - 301 0 - 158.6212ms
+2024-08-27 22:17:32 [Information] Request starting HTTP/1.1 GET http://localhost:5076/swagger/index.html - -
+2024-08-27 22:17:33 [Information] Request starting HTTP/1.1 GET http://localhost:5076/swagger/swagger-ui.css - -
+2024-08-27 22:17:33 [Information] Request starting HTTP/1.1 GET http://localhost:5076/_framework/aspnetcore-browser-refresh.js - -
+2024-08-27 22:17:33 [Information] Request starting HTTP/1.1 GET http://localhost:5076/swagger/swagger-ui-standalone-preset.js - -
+2024-08-27 22:17:33 [Information] Request starting HTTP/1.1 GET http://localhost:5076/swagger/swagger-ui-bundle.js - -
+2024-08-27 22:17:33 [Information] Request finished HTTP/1.1 GET http://localhost:5076/_framework/aspnetcore-browser-refresh.js - - - 200 11954 application/javascript;+charset=utf-8 15.5300ms
+2024-08-27 22:17:33 [Information] Request finished HTTP/1.1 GET http://localhost:5076/swagger/index.html - - - 200 - text/html;charset=utf-8 212.1733ms
+2024-08-27 22:17:33 [Information] Sending file. Request path: '"/swagger-ui.css"'. Physical path: '"N/A"'
+2024-08-27 22:17:33 [Information] Sending file. Request path: '"/swagger-ui-standalone-preset.js"'. Physical path: '"N/A"'
+2024-08-27 22:17:33 [Information] Sending file. Request path: '"/swagger-ui-bundle.js"'. Physical path: '"N/A"'
+2024-08-27 22:17:33 [Information] Request finished HTTP/1.1 GET http://localhost:5076/swagger/swagger-ui.css - - - 200 143632 text/css 53.0434ms
+2024-08-27 22:17:33 [Information] Request finished HTTP/1.1 GET http://localhost:5076/swagger/swagger-ui-standalone-preset.js - - - 200 337162 application/javascript 47.0995ms
+2024-08-27 22:17:33 [Information] Request finished HTTP/1.1 GET http://localhost:5076/swagger/swagger-ui-bundle.js - - - 200 1092889 application/javascript 47.1280ms
+2024-08-27 22:17:33 [Information] Request starting HTTP/1.1 GET http://localhost:5076/swagger/v1/swagger.json - -
+2024-08-27 22:17:33 [Information] Request finished HTTP/1.1 GET http://localhost:5076/swagger/v1/swagger.json - - - 200 - application/json;charset=utf-8 165.7236ms
+2024-08-27 22:18:17 [Information] Request starting HTTP/1.1 OPTIONS http://localhost:5076/api/Usuarios/login - -
+2024-08-27 22:18:17 [Information] CORS policy execution successful.
+2024-08-27 22:18:17 [Information] Request finished HTTP/1.1 OPTIONS http://localhost:5076/api/Usuarios/login - - - 204 - - 12.3423ms
+2024-08-27 22:18:17 [Information] Request starting HTTP/1.1 POST http://localhost:5076/api/Usuarios/login application/json 66
+2024-08-27 22:18:17 [Information] CORS policy execution successful.
+2024-08-27 22:18:18 [Information] Executing endpoint '"GerenciamentoTarefasAPI.Controllers.UsuariosController.LoginUsuario (GerenciamentoTarefas)"'
+2024-08-27 22:18:18 [Information] Route matched with "{action = \"LoginUsuario\", controller = \"Usuarios\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] LoginUsuario(GerenciamentoTarefas.Domain.LoginRequest)" on controller "GerenciamentoTarefasAPI.Controllers.UsuariosController" ("GerenciamentoTarefas").
+2024-08-27 22:18:18 [Information] Request starting HTTP/1.1 POST http://localhost:5076/api/Usuarios/login application/json 66
+2024-08-27 22:18:18 [Information] CORS policy execution successful.
+2024-08-27 22:18:18 [Information] Executing endpoint '"GerenciamentoTarefasAPI.Controllers.UsuariosController.LoginUsuario (GerenciamentoTarefas)"'
+2024-08-27 22:18:18 [Information] Route matched with "{action = \"LoginUsuario\", controller = \"Usuarios\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] LoginUsuario(GerenciamentoTarefas.Domain.LoginRequest)" on controller "GerenciamentoTarefasAPI.Controllers.UsuariosController" ("GerenciamentoTarefas").
+2024-08-27 22:18:49 [Information] Entity Framework Core "6.0.0" initialized '"GerenciamentoTarefasContext"' using provider '"Npgsql.EntityFrameworkCore.PostgreSQL":"6.0.0+025fc55189ae41e3f2b98bcbe4eb44c505653700"' with options: "None"
+2024-08-27 22:18:49 [Information] Entity Framework Core "6.0.0" initialized '"GerenciamentoTarefasContext"' using provider '"Npgsql.EntityFrameworkCore.PostgreSQL":"6.0.0+025fc55189ae41e3f2b98bcbe4eb44c505653700"' with options: "None"
+2024-08-27 22:18:50 [Information] Executed DbCommand ("61"ms) [Parameters=["@__email_0='?'"], CommandType='Text', CommandTimeout='30']"
+""SELECT u.id, u.email, u.idperfilusuario, u.nome, u.senha
+FROM usuarios AS u
+WHERE u.email = @__email_0
+LIMIT 1"
+2024-08-27 22:18:50 [Information] Executed DbCommand ("61"ms) [Parameters=["@__email_0='?'"], CommandType='Text', CommandTimeout='30']"
+""SELECT u.id, u.email, u.idperfilusuario, u.nome, u.senha
+FROM usuarios AS u
+WHERE u.email = @__email_0
+LIMIT 1"
+2024-08-27 22:19:18 [Information] Executing "OkObjectResult", writing value of type '"<>f__AnonymousType2`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]"'.
+2024-08-27 22:19:18 [Information] Executing "OkObjectResult", writing value of type '"<>f__AnonymousType2`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]"'.
+2024-08-27 22:19:18 [Information] Executed action "GerenciamentoTarefasAPI.Controllers.UsuariosController.LoginUsuario (GerenciamentoTarefas)" in 60187.0807ms
+2024-08-27 22:19:18 [Information] Executed action "GerenciamentoTarefasAPI.Controllers.UsuariosController.LoginUsuario (GerenciamentoTarefas)" in 59897.9473ms
+2024-08-27 22:19:18 [Information] Executed endpoint '"GerenciamentoTarefasAPI.Controllers.UsuariosController.LoginUsuario (GerenciamentoTarefas)"'
+2024-08-27 22:19:18 [Information] Executed endpoint '"GerenciamentoTarefasAPI.Controllers.UsuariosController.LoginUsuario (GerenciamentoTarefas)"'
+2024-08-27 22:19:18 [Information] Request finished HTTP/1.1 POST http://localhost:5076/api/Usuarios/login application/json 66 - 200 - application/json;+charset=utf-8 60445.8665ms
+2024-08-27 22:19:18 [Information] Request finished HTTP/1.1 POST http://localhost:5076/api/Usuarios/login application/json 66 - 200 - application/json;+charset=utf-8 59914.8887ms
+2024-08-27 22:23:09 [Information] Request starting HTTP/1.1 OPTIONS http://localhost:5076/api/Usuarios/login - -
+2024-08-27 22:23:09 [Information] CORS policy execution successful.
+2024-08-27 22:23:09 [Information] Request finished HTTP/1.1 OPTIONS http://localhost:5076/api/Usuarios/login - - - 204 - - 0.4885ms
+2024-08-27 22:23:09 [Information] Request starting HTTP/1.1 POST http://localhost:5076/api/Usuarios/login application/json 66
+2024-08-27 22:23:09 [Information] CORS policy execution successful.
+2024-08-27 22:23:09 [Information] Executing endpoint '"GerenciamentoTarefasAPI.Controllers.UsuariosController.LoginUsuario (GerenciamentoTarefas)"'
+2024-08-27 22:23:09 [Information] Route matched with "{action = \"LoginUsuario\", controller = \"Usuarios\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] LoginUsuario(GerenciamentoTarefas.Domain.LoginRequest)" on controller "GerenciamentoTarefasAPI.Controllers.UsuariosController" ("GerenciamentoTarefas").
+2024-08-27 22:23:15 [Information] Entity Framework Core "6.0.0" initialized '"GerenciamentoTarefasContext"' using provider '"Npgsql.EntityFrameworkCore.PostgreSQL":"6.0.0+025fc55189ae41e3f2b98bcbe4eb44c505653700"' with options: "None"
+2024-08-27 22:23:15 [Information] Executed DbCommand ("10"ms) [Parameters=["@__email_0='?'"], CommandType='Text', CommandTimeout='30']"
+""SELECT u.id, u.email, u.idperfilusuario, u.nome, u.senha
+FROM usuarios AS u
+WHERE u.email = @__email_0
+LIMIT 1"
+2024-08-27 22:23:18 [Information] Executing "OkObjectResult", writing value of type '"<>f__AnonymousType2`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]"'.
+2024-08-27 22:23:18 [Information] Executed action "GerenciamentoTarefasAPI.Controllers.UsuariosController.LoginUsuario (GerenciamentoTarefas)" in 8970.4444ms
+2024-08-27 22:23:18 [Information] Executed endpoint '"GerenciamentoTarefasAPI.Controllers.UsuariosController.LoginUsuario (GerenciamentoTarefas)"'
+2024-08-27 22:23:18 [Information] Request finished HTTP/1.1 POST http://localhost:5076/api/Usuarios/login application/json 66 - 200 - application/json;+charset=utf-8 8976.9353ms
+2024-08-27 22:34:01 [Information] Request starting HTTP/1.1 OPTIONS http://localhost:5076/api/Usuarios/login - -
+2024-08-27 22:34:01 [Information] CORS policy execution successful.
+2024-08-27 22:34:01 [Information] Request finished HTTP/1.1 OPTIONS http://localhost:5076/api/Usuarios/login - - - 204 - - 2.8465ms
+2024-08-27 22:34:01 [Information] Request starting HTTP/1.1 POST http://localhost:5076/api/Usuarios/login application/json 66
+2024-08-27 22:34:01 [Information] CORS policy execution successful.
+2024-08-27 22:34:01 [Information] Executing endpoint '"GerenciamentoTarefasAPI.Controllers.UsuariosController.LoginUsuario (GerenciamentoTarefas)"'
+2024-08-27 22:34:01 [Information] Route matched with "{action = \"LoginUsuario\", controller = \"Usuarios\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] LoginUsuario(GerenciamentoTarefas.Domain.LoginRequest)" on controller "GerenciamentoTarefasAPI.Controllers.UsuariosController" ("GerenciamentoTarefas").
+2024-08-27 22:34:05 [Information] Entity Framework Core "6.0.0" initialized '"GerenciamentoTarefasContext"' using provider '"Npgsql.EntityFrameworkCore.PostgreSQL":"6.0.0+025fc55189ae41e3f2b98bcbe4eb44c505653700"' with options: "None"
+2024-08-27 22:34:05 [Information] Executed DbCommand ("2"ms) [Parameters=["@__email_0='?'"], CommandType='Text', CommandTimeout='30']"
+""SELECT u.id, u.email, u.idperfilusuario, u.nome, u.senha
+FROM usuarios AS u
+WHERE u.email = @__email_0
+LIMIT 1"
+2024-08-27 22:34:06 [Information] Executing "OkObjectResult", writing value of type '"<>f__AnonymousType2`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]"'.
+2024-08-27 22:34:06 [Information] Executed action "GerenciamentoTarefasAPI.Controllers.UsuariosController.LoginUsuario (GerenciamentoTarefas)" in 5746.4882ms
+2024-08-27 22:34:06 [Information] Executed endpoint '"GerenciamentoTarefasAPI.Controllers.UsuariosController.LoginUsuario (GerenciamentoTarefas)"'
+2024-08-27 22:34:06 [Information] Request finished HTTP/1.1 POST http://localhost:5076/api/Usuarios/login application/json 66 - 200 - application/json;+charset=utf-8 5747.9893ms
+2024-08-27 22:34:26 [Information] Request starting HTTP/1.1 OPTIONS http://localhost:5076/api/Usuarios/login - -
+2024-08-27 22:34:26 [Information] CORS policy execution successful.
+2024-08-27 22:34:26 [Information] Request finished HTTP/1.1 OPTIONS http://localhost:5076/api/Usuarios/login - - - 204 - - 0.2348ms
+2024-08-27 22:34:26 [Information] Request starting HTTP/1.1 POST http://localhost:5076/api/Usuarios/login application/json 66
+2024-08-27 22:34:26 [Information] CORS policy execution successful.
+2024-08-27 22:34:26 [Information] Executing endpoint '"GerenciamentoTarefasAPI.Controllers.UsuariosController.LoginUsuario (GerenciamentoTarefas)"'
+2024-08-27 22:34:26 [Information] Route matched with "{action = \"LoginUsuario\", controller = \"Usuarios\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] LoginUsuario(GerenciamentoTarefas.Domain.LoginRequest)" on controller "GerenciamentoTarefasAPI.Controllers.UsuariosController" ("GerenciamentoTarefas").
+2024-08-27 22:34:32 [Information] Entity Framework Core "6.0.0" initialized '"GerenciamentoTarefasContext"' using provider '"Npgsql.EntityFrameworkCore.PostgreSQL":"6.0.0+025fc55189ae41e3f2b98bcbe4eb44c505653700"' with options: "None"
+2024-08-27 22:34:32 [Information] Executed DbCommand ("2"ms) [Parameters=["@__email_0='?'"], CommandType='Text', CommandTimeout='30']"
+""SELECT u.id, u.email, u.idperfilusuario, u.nome, u.senha
+FROM usuarios AS u
+WHERE u.email = @__email_0
+LIMIT 1"
+2024-08-27 22:34:34 [Information] Executing "OkObjectResult", writing value of type '"<>f__AnonymousType2`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]"'.
+2024-08-27 22:34:34 [Information] Executed action "GerenciamentoTarefasAPI.Controllers.UsuariosController.LoginUsuario (GerenciamentoTarefas)" in 7607.7059ms
+2024-08-27 22:34:34 [Information] Executed endpoint '"GerenciamentoTarefasAPI.Controllers.UsuariosController.LoginUsuario (GerenciamentoTarefas)"'
+2024-08-27 22:34:34 [Information] Request finished HTTP/1.1 POST http://localhost:5076/api/Usuarios/login application/json 66 - 200 - application/json;+charset=utf-8 7608.3278ms
+2024-08-27 22:44:42 [Information] Request starting HTTP/1.1 OPTIONS http://localhost:5076/api/Usuarios/login - -
+2024-08-27 22:44:42 [Information] CORS policy execution successful.
+2024-08-27 22:44:42 [Information] Request finished HTTP/1.1 OPTIONS http://localhost:5076/api/Usuarios/login - - - 204 - - 3.8904ms
+2024-08-27 22:44:42 [Information] Request starting HTTP/1.1 POST http://localhost:5076/api/Usuarios/login application/json 66
+2024-08-27 22:44:42 [Information] CORS policy execution successful.
+2024-08-27 22:44:42 [Information] Executing endpoint '"GerenciamentoTarefasAPI.Controllers.UsuariosController.LoginUsuario (GerenciamentoTarefas)"'
+2024-08-27 22:44:42 [Information] Route matched with "{action = \"LoginUsuario\", controller = \"Usuarios\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] LoginUsuario(GerenciamentoTarefas.Domain.LoginRequest)" on controller "GerenciamentoTarefasAPI.Controllers.UsuariosController" ("GerenciamentoTarefas").
+2024-08-27 22:44:44 [Information] Entity Framework Core "6.0.0" initialized '"GerenciamentoTarefasContext"' using provider '"Npgsql.EntityFrameworkCore.PostgreSQL":"6.0.0+025fc55189ae41e3f2b98bcbe4eb44c505653700"' with options: "None"
+2024-08-27 22:44:44 [Information] Executed DbCommand ("2"ms) [Parameters=["@__email_0='?'"], CommandType='Text', CommandTimeout='30']"
+""SELECT u.id, u.email, u.idperfilusuario, u.nome, u.senha
+FROM usuarios AS u
+WHERE u.email = @__email_0
+LIMIT 1"
+2024-08-27 22:44:45 [Information] Executing "OkObjectResult", writing value of type '"<>f__AnonymousType2`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]"'.
+2024-08-27 22:44:45 [Information] Executed action "GerenciamentoTarefasAPI.Controllers.UsuariosController.LoginUsuario (GerenciamentoTarefas)" in 2711.6055ms
+2024-08-27 22:44:45 [Information] Executed endpoint '"GerenciamentoTarefasAPI.Controllers.UsuariosController.LoginUsuario (GerenciamentoTarefas)"'
+2024-08-27 22:44:45 [Information] Request finished HTTP/1.1 POST http://localhost:5076/api/Usuarios/login application/json 66 - 200 - application/json;+charset=utf-8 2712.5769ms
+2024-08-27 23:01:28 [Information] Request starting HTTP/1.1 OPTIONS http://localhost:5076/api/Usuarios/login - -
+2024-08-27 23:01:28 [Information] CORS policy execution successful.
+2024-08-27 23:01:28 [Information] Request finished HTTP/1.1 OPTIONS http://localhost:5076/api/Usuarios/login - - - 204 - - 2.6559ms
+2024-08-27 23:01:28 [Information] Request starting HTTP/1.1 POST http://localhost:5076/api/Usuarios/login application/json 66
+2024-08-27 23:01:28 [Information] CORS policy execution successful.
+2024-08-27 23:01:28 [Information] Executing endpoint '"GerenciamentoTarefasAPI.Controllers.UsuariosController.LoginUsuario (GerenciamentoTarefas)"'
+2024-08-27 23:01:28 [Information] Route matched with "{action = \"LoginUsuario\", controller = \"Usuarios\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] LoginUsuario(GerenciamentoTarefas.Domain.LoginRequest)" on controller "GerenciamentoTarefasAPI.Controllers.UsuariosController" ("GerenciamentoTarefas").
+2024-08-27 23:01:32 [Information] Entity Framework Core "6.0.0" initialized '"GerenciamentoTarefasContext"' using provider '"Npgsql.EntityFrameworkCore.PostgreSQL":"6.0.0+025fc55189ae41e3f2b98bcbe4eb44c505653700"' with options: "None"
+2024-08-27 23:01:32 [Information] Executed DbCommand ("2"ms) [Parameters=["@__email_0='?'"], CommandType='Text', CommandTimeout='30']"
+""SELECT u.id, u.email, u.idperfilusuario, u.nome, u.senha
+FROM usuarios AS u
+WHERE u.email = @__email_0
+LIMIT 1"
+2024-08-27 23:01:35 [Information] Executing "OkObjectResult", writing value of type '"<>f__AnonymousType2`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]"'.
+2024-08-27 23:01:35 [Information] Executed action "GerenciamentoTarefasAPI.Controllers.UsuariosController.LoginUsuario (GerenciamentoTarefas)" in 6432.6109ms
+2024-08-27 23:01:35 [Information] Executed endpoint '"GerenciamentoTarefasAPI.Controllers.UsuariosController.LoginUsuario (GerenciamentoTarefas)"'
+2024-08-27 23:01:35 [Information] Request finished HTTP/1.1 POST http://localhost:5076/api/Usuarios/login application/json 66 - 200 - application/json;+charset=utf-8 6433.1730ms
+2024-08-27 23:07:20 [Information] Request starting HTTP/1.1 OPTIONS http://localhost:5076/api/Usuarios/login - -
+2024-08-27 23:07:20 [Information] CORS policy execution successful.
+2024-08-27 23:07:20 [Information] Request finished HTTP/1.1 OPTIONS http://localhost:5076/api/Usuarios/login - - - 204 - - 2.6459ms
+2024-08-27 23:07:20 [Information] Request starting HTTP/1.1 POST http://localhost:5076/api/Usuarios/login application/json 66
+2024-08-27 23:07:20 [Information] CORS policy execution successful.
+2024-08-27 23:07:20 [Information] Executing endpoint '"GerenciamentoTarefasAPI.Controllers.UsuariosController.LoginUsuario (GerenciamentoTarefas)"'
+2024-08-27 23:07:20 [Information] Route matched with "{action = \"LoginUsuario\", controller = \"Usuarios\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] LoginUsuario(GerenciamentoTarefas.Domain.LoginRequest)" on controller "GerenciamentoTarefasAPI.Controllers.UsuariosController" ("GerenciamentoTarefas").
+2024-08-27 23:07:23 [Information] Entity Framework Core "6.0.0" initialized '"GerenciamentoTarefasContext"' using provider '"Npgsql.EntityFrameworkCore.PostgreSQL":"6.0.0+025fc55189ae41e3f2b98bcbe4eb44c505653700"' with options: "None"
+2024-08-27 23:07:23 [Information] Executed DbCommand ("3"ms) [Parameters=["@__email_0='?'"], CommandType='Text', CommandTimeout='30']"
+""SELECT u.id, u.email, u.idperfilusuario, u.nome, u.senha
+FROM usuarios AS u
+WHERE u.email = @__email_0
+LIMIT 1"
+2024-08-27 23:07:25 [Information] Executing "OkObjectResult", writing value of type '"<>f__AnonymousType2`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]"'.
+2024-08-27 23:07:25 [Information] Executed action "GerenciamentoTarefasAPI.Controllers.UsuariosController.LoginUsuario (GerenciamentoTarefas)" in 5332.4748ms
+2024-08-27 23:07:25 [Information] Executed endpoint '"GerenciamentoTarefasAPI.Controllers.UsuariosController.LoginUsuario (GerenciamentoTarefas)"'
+2024-08-27 23:07:25 [Information] Request finished HTTP/1.1 POST http://localhost:5076/api/Usuarios/login application/json 66 - 200 - application/json;+charset=utf-8 5333.1127ms
+2024-08-27 23:09:47 [Information] Request starting HTTP/1.1 OPTIONS http://localhost:5076/api/Usuarios/login - -
+2024-08-27 23:09:47 [Information] CORS policy execution successful.
+2024-08-27 23:09:47 [Information] Request finished HTTP/1.1 OPTIONS http://localhost:5076/api/Usuarios/login - - - 204 - - 0.8352ms
+2024-08-27 23:09:47 [Information] Request starting HTTP/1.1 POST http://localhost:5076/api/Usuarios/login application/json 66
+2024-08-27 23:09:47 [Information] CORS policy execution successful.
+2024-08-27 23:09:47 [Information] Executing endpoint '"GerenciamentoTarefasAPI.Controllers.UsuariosController.LoginUsuario (GerenciamentoTarefas)"'
+2024-08-27 23:09:47 [Information] Route matched with "{action = \"LoginUsuario\", controller = \"Usuarios\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] LoginUsuario(GerenciamentoTarefas.Domain.LoginRequest)" on controller "GerenciamentoTarefasAPI.Controllers.UsuariosController" ("GerenciamentoTarefas").
+2024-08-27 23:09:51 [Information] Entity Framework Core "6.0.0" initialized '"GerenciamentoTarefasContext"' using provider '"Npgsql.EntityFrameworkCore.PostgreSQL":"6.0.0+025fc55189ae41e3f2b98bcbe4eb44c505653700"' with options: "None"
+2024-08-27 23:09:51 [Information] Executed DbCommand ("1"ms) [Parameters=["@__email_0='?'"], CommandType='Text', CommandTimeout='30']"
+""SELECT u.id, u.email, u.idperfilusuario, u.nome, u.senha
+FROM usuarios AS u
+WHERE u.email = @__email_0
+LIMIT 1"
+2024-08-27 23:09:54 [Information] Executing "OkObjectResult", writing value of type '"<>f__AnonymousType2`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]"'.
+2024-08-27 23:09:54 [Information] Executed action "GerenciamentoTarefasAPI.Controllers.UsuariosController.LoginUsuario (GerenciamentoTarefas)" in 7039.0375ms
+2024-08-27 23:09:54 [Information] Executed endpoint '"GerenciamentoTarefasAPI.Controllers.UsuariosController.LoginUsuario (GerenciamentoTarefas)"'
+2024-08-27 23:09:54 [Information] Request finished HTTP/1.1 POST http://localhost:5076/api/Usuarios/login application/json 66 - 200 - application/json;+charset=utf-8 7039.5531ms
+2024-08-27 23:24:10 [Information] Request starting HTTP/1.1 OPTIONS http://localhost:5076/api/Usuarios/login - -
+2024-08-27 23:24:10 [Information] CORS policy execution successful.
+2024-08-27 23:24:10 [Information] Request finished HTTP/1.1 OPTIONS http://localhost:5076/api/Usuarios/login - - - 204 - - 4.3370ms
+2024-08-27 23:24:10 [Information] Request starting HTTP/1.1 POST http://localhost:5076/api/Usuarios/login application/json 66
+2024-08-27 23:24:10 [Information] CORS policy execution successful.
+2024-08-27 23:24:10 [Information] Executing endpoint '"GerenciamentoTarefasAPI.Controllers.UsuariosController.LoginUsuario (GerenciamentoTarefas)"'
+2024-08-27 23:24:10 [Information] Route matched with "{action = \"LoginUsuario\", controller = \"Usuarios\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] LoginUsuario(GerenciamentoTarefas.Domain.LoginRequest)" on controller "GerenciamentoTarefasAPI.Controllers.UsuariosController" ("GerenciamentoTarefas").
+2024-08-27 23:24:14 [Information] Entity Framework Core "6.0.0" initialized '"GerenciamentoTarefasContext"' using provider '"Npgsql.EntityFrameworkCore.PostgreSQL":"6.0.0+025fc55189ae41e3f2b98bcbe4eb44c505653700"' with options: "None"
+2024-08-27 23:24:14 [Information] Executed DbCommand ("2"ms) [Parameters=["@__email_0='?'"], CommandType='Text', CommandTimeout='30']"
+""SELECT u.id, u.email, u.idperfilusuario, u.nome, u.senha
+FROM usuarios AS u
+WHERE u.email = @__email_0
+LIMIT 1"
+2024-08-27 23:24:16 [Information] Executing "OkObjectResult", writing value of type '"<>f__AnonymousType2`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]"'.
+2024-08-27 23:24:16 [Information] Executed action "GerenciamentoTarefasAPI.Controllers.UsuariosController.LoginUsuario (GerenciamentoTarefas)" in 5650.8239ms
+2024-08-27 23:24:16 [Information] Executed endpoint '"GerenciamentoTarefasAPI.Controllers.UsuariosController.LoginUsuario (GerenciamentoTarefas)"'
+2024-08-27 23:24:16 [Information] Request finished HTTP/1.1 POST http://localhost:5076/api/Usuarios/login application/json 66 - 200 - application/json;+charset=utf-8 5651.2540ms
+2024-08-27 23:28:50 [Information] Request starting HTTP/1.1 OPTIONS http://localhost:5076/api/Usuarios/login - -
+2024-08-27 23:28:50 [Information] CORS policy execution successful.
+2024-08-27 23:28:50 [Information] Request finished HTTP/1.1 OPTIONS http://localhost:5076/api/Usuarios/login - - - 204 - - 4.2344ms
+2024-08-27 23:28:50 [Information] Request starting HTTP/1.1 POST http://localhost:5076/api/Usuarios/login application/json 66
+2024-08-27 23:28:50 [Information] CORS policy execution successful.
+2024-08-27 23:28:50 [Information] Executing endpoint '"GerenciamentoTarefasAPI.Controllers.UsuariosController.LoginUsuario (GerenciamentoTarefas)"'
+2024-08-27 23:28:50 [Information] Route matched with "{action = \"LoginUsuario\", controller = \"Usuarios\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] LoginUsuario(GerenciamentoTarefas.Domain.LoginRequest)" on controller "GerenciamentoTarefasAPI.Controllers.UsuariosController" ("GerenciamentoTarefas").
+2024-08-27 23:28:53 [Information] Entity Framework Core "6.0.0" initialized '"GerenciamentoTarefasContext"' using provider '"Npgsql.EntityFrameworkCore.PostgreSQL":"6.0.0+025fc55189ae41e3f2b98bcbe4eb44c505653700"' with options: "None"
+2024-08-27 23:28:53 [Information] Executed DbCommand ("4"ms) [Parameters=["@__email_0='?'"], CommandType='Text', CommandTimeout='30']"
+""SELECT u.id, u.email, u.idperfilusuario, u.nome, u.senha
+FROM usuarios AS u
+WHERE u.email = @__email_0
+LIMIT 1"
+2024-08-27 23:28:54 [Information] Executing "OkObjectResult", writing value of type '"<>f__AnonymousType2`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]"'.
+2024-08-27 23:28:54 [Information] Executed action "GerenciamentoTarefasAPI.Controllers.UsuariosController.LoginUsuario (GerenciamentoTarefas)" in 4705.0715ms
+2024-08-27 23:28:54 [Information] Executed endpoint '"GerenciamentoTarefasAPI.Controllers.UsuariosController.LoginUsuario (GerenciamentoTarefas)"'
+2024-08-27 23:28:54 [Information] Request finished HTTP/1.1 POST http://localhost:5076/api/Usuarios/login application/json 66 - 200 - application/json;+charset=utf-8 4705.5116ms
+2024-08-27 23:29:21 [Information] Request starting HTTP/1.1 OPTIONS http://localhost:5076/api/Usuarios/login - -
+2024-08-27 23:29:21 [Information] CORS policy execution successful.
+2024-08-27 23:29:21 [Information] Request finished HTTP/1.1 OPTIONS http://localhost:5076/api/Usuarios/login - - - 204 - - 4.0911ms
+2024-08-27 23:29:21 [Information] Request starting HTTP/1.1 POST http://localhost:5076/api/Usuarios/login application/json 66
+2024-08-27 23:29:21 [Information] CORS policy execution successful.
+2024-08-27 23:29:21 [Information] Executing endpoint '"GerenciamentoTarefasAPI.Controllers.UsuariosController.LoginUsuario (GerenciamentoTarefas)"'
+2024-08-27 23:29:21 [Information] Route matched with "{action = \"LoginUsuario\", controller = \"Usuarios\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] LoginUsuario(GerenciamentoTarefas.Domain.LoginRequest)" on controller "GerenciamentoTarefasAPI.Controllers.UsuariosController" ("GerenciamentoTarefas").
+2024-08-27 23:29:28 [Information] Entity Framework Core "6.0.0" initialized '"GerenciamentoTarefasContext"' using provider '"Npgsql.EntityFrameworkCore.PostgreSQL":"6.0.0+025fc55189ae41e3f2b98bcbe4eb44c505653700"' with options: "None"
+2024-08-27 23:29:28 [Information] Executed DbCommand ("2"ms) [Parameters=["@__email_0='?'"], CommandType='Text', CommandTimeout='30']"
+""SELECT u.id, u.email, u.idperfilusuario, u.nome, u.senha
+FROM usuarios AS u
+WHERE u.email = @__email_0
+LIMIT 1"
+2024-08-27 23:29:30 [Information] Executing "OkObjectResult", writing value of type '"<>f__AnonymousType2`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]"'.
+2024-08-27 23:29:30 [Information] Executed action "GerenciamentoTarefasAPI.Controllers.UsuariosController.LoginUsuario (GerenciamentoTarefas)" in 8896.4309ms
+2024-08-27 23:29:30 [Information] Executed endpoint '"GerenciamentoTarefasAPI.Controllers.UsuariosController.LoginUsuario (GerenciamentoTarefas)"'
+2024-08-27 23:29:30 [Information] Request finished HTTP/1.1 POST http://localhost:5076/api/Usuarios/login application/json 66 - 200 - application/json;+charset=utf-8 8896.8575ms
+2024-08-27 23:36:29 [Information] Request starting HTTP/1.1 OPTIONS http://localhost:5076/api/Usuarios/login - -
+2024-08-27 23:36:29 [Information] CORS policy execution successful.
+2024-08-27 23:36:29 [Information] Request finished HTTP/1.1 OPTIONS http://localhost:5076/api/Usuarios/login - - - 204 - - 36.5215ms
+2024-08-27 23:36:29 [Information] Request starting HTTP/1.1 POST http://localhost:5076/api/Usuarios/login application/json 66
+2024-08-27 23:36:29 [Information] CORS policy execution successful.
+2024-08-27 23:36:29 [Information] Executing endpoint '"GerenciamentoTarefasAPI.Controllers.UsuariosController.LoginUsuario (GerenciamentoTarefas)"'
+2024-08-27 23:36:29 [Information] Route matched with "{action = \"LoginUsuario\", controller = \"Usuarios\"}". Executing controller action with signature "System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] LoginUsuario(GerenciamentoTarefas.Domain.LoginRequest)" on controller "GerenciamentoTarefasAPI.Controllers.UsuariosController" ("GerenciamentoTarefas").
+2024-08-27 23:36:33 [Information] Entity Framework Core "6.0.0" initialized '"GerenciamentoTarefasContext"' using provider '"Npgsql.EntityFrameworkCore.PostgreSQL":"6.0.0+025fc55189ae41e3f2b98bcbe4eb44c505653700"' with options: "None"
+2024-08-27 23:36:33 [Information] Executed DbCommand ("2"ms) [Parameters=["@__email_0='?'"], CommandType='Text', CommandTimeout='30']"
+""SELECT u.id, u.email, u.idperfilusuario, u.nome, u.senha
+FROM usuarios AS u
+WHERE u.email = @__email_0
+LIMIT 1"
+2024-08-27 23:36:34 [Information] Executing "OkObjectResult", writing value of type '"<>f__AnonymousType2`1[[System.String, System.Private.CoreLib, Version=6.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]"'.
+2024-08-27 23:36:34 [Information] Executed action "GerenciamentoTarefasAPI.Controllers.UsuariosController.LoginUsuario (GerenciamentoTarefas)" in 5494.9414ms
+2024-08-27 23:36:34 [Information] Executed endpoint '"GerenciamentoTarefasAPI.Controllers.UsuariosController.LoginUsuario (GerenciamentoTarefas)"'
+2024-08-27 23:36:34 [Information] Request finished HTTP/1.1 POST http://localhost:5076/api/Usuarios/login application/json 66 - 200 - application/json;+charset=utf-8 5495.4740ms
